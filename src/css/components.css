@@ -1,0 +1,53 @@
+/* ============================================================
+   components.css — UI 컴포넌트 클래스
+   레이아웃은 layout.css, 모션은 animations.css에 둔다.
+   ============================================================ */
+
+@layer components {
+
+  /* ===== 버튼 ===== */
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-1.5
+           px-6 py-3 rounded-lg
+           bg-brand text-white font-bold
+           transition-colors duration-200
+           hover:bg-brand-600
+           active:scale-[0.97];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-1.5
+           px-6 py-3 rounded-lg
+           border border-black/15 text-ink font-medium
+           transition-colors duration-200
+           hover:bg-black/5;
+  }
+
+  /* ===== 외부 시스템 링크 (새 창으로 열림: GNB·모바일메뉴·푸터) ===== */
+
+  .link-external {
+    @apply inline-flex items-center gap-1 rounded-full px-3.5 py-2
+           text-sm font-medium text-muted
+           transition-colors duration-300
+           hover:bg-black/5 hover:text-ink;
+  }
+
+  .mobile-link-external {
+    @apply flex items-center justify-between gap-2 rounded-2xl px-4 py-3
+           text-lg font-semibold text-muted
+           transition-colors duration-300
+           hover:bg-black/5 hover:text-ink;
+  }
+
+  .footer-link-external {
+    @apply inline-flex items-center gap-1 hover:text-white;
+  }
+
+  /* ===== FAQ ===== */
+
+  .faq-answer {
+    overflow: hidden;
+  }
+
+}

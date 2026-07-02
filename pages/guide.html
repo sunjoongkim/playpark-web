@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>활용가이드 | PlayPark — 파크골프 영상 가이드 모음</title>
+  <meta name="description" content="PlayPark 활용 영상 가이드. 홍보영상부터 앱 설명서 숏츠까지 파크골프를 200% 즐기는 방법을 영상으로 안내합니다." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="활용가이드 | PlayPark" />
+  <meta property="og:description" content="파크골프 플레이파크 활용 영상 모음 — 홍보영상·숏츠·앱 설명서." />
+  <meta property="og:url" content="https://playpark.app/pages/guide.html" />
+  <meta property="og:locale" content="ko_KR" />
+  <link rel="canonical" href="https://playpark.app/pages/guide.html" />
+  <link rel="icon" href="../assets/images/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="../assets/images/favicon.png" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="../dist/output.css" />
+  <script src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
+</head>
+<body class="antialiased selection:bg-brand/20">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-white">본문 바로가기</a>
+
+  <header class="fixed inset-x-0 top-0 z-40 px-3">
+    <nav id="nav" aria-label="주 네비게이션" class="mx-auto mt-3 flex max-w-container items-center justify-between gap-4 rounded-full border border-black/5 bg-white/70 px-4 py-2.5 pl-5 shadow-[0_8px_30px_rgba(0,0,0,0.06)] backdrop-blur-xl transition-all duration-500 ease-spring sm:px-5">
+      <a href="../index.html" class="inline-flex items-center" aria-label="PlayPark 홈"><img src="../assets/images/logo.png" alt="PlayPark" width="586" height="175" class="h-7 w-auto sm:h-8" /></a>
+      <div class="hidden items-center gap-1 md:flex">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a href="guide.html" class="rounded-full px-3.5 py-2 text-sm font-bold text-ink transition-colors duration-300 hover:bg-black/5" aria-current="page">활용가이드</a></li>
+          <li><a href="about.html" class="rounded-full px-3.5 py-2 text-sm font-medium text-muted transition-colors duration-300 hover:bg-black/5 hover:text-ink">회사소개</a></li>
+          <li><a href="partnership.html" class="rounded-full px-3.5 py-2 text-sm font-medium text-muted transition-colors duration-300 hover:bg-black/5 hover:text-ink">제휴문의</a></li>
+        </ul>
+        <span class="mx-1 hidden h-4 w-px bg-black/10 lg:block" aria-hidden="true"></span>
+        <ul class="hidden items-center gap-1 lg:flex" role="list">
+          <li><a href="https://ppscreen.playpark.app/" target="_blank" rel="noopener" class="link-external">관리자센터<iconify-icon icon="solar:arrow-right-up-linear" class="text-xs"></iconify-icon><span class="sr-only">(새 창에서 열림)</span></a></li>
+          <li><a href="https://league.playpark.app" target="_blank" rel="noopener" class="link-external">대회관리시스템<iconify-icon icon="solar:arrow-right-up-linear" class="text-xs"></iconify-icon><span class="sr-only">(새 창에서 열림)</span></a></li>
+        </ul>
+      </div>
+      <div class="hidden items-center gap-2 md:flex">
+        <a href="https://ppscreen.playpark.app/reserve" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 rounded-full bg-ink px-4 py-2 text-sm font-bold text-white transition-all duration-500 ease-spring hover:scale-[1.03] active:scale-95">무인 매장 예약<iconify-icon icon="solar:arrow-right-up-linear" class="text-base"></iconify-icon><span class="sr-only">(새 창에서 열림)</span></a>
+        <a href="../index.html#download" class="inline-flex items-center gap-1.5 rounded-full bg-ink px-4 py-2 text-sm font-bold text-white transition-all duration-500 ease-spring hover:scale-[1.03] active:scale-95">앱 다운로드<iconify-icon icon="solar:download-minimalistic-bold" class="text-base"></iconify-icon></a>
+      </div>
+      <button id="navToggle" class="grid h-10 w-10 place-items-center rounded-full text-ink transition-colors hover:bg-black/5 md:hidden" aria-expanded="false" aria-controls="mobileMenu" aria-label="메뉴 열기"><iconify-icon icon="solar:hamburger-menu-linear" class="text-2xl"></iconify-icon></button>
+    </nav>
+  </header>
+
+  <div id="mobileMenu" class="fixed inset-0 z-50 hidden flex-col bg-white/95 backdrop-blur-2xl">
+    <div class="flex items-center justify-between px-6 py-5">
+      <img src="../assets/images/logo.png" alt="PlayPark" width="586" height="175" class="h-8 w-auto" />
+      <button id="navClose" class="grid h-10 w-10 place-items-center rounded-full text-ink hover:bg-black/5" aria-label="메뉴 닫기"><iconify-icon icon="solar:close-circle-linear" class="text-3xl"></iconify-icon></button>
+    </div>
+    <nav class="flex flex-col gap-2 px-6 pt-6" aria-label="모바일 네비게이션">
+      <a href="guide.html" class="rounded-2xl px-4 py-4 text-2xl font-bold text-ink" aria-current="page">활용가이드</a>
+      <a href="about.html" class="rounded-2xl px-4 py-4 text-2xl font-bold text-muted">회사소개</a>
+      <a href="partnership.html" class="rounded-2xl px-4 py-4 text-2xl font-bold text-muted">제휴문의</a>
+
+      <div class="mt-2 flex flex-col gap-1 border-t border-black/10 pt-4">
+        <a href="https://ppscreen.playpark.app/" target="_blank" rel="noopener" class="mobile-link-external">관리자센터<iconify-icon icon="solar:arrow-right-up-linear" class="text-xl"></iconify-icon><span class="sr-only">(새 창에서 열림)</span></a>
+        <a href="https://league.playpark.app" target="_blank" rel="noopener" class="mobile-link-external">대회관리시스템<iconify-icon icon="solar:arrow-right-up-linear" class="text-xl"></iconify-icon><span class="sr-only">(새 창에서 열림)</span></a>
+      </div>
+
+      <a href="https://ppscreen.playpark.app/reserve" target="_blank" rel="noopener" class="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-brand px-6 py-4 text-lg font-bold text-white">무인 매장 예약 <iconify-icon icon="solar:arrow-right-up-linear"></iconify-icon><span class="sr-only">(새 창에서 열림)</span></a>
+      <a href="../index.html#download" class="inline-flex items-center justify-center gap-2 rounded-full bg-brand px-6 py-4 text-lg font-bold text-white">앱 다운로드 <iconify-icon icon="solar:download-minimalistic-bold"></iconify-icon></a>
+    </nav>
+  </div>
+
+  <main id="main">
+
+    <!-- ===== 대표 서비스 — 페이지 헤더 겸 PlayPark 소개 ===== -->
+    <section id="playpark-intro" class="relative overflow-hidden bg-ground pt-32 pb-24 md:pt-40 md:pb-32" aria-labelledby="service-title">
+      <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
+        <div class="orb absolute -right-24 -top-10 h-[32rem] w-[32rem] rounded-full bg-brand/20 blur-[100px]"></div>
+        <div class="orb absolute -left-32 top-40 h-96 w-96 rounded-full bg-amber-200/30 blur-[90px]" style="animation-delay:-5s"></div>
+      </div>
+      <div class="mx-auto max-w-container px-6">
+        <div class="grid items-center gap-12 md:grid-cols-2 md:gap-16 lg:gap-20">
+          <div class="reveal">
+            <p class="mb-4 max-w-md text-lg leading-relaxed text-muted">스코어카드 기록, AI 기반 기량 분석, 전국 골프장 정보, 커뮤니티, 동호회 관리까지</p>
+            <h1 id="service-title" class="text-4xl font-black !leading-tight tracking-tight text-ink sm:text-5xl md:text-5xl">파크골프의 모든 것을<br>한 앱에서 해결하세요.</h1>
+            <ul class="mt-10 divide-y divide-black/10" role="list">
+              <li class="group flex items-start gap-5 py-5">
+                <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-brand/10 text-base font-black tabular-nums text-brand-600 transition-all duration-500 ease-spring group-hover:bg-brand group-hover:text-white">01</span>
+                <div>
+                  <h3 class="text-lg font-bold text-ink">기록의 디지털화</h3>
+                  <p class="mt-1.5 leading-relaxed text-muted">종이 스코어카드를 앱으로 옮겨 라운드 기록을 더 정확하고 편하게 보관합니다.</p>
+                </div>
+              </li>
+              <li class="group flex items-start gap-5 py-5">
+                <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-brand/10 text-base font-black tabular-nums text-brand-600 transition-all duration-500 ease-spring group-hover:bg-brand group-hover:text-white">02</span>
+                <div>
+                  <h3 class="text-lg font-bold text-ink">AI 기반 성장</h3>
+                  <p class="mt-1.5 leading-relaxed text-muted">라운드 데이터를 분석해 강점과 약점을 보여주고, 다음 라운드를 위한 힌트를 제공합니다.</p>
+                </div>
+              </li>
+              <li class="group flex items-start gap-5 py-5">
+                <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-brand/10 text-base font-black tabular-nums text-brand-600 transition-all duration-500 ease-spring group-hover:bg-brand group-hover:text-white">03</span>
+                <div>
+                  <h3 class="text-lg font-bold text-ink">커뮤니티와 모임</h3>
+                  <p class="mt-1.5 leading-relaxed text-muted">전국 파크골프인과 정보를 나누고, 동호회 모임을 더 효율적으로 운영합니다.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="reveal relative mx-auto w-full max-w-md" style="--d:120ms">
+            <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 rounded-full bg-brand/15 blur-3xl"></div>
+            <div class="relative aspect-square overflow-hidden rounded-full bg-gradient-to-b from-brand-light/70 to-white ring-1 ring-black/5 shadow-[0_30px_60px_-25px_rgba(0,0,0,0.25)]">
+              <img src="../assets/images/mascot-app.png" alt="플레이파크 마스코트 '플팍'이 PlayPark 앱 화면을 보여주는 모습" width="2075" height="3046" class="absolute inset-x-0 top-[8%] mx-auto w-[82%] max-w-none" loading="lazy" decoding="async" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 홍보영상 — 16:9 가로 갤러리 ===== -->
+    <section id="promo-videos" class="bg-white py-24 md:py-32" aria-labelledby="promo-title">
+      <div class="mx-auto max-w-container px-6">
+        <div class="reveal mx-auto mb-14 max-w-2xl text-center">
+          <span class="inline-flex items-center rounded-full bg-brand/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.15em] text-brand-600">홍보영상</span>
+          <h2 id="promo-title" class="mt-5 text-3xl font-black tracking-tight text-ink sm:text-4xl md:text-5xl">영상으로 보는 플레이파크</h2>
+          <p class="mt-5 text-lg text-muted">홍보영상부터 앱 사용법 숏츠까지, 파크골프를 더 즐겁게 만드는 영상을 모았습니다.</p>
+        </div>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+
+          <!-- 영상 1 — data-video-id에 YouTube 동영상 ID를 입력하세요 (예: xYz123abcde) -->
+          <a href="https://www.youtube.com/watch?v=SQhVyept-HY" target="_blank" rel="noopener"
+             data-video-id="SQhVyept-HY"
+             class="group reveal block" style="--d:0ms">
+            <div class="relative overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all duration-500 ease-spring group-hover:-translate-y-1.5 group-hover:shadow-[0_20px_50px_-18px_rgba(0,0,0,0.28)]">
+              <div class="aspect-video relative bg-gradient-to-br from-slate-600 to-ink">
+                <img src="https://img.youtube.com/vi/SQhVyept-HY/maxresdefault.jpg" alt="파크골프 앱 플레이파크 소개" class="absolute inset-0 h-full w-full object-cover" loading="lazy" decoding="async" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand shadow-[0_8px_24px_-4px_rgba(205,159,16,0.65)] transition-all duration-500 ease-spring group-hover:scale-110">
+                    <iconify-icon icon="solar:play-bold" class="ml-0.5 text-lg text-white"></iconify-icon>
+                  </div>
+                </div>
+                <div class="absolute right-3 top-3">
+                  <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true"><rect width="20" height="14" rx="3" fill="#FF0000"/><path d="M8 4.5L14 7L8 9.5V4.5Z" fill="white"/></svg>
+                </div>
+              </div>
+            </div>
+            <p class="mt-3 break-keep text-sm font-bold leading-snug text-ink">파크골프 앱 플레이파크 소개</p>
+          </a>
+
+          <!-- 영상 2 -->
+          <a href="https://www.youtube.com/watch?v=PDXhncdFYzc" target="_blank" rel="noopener"
+             data-video-id="PDXhncdFYzc"
+             class="group reveal block" style="--d:60ms">
+            <div class="relative overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all duration-500 ease-spring group-hover:-translate-y-1.5 group-hover:shadow-[0_20px_50px_-18px_rgba(0,0,0,0.28)]">
+              <div class="aspect-video relative bg-gradient-to-br from-amber-700 to-stone-900">
+                <img src="https://img.youtube.com/vi/PDXhncdFYzc/maxresdefault.jpg" alt="파크골프 동호회 플레이파크로 쉽게 즐겨보자!" class="absolute inset-0 h-full w-full object-cover" loading="lazy" decoding="async" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand shadow-[0_8px_24px_-4px_rgba(205,159,16,0.65)] transition-all duration-500 ease-spring group-hover:scale-110">
+                    <iconify-icon icon="solar:play-bold" class="ml-0.5 text-lg text-white"></iconify-icon>
+                  </div>
+                </div>
+                <div class="absolute right-3 top-3">
+                  <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true"><rect width="20" height="14" rx="3" fill="#FF0000"/><path d="M8 4.5L14 7L8 9.5V4.5Z" fill="white"/></svg>
+                </div>
+              </div>
+            </div>
+            <p class="mt-3 break-keep text-sm font-bold leading-snug text-ink">파크골프 동호회 플레이파크로 쉽게 즐겨보자!</p>
+          </a>
+
+          <!-- 영상 3 -->
+          <a href="https://www.youtube.com/watch?v=wrOuTZOF2kM" target="_blank" rel="noopener"
+             data-video-id="wrOuTZOF2kM"
+             class="group reveal block" style="--d:120ms">
+            <div class="relative overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all duration-500 ease-spring group-hover:-translate-y-1.5 group-hover:shadow-[0_20px_50px_-18px_rgba(0,0,0,0.28)]">
+              <div class="aspect-video relative bg-gradient-to-br from-green-800 to-slate-900">
+                <img src="https://img.youtube.com/vi/wrOuTZOF2kM/maxresdefault.jpg" alt="파크골프를 200% 즐기기 위한 앱 플레이파크" class="absolute inset-0 h-full w-full object-cover" loading="lazy" decoding="async" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand shadow-[0_8px_24px_-4px_rgba(205,159,16,0.65)] transition-all duration-500 ease-spring group-hover:scale-110">
+                    <iconify-icon icon="solar:play-bold" class="ml-0.5 text-lg text-white"></iconify-icon>
+                  </div>
+                </div>
+                <div class="absolute right-3 top-3">
+                  <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true"><rect width="20" height="14" rx="3" fill="#FF0000"/><path d="M8 4.5L14 7L8 9.5V4.5Z" fill="white"/></svg>
+                </div>
+              </div>
+            </div>
+            <p class="mt-3 break-keep text-sm font-bold leading-snug text-ink">파크골프를 200% 즐기기 위한 앱 플레이파크</p>
+          </a>
+
+          <!-- 영상 4 -->
+          <a href="https://www.youtube.com/watch?v=bAOezP3FAJA" target="_blank" rel="noopener"
+             data-video-id="bAOezP3FAJA"
+             class="group reveal block" style="--d:180ms">
+            <div class="relative overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all duration-500 ease-spring group-hover:-translate-y-1.5 group-hover:shadow-[0_20px_50px_-18px_rgba(0,0,0,0.28)]">
+              <div class="aspect-video relative bg-gradient-to-br from-teal-700 to-slate-900">
+                <img src="https://img.youtube.com/vi/bAOezP3FAJA/maxresdefault.jpg" alt="[어깨동무] 헷갈리는 파크골프 타수 쉽게 계산하는 방법" class="absolute inset-0 h-full w-full object-cover" loading="lazy" decoding="async" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand shadow-[0_8px_24px_-4px_rgba(205,159,16,0.65)] transition-all duration-500 ease-spring group-hover:scale-110">
+                    <iconify-icon icon="solar:play-bold" class="ml-0.5 text-lg text-white"></iconify-icon>
+                  </div>
+                </div>
+                <div class="absolute right-3 top-3">
+                  <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true"><rect width="20" height="14" rx="3" fill="#FF0000"/><path d="M8 4.5L14 7L8 9.5V4.5Z" fill="white"/></svg>
+                </div>
+              </div>
+            </div>
+            <p class="mt-3 break-keep text-sm font-bold leading-snug text-ink">[어깨동무] 헷갈리는 파크골프 타수 쉽게 계산하는 방법</p>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 플팍이와 함께 — 9:16 숏츠 2장 ===== -->
+    <section id="with-playpark" class="bg-white py-24 md:py-32" aria-labelledby="shorts1-title">
+      <div class="mx-auto max-w-container px-6">
+        <div class="reveal mx-auto mb-14 max-w-2xl text-center">
+          <span class="inline-flex items-center rounded-full bg-brand/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.15em] text-brand-600">플팍이와 함께</span>
+          <h2 id="shorts1-title" class="mt-5 text-3xl font-black tracking-tight text-ink sm:text-4xl md:text-5xl">파크골프 꿀팁 한입 숏츠</h2>
+          <p class="mt-5 text-lg text-muted">짧고 굵게 즐기는 파크골프 이야기</p>
+        </div>
+        <div class="mx-auto flex max-w-md justify-center gap-8">
+
+          <!-- 숏츠 1 — data-video-id에 YouTube Shorts ID를 입력하세요 -->
+          <a href="https://www.youtube.com/shorts/HNkusuuF_Ac" target="_blank" rel="noopener"
+             data-video-id="HNkusuuF_Ac"
+             class="group reveal block flex-1" style="--d:0ms">
+            <div class="relative overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all duration-500 ease-spring group-hover:-translate-y-1.5 group-hover:shadow-[0_20px_50px_-18px_rgba(205,159,16,0.28)]">
+              <div class="aspect-[9/16] relative bg-brand-light">
+                <!-- 실제 숏츠 썸네일: <img src="https://img.youtube.com/vi/HNkusuuF_Ac/maxresdefault.jpg" alt="" class="absolute inset-0 h-full w-full object-cover" loading="lazy" decoding="async" /> -->
+                <div class="absolute left-3 top-3 z-10">
+                  <p class="text-[9px] font-medium leading-tight text-brand/60">파크골프<br>스코어카드 앱</p>
+                  <p class="mt-0.5 text-sm font-black leading-none text-brand">PlayPark</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center px-4">
+                  <p class="break-keep text-center text-2xl font-black leading-tight text-brand">스코어카드<br>중요성</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center bg-brand/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand shadow-lg">
+                    <iconify-icon icon="solar:play-bold" class="ml-0.5 text-lg text-white"></iconify-icon>
+                  </div>
+                </div>
+                <div class="absolute right-2 top-2 z-10">
+                  <svg width="16" height="11" viewBox="0 0 20 14" fill="none" aria-hidden="true"><rect width="20" height="14" rx="3" fill="#FF0000"/><path d="M8 4.5L14 7L8 9.5V4.5Z" fill="white"/></svg>
+                </div>
+              </div>
+            </div>
+            <p class="mt-3 break-keep text-sm font-bold leading-snug text-ink">파크골프 스코어카드의 중요성</p>
+          </a>
+
+          <!-- 숏츠 2 -->
+          <a href="https://www.youtube.com/shorts/ZBrjASuL2Os" target="_blank" rel="noopener"
+             data-video-id="ZBrjASuL2Os"
+             class="group reveal block flex-1" style="--d:80ms">
+            <div class="relative overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all duration-500 ease-spring group-hover:-translate-y-1.5 group-hover:shadow-[0_20px_50px_-18px_rgba(205,159,16,0.28)]">
+              <div class="aspect-[9/16] relative bg-brand-light">
+                <!-- 실제 숏츠 썸네일: <img src="https://img.youtube.com/vi/ZBrjASuL2Os/maxresdefault.jpg" alt="" class="absolute inset-0 h-full w-full object-cover" loading="lazy" decoding="async" /> -->
+                <div class="absolute left-3 top-3 z-10">
+                  <p class="text-[9px] font-medium leading-tight text-brand/60">파크골프<br>스코어카드 앱</p>
+                  <p class="mt-0.5 text-sm font-black leading-none text-brand">PlayPark</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center px-4">
+                  <p class="break-keep text-center text-2xl font-black leading-tight text-brand">플레이파크<br>누구에게<br>필요할까</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center bg-brand/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand shadow-lg">
+                    <iconify-icon icon="solar:play-bold" class="ml-0.5 text-lg text-white"></iconify-icon>
+                  </div>
+                </div>
+                <div class="absolute right-2 top-2 z-10">
+                  <svg width="16" height="11" viewBox="0 0 20 14" fill="none" aria-hidden="true"><rect width="20" height="14" rx="3" fill="#FF0000"/><path d="M8 4.5L14 7L8 9.5V4.5Z" fill="white"/></svg>
+                </div>
+              </div>
+            </div>
+            <p class="mt-3 break-keep text-sm font-bold leading-snug text-ink">파크골프 어플을 다운받아야 하는 이유</p>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 앱 설명서 — 9:16 숏츠 15장, 카테고리별 그룹 ===== -->
+    <section id="app-manual" class="bg-ground py-24 md:py-32" aria-labelledby="manual-title">
+      <div class="mx-auto max-w-container px-6">
+        <div class="reveal mx-auto mb-14 max-w-2xl text-center">
+          <span class="inline-flex items-center rounded-full bg-brand/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.15em] text-brand-600">앱 설명서</span>
+          <h2 id="manual-title" class="mt-5 text-3xl font-black tracking-tight text-ink sm:text-4xl md:text-5xl">기능별 사용법, 영상으로 쉽게</h2>
+          <p class="mt-5 text-lg text-muted">필요한 주제부터 골라 보세요. 따라만 하면 누구나 손쉽게.</p>
+        </div>
+
+        <!-- 카테고리 ① 골프장 찾기 · 시작하기 -->
+        <div class="reveal mb-6 flex items-center gap-3">
+          <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand-600">
+            <iconify-icon icon="solar:map-point-bold-duotone" class="text-xl"></iconify-icon>
+          </span>
+          <h3 class="text-xl font-black tracking-tight text-ink sm:text-2xl">골프장 찾기 · 시작하기</h3>
+        </div>
+        <!-- 모바일: 가로 스크롤 / md 이상: 줄바꿈 그리드 -->
+        <div class="-mx-6 mb-14 flex gap-6 overflow-x-auto scroll-smooth px-6 pb-4 snap-x snap-mandatory md:mx-0 md:grid md:grid-cols-4 md:overflow-visible md:px-0 md:pb-0 md:snap-none lg:grid-cols-5">
+
+          <!-- 파크골프장 상세 정보 -->
+          <a href="https://www.youtube.com/shorts/5H7S7g5U7Vg" target="_blank" rel="noopener"
+             data-video-id="5H7S7g5U7Vg"
+             class="group block w-[44vw] max-w-[180px] shrink-0 snap-center md:w-auto md:max-w-none">
+            <div class="relative overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all duration-500 ease-spring group-hover:-translate-y-1.5 group-hover:shadow-[0_20px_50px_-18px_rgba(205,159,16,0.28)]">
+              <div class="aspect-[9/16] relative bg-brand-light">
+                <div class="absolute left-2.5 top-2.5 z-10">
+                  <p class="text-[8px] font-medium leading-tight text-brand/60">파크골프<br>스코어카드 앱</p>
+                  <p class="mt-0.5 text-xs font-black leading-none text-brand">PlayPark</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center px-3">
+                  <p class="break-keep text-center text-xl font-black leading-tight text-brand">파크골프장<br>상세 정보</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center bg-brand/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-brand shadow-lg">
+                    <iconify-icon icon="solar:play-bold" class="ml-0.5 text-base text-white"></iconify-icon>
+                  </div>
+                </div>
+                <div class="absolute right-2 top-2 z-10">
+                  <svg width="14" height="10" viewBox="0 0 20 14" fill="none" aria-hidden="true"><rect width="20" height="14" rx="3" fill="#FF0000"/><path d="M8 4.5L14 7L8 9.5V4.5Z" fill="white"/></svg>
+                </div>
+              </div>
+            </div>
+            <p class="mt-2 break-keep text-xs font-bold leading-snug text-ink">파크골프장 상세 정보</p>
+          </a>
+
+          <!-- 내 주변 파크골프장 찾기 -->
+          <a href="https://www.youtube.com/shorts/Ok_vXvn7eMk" target="_blank" rel="noopener"
+             data-video-id="Ok_vXvn7eMk"
+             class="group block w-[44vw] max-w-[180px] shrink-0 snap-center md:w-auto md:max-w-none">
+            <div class="relative overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all duration-500 ease-spring group-hover:-translate-y-1.5 group-hover:shadow-[0_20px_50px_-18px_rgba(205,159,16,0.28)]">
+              <div class="aspect-[9/16] relative bg-brand-light">
+                <div class="absolute left-2.5 top-2.5 z-10">
+                  <p class="text-[8px] font-medium leading-tight text-brand/60">파크골프<br>스코어카드 앱</p>
+                  <p class="mt-0.5 text-xs font-black leading-none text-brand">PlayPark</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center px-3">
+                  <p class="break-keep text-center text-xl font-black leading-tight text-brand">내 주변<br>파크골프장<br>찾기</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center bg-brand/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-brand shadow-lg">
+                    <iconify-icon icon="solar:play-bold" class="ml-0.5 text-base text-white"></iconify-icon>
+                  </div>
+                </div>
+                <div class="absolute right-2 top-2 z-10">
+                  <svg width="14" height="10" viewBox="0 0 20 14" fill="none" aria-hidden="true"><rect width="20" height="14" rx="3" fill="#FF0000"/><path d="M8 4.5L14 7L8 9.5V4.5Z" fill="white"/></svg>
+                </div>
+              </div>
+            </div>
+            <p class="mt-2 break-keep text-xs font-bold leading-snug text-ink">내 주변 파크골프장 찾기</p>
+          </a>
+
+          <!-- 내가 원하는 골프장 등록하기 -->
+          <a href="https://www.youtube.com/shorts/8WQSoH-4r5Y" target="_blank" rel="noopener"
+             data-video-id="8WQSoH-4r5Y"
+             class="group block w-[44vw] max-w-[180px] shrink-0 snap-center md:w-auto md:max-w-none">
+            <div class="relative overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all duration-500 ease-spring group-hover:-translate-y-1.5 group-hover:shadow-[0_20px_50px_-18px_rgba(205,159,16,0.28)]">
+              <div class="aspect-[9/16] relative bg-brand-light">
+                <div class="absolute left-2.5 top-2.5 z-10">
+                  <p class="text-[8px] font-medium leading-tight text-brand/60">파크골프<br>스코어카드 앱</p>
+                  <p class="mt-0.5 text-xs font-black leading-none text-brand">PlayPark</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center px-3">
+                  <p class="break-keep text-center text-xl font-black leading-tight text-brand">내가 원하는<br>골프장<br>등록하기</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center bg-brand/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-brand shadow-lg">
+                    <iconify-icon icon="solar:play-bold" class="ml-0.5 text-base text-white"></iconify-icon>
+                  </div>
+                </div>
+                <div class="absolute right-2 top-2 z-10">
+                  <svg width="14" height="10" viewBox="0 0 20 14" fill="none" aria-hidden="true"><rect width="20" height="14" rx="3" fill="#FF0000"/><path d="M8 4.5L14 7L8 9.5V4.5Z" fill="white"/></svg>
+                </div>
+              </div>
+            </div>
+            <p class="mt-2 break-keep text-xs font-bold leading-snug text-ink">내가 원하는 골프장 등록하기</p>
+          </a>
+
+          <!-- 파크골프장 게임 예약하기 -->
+          <a href="https://www.youtube.com/shorts/mQy6fW7hrYU" target="_blank" rel="noopener"
+             data-video-id="mQy6fW7hrYU"
+             class="group block w-[44vw] max-w-[180px] shrink-0 snap-center md:w-auto md:max-w-none">
+            <div class="relative overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all duration-500 ease-spring group-hover:-translate-y-1.5 group-hover:shadow-[0_20px_50px_-18px_rgba(205,159,16,0.28)]">
+              <div class="aspect-[9/16] relative bg-brand-light">
+                <div class="absolute left-2.5 top-2.5 z-10">
+                  <p class="text-[8px] font-medium leading-tight text-brand/60">파크골프<br>스코어카드 앱</p>
+                  <p class="mt-0.5 text-xs font-black leading-none text-brand">PlayPark</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center px-3">
+                  <p class="break-keep text-center text-xl font-black leading-tight text-brand">파크골프장<br>게임<br>예약하기</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center bg-brand/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-brand shadow-lg">
+                    <iconify-icon icon="solar:play-bold" class="ml-0.5 text-base text-white"></iconify-icon>
+                  </div>
+                </div>
+                <div class="absolute right-2 top-2 z-10">
+                  <svg width="14" height="10" viewBox="0 0 20 14" fill="none" aria-hidden="true"><rect width="20" height="14" rx="3" fill="#FF0000"/><path d="M8 4.5L14 7L8 9.5V4.5Z" fill="white"/></svg>
+                </div>
+              </div>
+            </div>
+            <p class="mt-2 break-keep text-xs font-bold leading-snug text-ink">파크골프장 게임 예약하기</p>
+          </a>
+
+        </div>
+
+        <!-- 카테고리 ② 스코어 기록 · 관리 -->
+        <div class="reveal mb-6 flex items-center gap-3">
+          <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand-600">
+            <iconify-icon icon="solar:clipboard-text-bold-duotone" class="text-xl"></iconify-icon>
+          </span>
+          <h3 class="text-xl font-black tracking-tight text-ink sm:text-2xl">스코어 기록 · 관리</h3>
+        </div>
+        <div class="-mx-6 mb-14 flex gap-6 overflow-x-auto scroll-smooth px-6 pb-4 snap-x snap-mandatory md:mx-0 md:grid md:grid-cols-4 md:overflow-visible md:px-0 md:pb-0 md:snap-none lg:grid-cols-5">
+
+          <!-- 파크골프 스코어보드 점수 쉽게 기록하기 -->
+          <a href="https://www.youtube.com/shorts/1N3A1cEVJ1E" target="_blank" rel="noopener"
+             data-video-id="1N3A1cEVJ1E"
+             class="group block w-[44vw] max-w-[180px] shrink-0 snap-center md:w-auto md:max-w-none">
+            <div class="relative overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all duration-500 ease-spring group-hover:-translate-y-1.5 group-hover:shadow-[0_20px_50px_-18px_rgba(205,159,16,0.28)]">
+              <div class="aspect-[9/16] relative bg-brand-light">
+                <div class="absolute left-2.5 top-2.5 z-10">
+                  <p class="text-[8px] font-medium leading-tight text-brand/60">파크골프<br>스코어카드 앱</p>
+                  <p class="mt-0.5 text-xs font-black leading-none text-brand">PlayPark</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center px-3">
+                  <p class="break-keep text-center text-xl font-black leading-tight text-brand">게임 시작과<br>스코어 기록하기</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center bg-brand/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-brand shadow-lg">
+                    <iconify-icon icon="solar:play-bold" class="ml-0.5 text-base text-white"></iconify-icon>
+                  </div>
+                </div>
+                <div class="absolute right-2 top-2 z-10">
+                  <svg width="14" height="10" viewBox="0 0 20 14" fill="none" aria-hidden="true"><rect width="20" height="14" rx="3" fill="#FF0000"/><path d="M8 4.5L14 7L8 9.5V4.5Z" fill="white"/></svg>
+                </div>
+              </div>
+            </div>
+            <p class="mt-2 break-keep text-xs font-bold leading-snug text-ink">파크골프 스코어보드 점수 쉽게 기록하기</p>
+          </a>
+
+          <!-- 파크골프 내 기록 관리하기 -->
+          <a href="https://www.youtube.com/shorts/XvWZIdhhAf4" target="_blank" rel="noopener"
+             data-video-id="XvWZIdhhAf4"
+             class="group block w-[44vw] max-w-[180px] shrink-0 snap-center md:w-auto md:max-w-none">
+            <div class="relative overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all duration-500 ease-spring group-hover:-translate-y-1.5 group-hover:shadow-[0_20px_50px_-18px_rgba(205,159,16,0.28)]">
+              <div class="aspect-[9/16] relative bg-brand-light">
+                <div class="absolute left-2.5 top-2.5 z-10">
+                  <p class="text-[8px] font-medium leading-tight text-brand/60">파크골프<br>스코어카드 앱</p>
+                  <p class="mt-0.5 text-xs font-black leading-none text-brand">PlayPark</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center px-3">
+                  <p class="break-keep text-center text-xl font-black leading-tight text-brand">파크골프 어플<br>내 기록 관리하기</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center bg-brand/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-brand shadow-lg">
+                    <iconify-icon icon="solar:play-bold" class="ml-0.5 text-base text-white"></iconify-icon>
+                  </div>
+                </div>
+                <div class="absolute right-2 top-2 z-10">
+                  <svg width="14" height="10" viewBox="0 0 20 14" fill="none" aria-hidden="true"><rect width="20" height="14" rx="3" fill="#FF0000"/><path d="M8 4.5L14 7L8 9.5V4.5Z" fill="white"/></svg>
+                </div>
+              </div>
+            </div>
+            <p class="mt-2 break-keep text-xs font-bold leading-snug text-ink">파크골프 내 기록 관리하기</p>
+          </a>
+
+        </div>
+
+        <!-- 카테고리 ③ 커뮤니티 · 친구 -->
+        <div class="reveal mb-6 flex items-center gap-3">
+          <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand-600">
+            <iconify-icon icon="solar:chat-round-dots-bold-duotone" class="text-xl"></iconify-icon>
+          </span>
+          <h3 class="text-xl font-black tracking-tight text-ink sm:text-2xl">커뮤니티 · 친구</h3>
+        </div>
+        <div class="-mx-6 mb-14 flex gap-6 overflow-x-auto scroll-smooth px-6 pb-4 snap-x snap-mandatory md:mx-0 md:grid md:grid-cols-4 md:overflow-visible md:px-0 md:pb-0 md:snap-none lg:grid-cols-5">
+
+          <!-- 플레이파크 친구 초대하기 -->
+          <a href="https://www.youtube.com/shorts/GZiQ0xL6A7U" target="_blank" rel="noopener"
+             data-video-id="GZiQ0xL6A7U"
+             class="group block w-[44vw] max-w-[180px] shrink-0 snap-center md:w-auto md:max-w-none">
+            <div class="relative overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all duration-500 ease-spring group-hover:-translate-y-1.5 group-hover:shadow-[0_20px_50px_-18px_rgba(205,159,16,0.28)]">
+              <div class="aspect-[9/16] relative bg-brand-light">
+                <div class="absolute left-2.5 top-2.5 z-10">
+                  <p class="text-[8px] font-medium leading-tight text-brand/60">파크골프<br>스코어카드 앱</p>
+                  <p class="mt-0.5 text-xs font-black leading-none text-brand">PlayPark</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center px-3">
+                  <p class="break-keep text-center text-xl font-black leading-tight text-brand">플레이파크<br>친구<br>초대하기</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center bg-brand/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-brand shadow-lg">
+                    <iconify-icon icon="solar:play-bold" class="ml-0.5 text-base text-white"></iconify-icon>
+                  </div>
+                </div>
+                <div class="absolute right-2 top-2 z-10">
+                  <svg width="14" height="10" viewBox="0 0 20 14" fill="none" aria-hidden="true"><rect width="20" height="14" rx="3" fill="#FF0000"/><path d="M8 4.5L14 7L8 9.5V4.5Z" fill="white"/></svg>
+                </div>
+              </div>
+            </div>
+            <p class="mt-2 break-keep text-xs font-bold leading-snug text-ink">플레이파크 친구 초대하기</p>
+          </a>
+
+          <!-- 파크골프 게시판 활용하기 -->
+          <a href="https://www.youtube.com/shorts/mEuqRg3ZsgA" target="_blank" rel="noopener"
+             data-video-id="mEuqRg3ZsgA"
+             class="group block w-[44vw] max-w-[180px] shrink-0 snap-center md:w-auto md:max-w-none">
+            <div class="relative overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all duration-500 ease-spring group-hover:-translate-y-1.5 group-hover:shadow-[0_20px_50px_-18px_rgba(205,159,16,0.28)]">
+              <div class="aspect-[9/16] relative bg-brand-light">
+                <div class="absolute left-2.5 top-2.5 z-10">
+                  <p class="text-[8px] font-medium leading-tight text-brand/60">파크골프<br>스코어카드 앱</p>
+                  <p class="mt-0.5 text-xs font-black leading-none text-brand">PlayPark</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center px-3">
+                  <p class="break-keep text-center text-xl font-black leading-tight text-brand">플레이파크<br>게시판 활용하기</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center bg-brand/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-brand shadow-lg">
+                    <iconify-icon icon="solar:play-bold" class="ml-0.5 text-base text-white"></iconify-icon>
+                  </div>
+                </div>
+                <div class="absolute right-2 top-2 z-10">
+                  <svg width="14" height="10" viewBox="0 0 20 14" fill="none" aria-hidden="true"><rect width="20" height="14" rx="3" fill="#FF0000"/><path d="M8 4.5L14 7L8 9.5V4.5Z" fill="white"/></svg>
+                </div>
+              </div>
+            </div>
+            <p class="mt-2 break-keep text-xs font-bold leading-snug text-ink">파크골프 게시판 활용하기</p>
+          </a>
+
+        </div>
+
+        <!-- 카테고리 ④ 동호회 · 모임 운영 -->
+        <div class="reveal mb-6 flex items-center gap-3">
+          <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand-600">
+            <iconify-icon icon="solar:flag-2-bold-duotone" class="text-xl"></iconify-icon>
+          </span>
+          <h3 class="text-xl font-black tracking-tight text-ink sm:text-2xl">동호회 · 모임 운영</h3>
+        </div>
+        <div class="-mx-6 flex gap-6 overflow-x-auto scroll-smooth px-6 pb-4 snap-x snap-mandatory md:mx-0 md:grid md:grid-cols-4 md:overflow-visible md:px-0 md:pb-0 md:snap-none lg:grid-cols-5">
+
+          <!-- 파크골프 동호회 만들기 -->
+          <a href="https://www.youtube.com/shorts/7rGSueQ8yWc" target="_blank" rel="noopener"
+             data-video-id="7rGSueQ8yWc"
+             class="group block w-[44vw] max-w-[180px] shrink-0 snap-center md:w-auto md:max-w-none">
+            <div class="relative overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all duration-500 ease-spring group-hover:-translate-y-1.5 group-hover:shadow-[0_20px_50px_-18px_rgba(205,159,16,0.28)]">
+              <div class="aspect-[9/16] relative bg-brand-light">
+                <div class="absolute left-2.5 top-2.5 z-10">
+                  <p class="text-[8px] font-medium leading-tight text-brand/60">파크골프<br>스코어카드 앱</p>
+                  <p class="mt-0.5 text-xs font-black leading-none text-brand">PlayPark</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center px-3">
+                  <p class="break-keep text-center text-xl font-black leading-tight text-brand">파크골프<br>동호회 만들기</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center bg-brand/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-brand shadow-lg">
+                    <iconify-icon icon="solar:play-bold" class="ml-0.5 text-base text-white"></iconify-icon>
+                  </div>
+                </div>
+                <div class="absolute right-2 top-2 z-10">
+                  <svg width="14" height="10" viewBox="0 0 20 14" fill="none" aria-hidden="true"><rect width="20" height="14" rx="3" fill="#FF0000"/><path d="M8 4.5L14 7L8 9.5V4.5Z" fill="white"/></svg>
+                </div>
+              </div>
+            </div>
+            <p class="mt-2 break-keep text-xs font-bold leading-snug text-ink">파크골프 동호회 만들기</p>
+          </a>
+
+          <!-- 파크골프 동호회 가입하기 -->
+          <a href="https://www.youtube.com/shorts/_Yd-qCY7wMI" target="_blank" rel="noopener"
+             data-video-id="_Yd-qCY7wMI"
+             class="group block w-[44vw] max-w-[180px] shrink-0 snap-center md:w-auto md:max-w-none">
+            <div class="relative overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all duration-500 ease-spring group-hover:-translate-y-1.5 group-hover:shadow-[0_20px_50px_-18px_rgba(205,159,16,0.28)]">
+              <div class="aspect-[9/16] relative bg-brand-light">
+                <div class="absolute left-2.5 top-2.5 z-10">
+                  <p class="text-[8px] font-medium leading-tight text-brand/60">파크골프<br>스코어카드 앱</p>
+                  <p class="mt-0.5 text-xs font-black leading-none text-brand">PlayPark</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center px-3">
+                  <p class="break-keep text-center text-xl font-black leading-tight text-brand">파크골프 어플로<br>동호회 가입하기</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center bg-brand/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-brand shadow-lg">
+                    <iconify-icon icon="solar:play-bold" class="ml-0.5 text-base text-white"></iconify-icon>
+                  </div>
+                </div>
+                <div class="absolute right-2 top-2 z-10">
+                  <svg width="14" height="10" viewBox="0 0 20 14" fill="none" aria-hidden="true"><rect width="20" height="14" rx="3" fill="#FF0000"/><path d="M8 4.5L14 7L8 9.5V4.5Z" fill="white"/></svg>
+                </div>
+              </div>
+            </div>
+            <p class="mt-2 break-keep text-xs font-bold leading-snug text-ink">파크골프 동호회 가입하기</p>
+          </a>
+
+          <!-- 동호회 일반모임 만들기 -->
+          <a href="https://www.youtube.com/shorts/4MJXgqlTurE" target="_blank" rel="noopener"
+             data-video-id="4MJXgqlTurE"
+             class="group block w-[44vw] max-w-[180px] shrink-0 snap-center md:w-auto md:max-w-none">
+            <div class="relative overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all duration-500 ease-spring group-hover:-translate-y-1.5 group-hover:shadow-[0_20px_50px_-18px_rgba(205,159,16,0.28)]">
+              <div class="aspect-[9/16] relative bg-brand-light">
+                <div class="absolute left-2.5 top-2.5 z-10">
+                  <p class="text-[8px] font-medium leading-tight text-brand/60">파크골프<br>스코어카드 앱</p>
+                  <p class="mt-0.5 text-xs font-black leading-none text-brand">PlayPark</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center px-3">
+                  <p class="break-keep text-center text-xl font-black leading-tight text-brand">플레이파크로<br>일반모임 만들기</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center bg-brand/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-brand shadow-lg">
+                    <iconify-icon icon="solar:play-bold" class="ml-0.5 text-base text-white"></iconify-icon>
+                  </div>
+                </div>
+                <div class="absolute right-2 top-2 z-10">
+                  <svg width="14" height="10" viewBox="0 0 20 14" fill="none" aria-hidden="true"><rect width="20" height="14" rx="3" fill="#FF0000"/><path d="M8 4.5L14 7L8 9.5V4.5Z" fill="white"/></svg>
+                </div>
+              </div>
+            </div>
+            <p class="mt-2 break-keep text-xs font-bold leading-snug text-ink">동호회 일반모임 만들기</p>
+          </a>
+
+          <!-- 파크골프 게임만들기와 참가하기 -->
+          <a href="https://www.youtube.com/shorts/u-S0GVYyFGI" target="_blank" rel="noopener"
+             data-video-id="u-S0GVYyFGI"
+             class="group block w-[44vw] max-w-[180px] shrink-0 snap-center md:w-auto md:max-w-none">
+            <div class="relative overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all duration-500 ease-spring group-hover:-translate-y-1.5 group-hover:shadow-[0_20px_50px_-18px_rgba(205,159,16,0.28)]">
+              <div class="aspect-[9/16] relative bg-brand-light">
+                <div class="absolute left-2.5 top-2.5 z-10">
+                  <p class="text-[8px] font-medium leading-tight text-brand/60">파크골프<br>스코어카드 앱</p>
+                  <p class="mt-0.5 text-xs font-black leading-none text-brand">PlayPark</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center px-3">
+                  <p class="break-keep text-center text-xl font-black leading-tight text-brand">게임 모임 만들기<br>게임 참가하기</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center bg-brand/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-brand shadow-lg">
+                    <iconify-icon icon="solar:play-bold" class="ml-0.5 text-base text-white"></iconify-icon>
+                  </div>
+                </div>
+                <div class="absolute right-2 top-2 z-10">
+                  <svg width="14" height="10" viewBox="0 0 20 14" fill="none" aria-hidden="true"><rect width="20" height="14" rx="3" fill="#FF0000"/><path d="M8 4.5L14 7L8 9.5V4.5Z" fill="white"/></svg>
+                </div>
+              </div>
+            </div>
+            <p class="mt-2 break-keep text-xs font-bold leading-snug text-ink">파크골프 게임만들기와 참가하기</p>
+          </a>
+
+          <!-- 파크골프 조편성하기 -->
+          <a href="https://www.youtube.com/shorts/-KtIoTjGwIU" target="_blank" rel="noopener"
+             data-video-id="-KtIoTjGwIU"
+             class="group block w-[44vw] max-w-[180px] shrink-0 snap-center md:w-auto md:max-w-none">
+            <div class="relative overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all duration-500 ease-spring group-hover:-translate-y-1.5 group-hover:shadow-[0_20px_50px_-18px_rgba(205,159,16,0.28)]">
+              <div class="aspect-[9/16] relative bg-brand-light">
+                <div class="absolute left-2.5 top-2.5 z-10">
+                  <p class="text-[8px] font-medium leading-tight text-brand/60">파크골프<br>스코어카드 앱</p>
+                  <p class="mt-0.5 text-xs font-black leading-none text-brand">PlayPark</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center px-3">
+                  <p class="break-keep text-center text-xl font-black leading-tight text-brand">파크골프 모임<br>조편성하기</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center bg-brand/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-brand shadow-lg">
+                    <iconify-icon icon="solar:play-bold" class="ml-0.5 text-base text-white"></iconify-icon>
+                  </div>
+                </div>
+                <div class="absolute right-2 top-2 z-10">
+                  <svg width="14" height="10" viewBox="0 0 20 14" fill="none" aria-hidden="true"><rect width="20" height="14" rx="3" fill="#FF0000"/><path d="M8 4.5L14 7L8 9.5V4.5Z" fill="white"/></svg>
+                </div>
+              </div>
+            </div>
+            <p class="mt-2 break-keep text-xs font-bold leading-snug text-ink">파크골프 조편성하기</p>
+          </a>
+
+          <!-- 파크골프 동호회 게임모임에서 게임하기 -->
+          <a href="https://www.youtube.com/shorts/uOeqirCZTa0" target="_blank" rel="noopener"
+             data-video-id="uOeqirCZTa0"
+             class="group block w-[44vw] max-w-[180px] shrink-0 snap-center md:w-auto md:max-w-none">
+            <div class="relative overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all duration-500 ease-spring group-hover:-translate-y-1.5 group-hover:shadow-[0_20px_50px_-18px_rgba(205,159,16,0.28)]">
+              <div class="aspect-[9/16] relative bg-brand-light">
+                <div class="absolute left-2.5 top-2.5 z-10">
+                  <p class="text-[8px] font-medium leading-tight text-brand/60">파크골프<br>스코어카드 앱</p>
+                  <p class="mt-0.5 text-xs font-black leading-none text-brand">PlayPark</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center px-3">
+                  <p class="break-keep text-center text-xl font-black leading-tight text-brand">동호회 게임모임<br>게임하기</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center bg-brand/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-brand shadow-lg">
+                    <iconify-icon icon="solar:play-bold" class="ml-0.5 text-base text-white"></iconify-icon>
+                  </div>
+                </div>
+                <div class="absolute right-2 top-2 z-10">
+                  <svg width="14" height="10" viewBox="0 0 20 14" fill="none" aria-hidden="true"><rect width="20" height="14" rx="3" fill="#FF0000"/><path d="M8 4.5L14 7L8 9.5V4.5Z" fill="white"/></svg>
+                </div>
+              </div>
+            </div>
+            <p class="mt-2 break-keep text-xs font-bold leading-snug text-ink">파크골프 동호회 게임모임에서 게임하기</p>
+          </a>
+
+          <!-- 파크골프 동호회 관리하기 -->
+          <a href="https://www.youtube.com/shorts/diWGC8-i8WI" target="_blank" rel="noopener"
+             data-video-id="diWGC8-i8WI"
+             class="group block w-[44vw] max-w-[180px] shrink-0 snap-center md:w-auto md:max-w-none">
+            <div class="relative overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all duration-500 ease-spring group-hover:-translate-y-1.5 group-hover:shadow-[0_20px_50px_-18px_rgba(205,159,16,0.28)]">
+              <div class="aspect-[9/16] relative bg-brand-light">
+                <div class="absolute left-2.5 top-2.5 z-10">
+                  <p class="text-[8px] font-medium leading-tight text-brand/60">파크골프<br>스코어카드 앱</p>
+                  <p class="mt-0.5 text-xs font-black leading-none text-brand">PlayPark</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center px-3">
+                  <p class="break-keep text-center text-xl font-black leading-tight text-brand">파크골프<br>동호회 관리하기</p>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center bg-brand/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-brand shadow-lg">
+                    <iconify-icon icon="solar:play-bold" class="ml-0.5 text-base text-white"></iconify-icon>
+                  </div>
+                </div>
+                <div class="absolute right-2 top-2 z-10">
+                  <svg width="14" height="10" viewBox="0 0 20 14" fill="none" aria-hidden="true"><rect width="20" height="14" rx="3" fill="#FF0000"/><path d="M8 4.5L14 7L8 9.5V4.5Z" fill="white"/></svg>
+                </div>
+              </div>
+            </div>
+            <p class="mt-2 break-keep text-xs font-bold leading-snug text-ink">파크골프 동호회 관리하기</p>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 다운로드 CTA ===== -->
+    <section id="download" class="relative overflow-hidden bg-night py-24 text-white md:py-32" aria-labelledby="cta-title">
+      <div aria-hidden="true" class="pointer-events-none absolute inset-0">
+        <div class="orb absolute left-1/4 top-0 h-80 w-80 rounded-full bg-brand/25 blur-[100px]"></div>
+        <div class="orb absolute bottom-0 right-1/4 h-72 w-72 rounded-full bg-amber-500/15 blur-[100px]" style="animation-delay:-6s"></div>
+      </div>
+      <div class="reveal relative mx-auto max-w-container px-6 text-center">
+        <h2 id="cta-title" class="text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">지금 바로 시작하세요!</h2>
+        <p class="mt-4 text-lg text-white/55">파크골프가 더 즐거워집니다.</p>
+        <div class="mt-12 flex flex-wrap items-start justify-center gap-8">
+          <a href="https://apps.apple.com/kr/app/id6736860479" target="_blank" rel="noopener" class="group flex flex-col items-center gap-4">
+            <span class="rounded-[1.5rem] bg-white/5 p-1.5 ring-1 ring-white/10 transition-all duration-500 ease-spring group-hover:-translate-y-1.5 group-hover:ring-white/25">
+              <img src="../assets/images/qr-appstore.png" alt="" decoding="async" class="h-32 w-32 rounded-[1.125rem] bg-white object-contain p-2" />
+            </span>
+            <span class="inline-flex items-center gap-1.5 font-bold">
+              App Store 다운로드
+              <span class="grid h-6 w-6 place-items-center rounded-full bg-white/10 transition-transform duration-500 ease-spring group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                <iconify-icon icon="solar:arrow-right-up-linear" class="text-sm"></iconify-icon>
+              </span>
+              <span class="sr-only">(새 창에서 열림)</span>
+            </span>
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.sevendays.playpark" target="_blank" rel="noopener" class="group flex flex-col items-center gap-4">
+            <span class="rounded-[1.5rem] bg-white/5 p-1.5 ring-1 ring-white/10 transition-all duration-500 ease-spring group-hover:-translate-y-1.5 group-hover:ring-white/25">
+              <img src="../assets/images/qr-googleplay.png" alt="" decoding="async" class="h-32 w-32 rounded-[1.125rem] bg-white object-contain p-2" />
+            </span>
+            <span class="inline-flex items-center gap-1.5 font-bold">
+              Google Play 다운로드
+              <span class="grid h-6 w-6 place-items-center rounded-full bg-white/10 transition-transform duration-500 ease-spring group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                <iconify-icon icon="solar:arrow-right-up-linear" class="text-sm"></iconify-icon>
+              </span>
+              <span class="sr-only">(새 창에서 열림)</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== 영상 라이트박스 ===== -->
+  <div id="videoModal" role="dialog" aria-modal="true" aria-label="영상 재생"
+       class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/80 backdrop-blur-sm"
+       tabindex="-1">
+    <div class="relative mx-4 w-full max-w-3xl">
+      <button id="modalClose"
+              class="absolute -top-12 right-0 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
+              aria-label="닫기">
+        <iconify-icon icon="solar:close-circle-linear" class="text-2xl"></iconify-icon>
+      </button>
+      <div class="aspect-video overflow-hidden rounded-2xl bg-black shadow-2xl">
+        <iframe id="videoFrame" src="" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                class="h-full w-full"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-night text-white/70" role="contentinfo">
+    <div class="mx-auto max-w-container px-6 py-16">
+      <div class="grid gap-10 border-b border-white/10 pb-10 md:grid-cols-[1fr_2fr]">
+        <div><img src="../assets/images/logo-white.png" alt="PlayPark" width="586" height="174" class="h-8 w-auto" /><p class="mt-2 text-sm text-white/50">파크골프를 200% 즐기는 방법</p></div>
+        <dl class="grid grid-cols-1 gap-x-8 gap-y-3 text-sm sm:grid-cols-2">
+          <div class="flex gap-3"><dt class="w-24 shrink-0 text-white/40">상호</dt><dd>(주)7데이즈</dd></div>
+          <div class="flex gap-3"><dt class="w-24 shrink-0 text-white/40">대표자</dt><dd>이인규</dd></div>
+          <div class="flex gap-3"><dt class="w-24 shrink-0 text-white/40">사업자등록번호</dt><dd>439-81-01598</dd></div>
+          <div class="flex gap-3"><dt class="w-24 shrink-0 text-white/40">주소</dt><dd>서울시 동대문구 장한로 110 힐스테이트 장안센트럴 238호</dd></div>
+          <div class="flex gap-3"><dt class="w-24 shrink-0 text-white/40">연락처</dt><dd><a href="tel:0269492277" class="hover:text-white">02-6949-2277</a></dd></div>
+          <div class="flex gap-3"><dt class="w-24 shrink-0 text-white/40">이메일</dt><dd><a href="mailto:info@playpark.app" class="hover:text-white">info@playpark.app</a></dd></div>
+        </dl>
+      </div>
+      <div class="flex flex-col items-center justify-between gap-4 pt-8 text-sm text-white/50 sm:flex-row">
+        <p>© <span data-year></span> (주)7데이즈. All rights reserved.</p>
+        <nav class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 sm:justify-end" aria-label="푸터 링크"><a href="privacy.html" class="hover:text-white">개인정보처리방침</a><a href="partnership.html" class="hover:text-white">제휴문의</a><a href="https://ppscreen.playpark.app/" target="_blank" rel="noopener" class="footer-link-external">관리자센터<iconify-icon icon="solar:arrow-right-up-linear" class="text-sm"></iconify-icon><span class="sr-only">(새 창에서 열림)</span></a><a href="https://league.playpark.app" target="_blank" rel="noopener" class="footer-link-external">대회관리시스템<iconify-icon icon="solar:arrow-right-up-linear" class="text-sm"></iconify-icon><span class="sr-only">(새 창에서 열림)</span></a><a href="https://ppscreen.playpark.app/reserve" target="_blank" rel="noopener" class="footer-link-external">무인 매장 예약<iconify-icon icon="solar:arrow-right-up-linear" class="text-sm"></iconify-icon><span class="sr-only">(새 창에서 열림)</span></a></nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      "use strict";
+
+      // 네비게이션 스크롤 효과
+      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var nav = document.getElementById("nav");
+      if (nav) window.addEventListener("scroll", function () {
+        var s = window.scrollY > 12;
+        nav.classList.toggle("shadow-[0_8px_30px_rgba(0,0,0,0.06)]", !s);
+        nav.classList.toggle("shadow-[0_12px_40px_rgba(0,0,0,0.12)]", s);
+        nav.classList.toggle("bg-white/70", !s);
+        nav.classList.toggle("bg-white/90", s);
+      }, { passive: true });
+
+      // 모바일 메뉴
+      var toggle = document.getElementById("navToggle"), menu = document.getElementById("mobileMenu"), closeNav = document.getElementById("navClose");
+      function openMenu(open) { if (!menu) return; menu.classList.toggle("hidden", !open); menu.classList.toggle("flex", open); if (toggle) toggle.setAttribute("aria-expanded", String(open)); document.body.style.overflow = open ? "hidden" : ""; }
+      if (toggle) toggle.addEventListener("click", function () { openMenu(true); });
+      if (closeNav) closeNav.addEventListener("click", function () { openMenu(false); });
+      if (menu) menu.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { openMenu(false); }); });
+
+      // 스크롤 등장 애니메이션
+      var reveals = document.querySelectorAll(".reveal");
+      if (reveals.length) {
+        if (reduce || !("IntersectionObserver" in window)) {
+          reveals.forEach(function (el) { el.classList.add("in"); });
+        } else {
+          var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+          }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+          reveals.forEach(function (el) { io.observe(el); });
+        }
+      }
+
+      // 저작권 연도
+      var yearEl = document.querySelector("[data-year]");
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      // 영상 라이트박스
+      var modal = document.getElementById("videoModal");
+      var frame = document.getElementById("videoFrame");
+      var modalClose = document.getElementById("modalClose");
+
+      function openVideo(videoId) {
+        if (!modal || !frame) return;
+        frame.src = "https://www.youtube-nocookie.com/embed/" + videoId + "?autoplay=1&rel=0";
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        document.body.style.overflow = "hidden";
+        modal.focus();
+      }
+
+      function closeVideo() {
+        if (!modal) return;
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+        if (frame) frame.src = "";
+        document.body.style.overflow = "";
+      }
+
+      if (modalClose) modalClose.addEventListener("click", closeVideo);
+      if (modal) modal.addEventListener("click", function (e) { if (e.target === this) closeVideo(); });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && modal && !modal.classList.contains("hidden")) closeVideo();
+      });
+
+      // data-video-id가 있는 링크는 라이트박스로 열기
+      document.querySelectorAll("[data-video-id]").forEach(function (el) {
+        el.addEventListener("click", function (e) {
+          var videoId = this.getAttribute("data-video-id");
+          if (videoId) {
+            e.preventDefault();
+            openVideo(videoId);
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

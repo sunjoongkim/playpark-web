@@ -1,0 +1,16 @@
+{
+  "name": "website-template",
+  "version": "1.0.0",
+  "description": "Tailwind CSS HTML 웹사이트 템플릿",
+  "scripts": {
+    "build": "postcss src/css/main.css -o dist/output.css --env production",
+    "watch": "postcss src/css/main.css -o dist/output.css --watch",
+    "dev": "npm run watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "postcss": "^8.4.0",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.0.0"
+  }
+}
