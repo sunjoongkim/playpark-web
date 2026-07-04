@@ -5,9 +5,11 @@
   "scripts": {
     "build": "postcss src/css/main.css -o dist/output.css --env production",
     "watch": "postcss src/css/main.css -o dist/output.css --watch",
-    "dev": "npm run watch"
+    "dev": "concurrently -k \"npm:watch\" \"serve -l 3000 .\""
   },
   "devDependencies": {
+    "concurrently": "^9.0.0",
+    "serve": "^14.2.0",
     "tailwindcss": "^3.4.0",
     "postcss": "^8.4.0",
     "postcss-cli": "^11.0.0",

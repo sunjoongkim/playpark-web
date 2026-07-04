@@ -60,7 +60,7 @@
 6. **대회 운영 시스템(B2B)** — 100명 이상 대회, 심판 태블릿 채점·실시간 집계(제휴 문의).
 
 ### 소셜 프루프 방향 (실제 수치 — 과장 금지)
-- **핵심 지표**: 활동중인 회원 3천+ · 등록 파크골프장 100+ · 앱스토어 평점 4.9
+- **핵심 지표**: 활동중인 회원 4천+ · 등록 파크골프장 500+ · 앱스토어 평점 4.9
 - **시장 데이터**: 국내 파크골프 인구 약 60만 명, 전국 약 500여 개 골프장.
 - **후기**: App Store·Google Play 실제 사용자 리뷰를 마퀴로 노출(실명 미사용, "앱스토어/구글플레이 실제 사용자 리뷰"로 표기).
 - **타깃 카드**: 개인 플레이어 / 동호회 모임장 / 골프장·대회 주최(개인·동호회는 무료, 대회는 제휴).
@@ -73,12 +73,13 @@
 
 ## 기술 요구사항
 
-- **폼 / 문의**: 제휴문의는 `pages/partnership.html`에서 접수(연락처·이메일 노출). 자체 폼/외부 연동 여부는 partnership 페이지 구현 기준을 따른다.
+- **폼 / 문의**: 제휴문의는 `pages/partnership.html`에서 접수(연락처·이메일 노출). 전송은 **EmailJS REST API**(기존 playpark_webapp과 동일한 서비스 `service_k454clt`·템플릿 `template_ppqsbsd`)로 처리하며, 구현은 `src/js/components/partnership.js`에 있다. 템플릿 파라미터는 `name·phone·organization·email·message`(문의 유형은 message 앞에 `[문의 유형]`으로 병합, organization은 빈 값).
 - **앱 다운로드 동선**: 홈 `#download` 섹션의 App Store·Google Play 링크(QR + 텍스트 링크), 외부 링크는 `target="_blank" rel="noopener"`.
 - **분석 도구**: 현재 미설정(추가 시 본 문서에 반영).
 - **다국어 지원**: 한국어 단일(`<html lang="ko">`).
 - **접근성 요구**: 시니어 사용자 배려 — WCAG AA 명도 대비, 큰 글씨·버튼, skip link·키보드 포커스·`prefers-reduced-motion` 유지(coding.md §4 준수).
 - **SEO/도메인**: 정규 도메인 `https://playpark.app/`. 페이지별 고유 title·description·OG·canonical·JSON-LD 유지(coding.md §5~6).
+- **호스팅/배포**: Firebase Hosting(프로젝트 `playpark-fd02d`, 2026-07-04 리뉴얼 배포). 루트를 그대로 서빙하되 소스·문서류는 `firebase.json`의 ignore로 제외. 구버전 URL(`/partnership`·`/privacy`·`/terms`·`/poster`·`/video`)은 301 리다이렉트 유지. 배포는 `npm run build` 후 `firebase deploy --only hosting`(프리뷰는 `firebase hosting:channel:deploy <채널명>`).
 
 ---
 

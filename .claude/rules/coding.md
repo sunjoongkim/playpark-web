@@ -32,7 +32,8 @@
 
 - **CSS**: Tailwind CSS v3, PostCSS 빌드 (`src/css/main.css` → `dist/output.css`)
 - **마크업**: 순수 HTML5 (프레임워크 없음, 정적 사이트)
-- **JS**: 바닐라 JavaScript (`src/js/main.js`)
+- **JS**: 바닐라 JavaScript (`src/js/common.js` 공통 + `src/js/components/` 화면별)
+- **페이지 전환**: Turbo Drive (jsdelivr CDN, head defer) — 링크 클릭 시 body만 교체해 헤더 재렌더링 없이 전환
 - **폰트**: Pretendard (한국어 표준), 필요 시 디스플레이 영문 폰트
 - **아이콘**: Iconify Solar (`<iconify-icon icon="solar:...">`)
 - **빌드**: `npm run build` / `npm run watch` / `npm run dev`
@@ -88,7 +89,10 @@
   `<div>` 남발 금지. 페이지 본문은 `<main id="main">` 하나로 감싼다.
 - 제목 위계는 **h1 → h2 → h3 순서를 건너뛰지 않는다**. 페이지당 `<h1>`은 하나.
 - 페이지 추가 시 `pages/_template.html`을 복사해 `pages/새페이지명.html`로 저장한다. 폴더를 만들지 않는다.
-- CSS 참조 경로: 루트는 `dist/output.css`, `pages/` 하위는 `../dist/output.css`.
+- CSS·JS·파비콘·헤더 내부 링크는 루트 절대 경로를 쓴다(`/dist/output.css`, `/src/js/...`, `/pages/guide.html`, `/#download`).
+  Turbo 영속 헤더가 페이지를 넘나들며 그대로 유지되므로 그 안의 상대 경로는 깨진다.
+- 헤더(`#siteHeader`)·모바일 메뉴(`#mobileMenu`)는 `data-turbo-permanent` 영속 요소다.
+  전 페이지에서 마크업을 동일하게 유지한다(활성 메뉴 표시는 common.js의 `updateActiveNav`가 갱신).
 - 링크·앵커는 명확한 텍스트를 쓴다("여기 클릭" 금지).
 
 ---
@@ -151,7 +155,14 @@ LLM·AI 검색(ChatGPT, Perplexity, Google AI Overviews 등)에 잘 인용되도
 
 ## 8. JavaScript
 
-- `src/js/main.js`에 둔다. 인라인 `onclick` 등 HTML 핸들러 속성 금지(이벤트 위임/리스너 사용).
+- 전 페이지 공통 동작은 `src/js/common.js`, 화면별 동작은 `src/js/components/화면명.js`에 둔다.
+  HTML 안 인라인 `<script>` 블록 금지 — 각 페이지는 head에서 `common.js`(+ 필요 시 자기 화면 파일)를
+  절대 경로 + `defer`로 참조한다(`<script src="/src/js/common.js" defer>`).
+- **Turbo Drive 생명주기**: 스크립트는 반드시 head+defer로 로드한다(body 스크립트는 Turbo가 방문마다 재실행해 중복 바인딩됨).
+  본문 요소 초기화는 실행 시점 1회 + `turbo:load`마다 실행하고, `data-js-bound` 마커로 같은 요소 중복 바인딩을 막는다
+  (마커는 common.js의 `turbo:before-cache`에서 일괄 정리). 영속 요소(헤더·모바일 메뉴)는 최초 1회만 바인딩한다.
+  가능하면 문서 레벨 이벤트 위임을 써서 재바인딩 자체를 없앤다(guide.js 참고).
+- 인라인 `onclick` 등 HTML 핸들러 속성 금지(이벤트 위임/리스너 사용).
 - DOM 토글로 상태를 바꿀 때 `aria-expanded` 등 ARIA 속성도 함께 갱신한다.
 - IntersectionObserver 기반 `.reveal` 등장 패턴 등 기존 컨벤션을 재사용한다.
 - 외부 의존성 없이 바닐라로 해결 가능하면 라이브러리를 추가하지 않는다.

@@ -1,0 +1,30 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "**/*.md",
+      "package.json",
+      "package-lock.json",
+      "tailwind.config.js",
+      "postcss.config.js",
+      "src/css/**",
+      "pages/_template.html"
+    ],
+    "redirects": [
+      { "source": "/partnership", "destination": "/pages/partnership.html", "type": 301 },
+      { "source": "/privacy", "destination": "/pages/privacy.html", "type": 301 },
+      { "source": "/terms", "destination": "/pages/terms.html", "type": 301 },
+      { "source": "/poster", "destination": "/", "type": 301 },
+      { "source": "/video", "destination": "/pages/guide.html", "type": 301 }
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(png|jpg|jpeg|webp|avif|svg|woff2)",
+        "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }]
+      }
+    ]
+  }
+}

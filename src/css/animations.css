@@ -52,8 +52,20 @@
 }
 .orb { animation: orbDrift 14s ease-in-out infinite; }
 
+/* --- 페이지 전환 (cross-document View Transitions) ---
+   정적 멀티페이지 사이트라 링크 이동마다 문서 전체가 새로 로드된다.
+   헤더에 같은 view-transition-name을 주면 전환 중 그대로 유지되어
+   "메뉴 선택 상태만 바뀌는" 것처럼 보인다. 미지원 브라우저는 기존 동작. */
+@view-transition {
+  navigation: auto;
+}
+#nav {
+  view-transition-name: site-nav;
+}
+
 /* --- 모션 감소 대응 --- */
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; filter: none; transition: none; }
   .marquee, .floaty, .orb { animation: none; }
+  @view-transition { navigation: none; }
 }

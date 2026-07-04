@@ -12,34 +12,40 @@
   <meta property="og:url"         content="https://playpark.app/" />
   <meta property="og:locale"      content="ko_KR" />
   <link rel="canonical" href="https://playpark.app/" />
-  <link rel="icon" href="assets/images/favicon.png" type="image/png" />
-  <link rel="apple-touch-icon" href="assets/images/favicon.png" />
+  <link rel="icon" href="/assets/images/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/assets/images/favicon.png" />
 
   <!-- 폰트: Pretendard (한국어 표준) -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.min.css" />
 
   <!-- Tailwind CSS (compiled) -->
-  <link rel="stylesheet" href="dist/output.css" />
+  <link rel="stylesheet" href="/dist/output.css" />
 
   <!-- Iconify Solar 아이콘 -->
   <script src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
+
+  <!-- Turbo Drive — 링크 클릭 시 body만 교체해 헤더를 유지 -->
+  <script src="https://cdn.jsdelivr.net/npm/@hotwired/turbo@8.0.13/dist/turbo.es2017-umd.min.js" defer></script>
+  <!-- 사이트 스크립트 — head+defer (Turbo가 body 스크립트를 방문마다 재실행하지 않도록 head에서 로드) -->
+  <script src="/src/js/common.js" defer></script>
+  <script src="/src/js/components/home.js" defer></script>
 </head>
 
 <body class="antialiased selection:bg-brand/20">
   <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-white">본문 바로가기</a>
 
   <!-- ===== 플로팅 글래스 내비 ===== -->
-  <header class="fixed inset-x-0 top-0 z-40 px-3">
+  <header id="siteHeader" data-turbo-permanent class="fixed inset-x-0 top-0 z-40 px-3">
     <nav id="nav" aria-label="주 네비게이션"
          class="mx-auto mt-3 flex max-w-container items-center justify-between gap-4 rounded-full border border-black/5 bg-white/70 px-4 py-2.5 pl-5 shadow-[0_8px_30px_rgba(0,0,0,0.06)] backdrop-blur-xl transition-all duration-500 ease-spring sm:px-5">
-      <a href="index.html" class="inline-flex items-center" aria-label="PlayPark 홈"><img src="assets/images/logo.png" alt="PlayPark" width="586" height="175" class="h-7 w-auto sm:h-8" /></a>
+      <a href="/" class="inline-flex items-center" aria-label="PlayPark 홈"><img src="/assets/images/logo.png" alt="PlayPark" width="586" height="175" class="h-7 w-auto sm:h-8" /></a>
 
       <div class="hidden items-center gap-1 md:flex">
         <ul class="flex items-center gap-1" role="list">
-          <li><a href="pages/guide.html" class="rounded-full px-3.5 py-2 text-sm font-medium text-muted transition-colors duration-300 hover:bg-black/5 hover:text-ink">활용가이드</a></li>
-          <li><a href="pages/about.html" class="rounded-full px-3.5 py-2 text-sm font-medium text-muted transition-colors duration-300 hover:bg-black/5 hover:text-ink">회사소개</a></li>
-          <li><a href="pages/partnership.html" class="rounded-full px-3.5 py-2 text-sm font-medium text-muted transition-colors duration-300 hover:bg-black/5 hover:text-ink">제휴문의</a></li>
+          <li><a href="/pages/guide.html" class="rounded-full px-3.5 py-2 text-sm font-medium text-muted transition-colors duration-300 hover:bg-black/5 hover:text-ink">활용가이드</a></li>
+          <li><a href="/pages/about.html" class="rounded-full px-3.5 py-2 text-sm font-medium text-muted transition-colors duration-300 hover:bg-black/5 hover:text-ink">회사소개</a></li>
+          <li><a href="/pages/partnership.html" class="rounded-full px-3.5 py-2 text-sm font-medium text-muted transition-colors duration-300 hover:bg-black/5 hover:text-ink">제휴문의</a></li>
         </ul>
         <span class="mx-1 hidden h-4 w-px bg-black/10 lg:block" aria-hidden="true"></span>
         <ul class="hidden items-center gap-1 lg:flex" role="list">
@@ -56,7 +62,7 @@
           <span class="sr-only">(새 창에서 열림)</span>
         </a>
 
-        <a href="#download"
+        <a href="/#download"
            class="inline-flex items-center gap-1.5 rounded-full bg-ink px-4 py-2 text-sm font-bold text-white transition-all duration-500 ease-spring hover:scale-[1.03] active:scale-95">
           앱 다운로드
           <iconify-icon icon="solar:download-minimalistic-bold" class="text-base"></iconify-icon>
@@ -71,17 +77,17 @@
   </header>
 
   <!-- 모바일 메뉴 오버레이 -->
-  <div id="mobileMenu" class="fixed inset-0 z-50 hidden flex-col bg-white/95 backdrop-blur-2xl">
+  <div id="mobileMenu" data-turbo-permanent class="fixed inset-0 z-50 hidden flex-col bg-white/95 backdrop-blur-2xl">
     <div class="flex items-center justify-between px-6 py-5">
-      <img src="assets/images/logo.png" alt="PlayPark" width="586" height="175" class="h-8 w-auto" />
+      <img src="/assets/images/logo.png" alt="PlayPark" width="586" height="175" class="h-8 w-auto" />
       <button id="navClose" class="grid h-10 w-10 place-items-center rounded-full text-ink hover:bg-black/5" aria-label="메뉴 닫기">
         <iconify-icon icon="solar:close-circle-linear" class="text-3xl"></iconify-icon>
       </button>
     </div>
     <nav class="flex flex-col gap-2 px-6 pt-6" aria-label="모바일 네비게이션">
-      <a href="pages/guide.html" class="rounded-2xl px-4 py-4 text-2xl font-bold text-muted">활용가이드</a>
-      <a href="pages/about.html" class="rounded-2xl px-4 py-4 text-2xl font-bold text-muted">회사소개</a>
-      <a href="pages/partnership.html" class="rounded-2xl px-4 py-4 text-2xl font-bold text-muted">제휴문의</a>
+      <a href="/pages/guide.html" class="rounded-2xl px-4 py-4 text-2xl font-bold text-muted">활용가이드</a>
+      <a href="/pages/about.html" class="rounded-2xl px-4 py-4 text-2xl font-bold text-muted">회사소개</a>
+      <a href="/pages/partnership.html" class="rounded-2xl px-4 py-4 text-2xl font-bold text-muted">제휴문의</a>
 
       <div class="mt-2 flex flex-col gap-1 border-t border-black/10 pt-4">
         <a href="https://ppscreen.playpark.app/" target="_blank" rel="noopener" class="mobile-link-external">
@@ -100,7 +106,7 @@
         무인 매장 예약 <iconify-icon icon="solar:arrow-right-up-linear"></iconify-icon>
         <span class="sr-only">(새 창에서 열림)</span>
       </a>
-      <a href="#download" class="inline-flex items-center justify-center gap-2 rounded-full bg-brand px-6 py-4 text-lg font-bold text-white">
+      <a href="/#download" class="inline-flex items-center justify-center gap-2 rounded-full bg-brand px-6 py-4 text-lg font-bold text-white">
         앱 다운로드 <iconify-icon icon="solar:download-minimalistic-bold"></iconify-icon>
       </a>
     </nav>
@@ -127,7 +133,7 @@
             파크골프의 모든 것을 한 앱에서.
           </p>
           <div class="mt-9 flex flex-wrap items-center gap-3">
-            <a href="#download" class="group inline-flex items-center gap-2.5 rounded-full bg-brand px-7 py-4 text-lg font-bold text-white shadow-[0_12px_30px_-8px_rgba(205,159,16,0.6)] transition-all duration-500 ease-spring hover:scale-[1.02] hover:bg-brand-600 active:scale-[0.98]">
+            <a href="/#download" class="group inline-flex items-center gap-2.5 rounded-full bg-brand px-7 py-4 text-lg font-bold text-white shadow-[0_12px_30px_-8px_rgba(205,159,16,0.6)] transition-all duration-500 ease-spring hover:scale-[1.02] hover:bg-brand-600 active:scale-[0.98]">
               앱 다운로드
               <span class="grid h-7 w-7 place-items-center rounded-full bg-white/20 transition-transform duration-500 ease-spring group-hover:translate-x-1">
                 <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
@@ -155,11 +161,11 @@
         <p id="proof-title" class="reveal text-center text-4xl font-bold uppercase">전국 파크골프인이 선택한 앱</p>
         <div class="reveal mx-auto mt-10 grid max-w-3xl grid-cols-3 gap-4" style="--d:80ms">
           <div class="text-center">
-            <div class="text-3xl font-black tabular-nums text-ink sm:text-5xl"><span data-count="3" data-suffix="천+">3천+</span></div>
+            <div class="text-3xl font-black tabular-nums text-ink sm:text-5xl"><span data-count="4" data-suffix="천+">4천+</span></div>
             <p class="mt-4 text-muted">활동중인 회원</p>
           </div>
           <div class="text-center">
-            <div class="text-3xl font-black tabular-nums text-ink sm:text-5xl"><span data-count="100" data-suffix="+">100+</span></div>
+            <div class="text-3xl font-black tabular-nums text-ink sm:text-5xl"><span data-count="500" data-suffix="+">500+</span></div>
             <p class="mt-4 text-muted">등록된 파크골프장</p>
           </div>
           <div class="text-center">
@@ -336,37 +342,99 @@
           <p class="mt-5 text-lg text-muted">모두 준비되어 있습니다!</p>
         </div>
 
-        <div class="mt-14 grid gap-5 md:grid-cols-3">
-          <article class="reveal group rounded-[2rem] bg-black/[0.035] p-1.5 ring-1 ring-black/5 transition-all duration-500 ease-spring hover:-translate-y-1.5 hover:bg-black/[0.05]">
-            <div class="flex h-full flex-col rounded-[1.625rem] bg-white p-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.7),0_1px_2px_rgba(0,0,0,0.04)]">
-              <div class="grid h-14 w-14 place-items-center rounded-2xl bg-brand/10 text-3xl text-brand"><iconify-icon icon="solar:user-rounded-bold-duotone"></iconify-icon></div>
-              <h3 class="mt-6 text-xl font-bold text-ink">개인 플레이어</h3>
-              <p class="mt-3 leading-relaxed text-muted">혼자 또는 친구와 함께 스코어 기록부터 AI 분석까지, 내 실력을 스마트하게 관리하세요</p>
-              <div class="mt-auto pt-6"><span class="inline-flex items-center gap-1 rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand-600">무료 이용</span></div>
-            </div>
+        <!-- 모바일: 유형별 카드 (md 미만) -->
+        <div class="reveal mt-14 space-y-5 md:hidden">
+          <article class="overflow-hidden rounded-3xl ring-1 ring-black/5">
+            <h3 class="bg-brand-light px-6 py-4 text-lg font-bold text-ink">일반 게임</h3>
+            <dl class="divide-y divide-black/5 bg-white">
+              <div class="flex gap-4 px-6 py-4"><dt class="w-20 shrink-0 text-sm font-bold text-muted">게임 인원</dt><dd class="text-ink">4명 이하</dd></div>
+              <div class="flex gap-4 px-6 py-4"><dt class="w-20 shrink-0 text-sm font-bold text-muted">생성방법</dt><dd class="text-ink">게임멤버 중 1명 생성 후 초대</dd></div>
+              <div class="flex gap-4 px-6 py-4"><dt class="w-20 shrink-0 text-sm font-bold text-muted">기록자</dt><dd class="text-ink">플레이어 중 1명 이상</dd></div>
+              <div class="flex gap-4 px-6 py-4"><dt class="w-20 shrink-0 text-sm font-bold text-muted">사용방법</dt><dd class="text-ink">구장선택 후 게임 생성</dd></div>
+              <div class="flex gap-4 px-6 py-4"><dt class="w-20 shrink-0 text-sm font-bold text-muted">비용</dt><dd class="font-bold text-brand-600">무료</dd></div>
+            </dl>
           </article>
 
-          <article class="reveal group rounded-[2rem] bg-black/[0.035] p-1.5 ring-1 ring-black/5 transition-all duration-500 ease-spring hover:-translate-y-1.5 hover:bg-black/[0.05]" style="--d:80ms">
-            <div class="flex h-full flex-col rounded-[1.625rem] bg-white p-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.7),0_1px_2px_rgba(0,0,0,0.04)]">
-              <div class="grid h-14 w-14 place-items-center rounded-2xl bg-brand/10 text-3xl text-brand"><iconify-icon icon="solar:crown-bold-duotone"></iconify-icon></div>
-              <h3 class="mt-6 text-xl font-bold text-ink">동호회 모임장</h3>
-              <p class="mt-3 leading-relaxed text-muted">조편성부터 실시간 스코어 집계까지, 4명에서 100명 규모 모임도 플레이파크 하나로 완벽하게</p>
-              <div class="mt-auto pt-6"><span class="inline-flex items-center gap-1 rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand-600">무료 이용</span></div>
-            </div>
+          <article class="overflow-hidden rounded-3xl ring-1 ring-black/5">
+            <h3 class="bg-brand/40 px-6 py-4 text-lg font-bold text-ink">동호회 게임 모임</h3>
+            <dl class="divide-y divide-black/5 bg-white">
+              <div class="flex gap-4 px-6 py-4"><dt class="w-20 shrink-0 text-sm font-bold text-muted">게임 인원</dt><dd class="text-ink">4명 ~ 100명</dd></div>
+              <div class="flex gap-4 px-6 py-4"><dt class="w-20 shrink-0 text-sm font-bold text-muted">생성방법</dt><dd class="text-ink">모임장 조편성 후 알림</dd></div>
+              <div class="flex gap-4 px-6 py-4"><dt class="w-20 shrink-0 text-sm font-bold text-muted">기록자</dt><dd class="text-ink">플레이어 중 1명 이상</dd></div>
+              <div class="flex gap-4 px-6 py-4"><dt class="w-20 shrink-0 text-sm font-bold text-muted">사용방법</dt><dd class="text-ink">동호회 내 게임모임 생성</dd></div>
+              <div class="flex gap-4 px-6 py-4"><dt class="w-20 shrink-0 text-sm font-bold text-muted">비용</dt><dd class="font-bold text-brand-600">무료</dd></div>
+            </dl>
           </article>
 
-          <article class="reveal group rounded-[2rem] bg-black/[0.035] p-1.5 ring-1 ring-black/5 transition-all duration-500 ease-spring hover:-translate-y-1.5 hover:bg-black/[0.05]" style="--d:160ms">
-            <div class="flex h-full flex-col rounded-[1.625rem] bg-white p-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.7),0_1px_2px_rgba(0,0,0,0.04)]">
-              <div class="grid h-14 w-14 place-items-center rounded-2xl bg-brand/10 text-3xl text-brand"><iconify-icon icon="solar:cup-star-bold-duotone"></iconify-icon></div>
-              <h3 class="mt-6 text-xl font-bold text-ink">골프장 · 대회 주최</h3>
-              <p class="mt-3 leading-relaxed text-muted">100명 이상 대회 운영 시스템, 심판 태블릿 채점·실시간 집계로 전문적인 대회를 더 쉽게</p>
-              <div class="mt-auto pt-6">
-                <a href="pages/partnership.html" class="group/btn inline-flex items-center gap-1.5 text-sm font-bold text-brand-600 transition-colors hover:text-brand">
-                  제휴 문의하기 <iconify-icon icon="solar:arrow-right-linear" class="transition-transform duration-500 ease-spring group-hover/btn:translate-x-1"></iconify-icon>
-                </a>
+          <article class="overflow-hidden rounded-3xl ring-1 ring-black/5">
+            <h3 class="bg-brand px-6 py-4 text-lg font-bold text-white">대회운영시스템</h3>
+            <dl class="divide-y divide-black/5 bg-white">
+              <div class="flex gap-4 px-6 py-4"><dt class="w-20 shrink-0 text-sm font-bold text-muted">게임 인원</dt><dd class="text-ink">100명 이상</dd></div>
+              <div class="flex gap-4 px-6 py-4"><dt class="w-20 shrink-0 text-sm font-bold text-muted">생성방법</dt><dd class="text-ink">관리자 선수 등록</dd></div>
+              <div class="flex gap-4 px-6 py-4"><dt class="w-20 shrink-0 text-sm font-bold text-muted">기록자</dt><dd class="text-ink">심판</dd></div>
+              <div class="flex gap-4 px-6 py-4"><dt class="w-20 shrink-0 text-sm font-bold text-muted">사용방법</dt><dd class="text-ink">대회운영 시스템으로 대회 생성 후 태블릿 채점</dd></div>
+              <div class="flex gap-4 px-6 py-4">
+                <dt class="w-20 shrink-0 text-sm font-bold text-muted">비용</dt>
+                <dd class="flex flex-wrap items-center gap-2 text-ink">도입 비용 협의
+                  <a href="/pages/partnership.html" class="group/btn inline-flex items-center gap-1.5 rounded-full bg-brand px-3 py-1 text-xs font-bold text-white transition-colors hover:bg-brand-600">
+                    문의하기 <iconify-icon icon="solar:arrow-right-linear" class="transition-transform duration-500 ease-spring group-hover/btn:translate-x-1"></iconify-icon>
+                  </a>
+                </dd>
               </div>
-            </div>
+            </dl>
           </article>
+        </div>
+
+        <!-- 데스크톱: 비교 표 (md 이상) -->
+        <div class="reveal mt-14 hidden overflow-x-auto rounded-[1.75rem] ring-1 ring-black/5 md:block">
+          <table class="w-full min-w-[720px] table-fixed border-collapse text-center">
+            <thead>
+              <tr>
+                <th scope="col" class="w-40 bg-ground-dark px-6 py-5 text-sm font-bold text-ink">유형</th>
+                <th scope="col" class="bg-brand-light px-6 py-5 text-base font-bold text-ink">일반 게임</th>
+                <th scope="col" class="bg-brand/40 px-6 py-5 text-base font-bold text-ink">동호회 게임 모임</th>
+                <th scope="col" class="bg-brand px-6 py-5 text-base font-bold text-white">대회운영시스템</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-t border-black/5">
+                <th scope="row" class="bg-ground-dark px-6 py-5 text-sm font-bold text-ink">게임 인원</th>
+                <td class="bg-white px-6 py-5 text-ink">4명 이하</td>
+                <td class="bg-white px-6 py-5 text-ink">4명 ~ 100명</td>
+                <td class="bg-white px-6 py-5 text-ink">100명 이상</td>
+              </tr>
+              <tr class="border-t border-black/5">
+                <th scope="row" class="bg-ground-dark px-6 py-5 text-sm font-bold text-ink">생성방법</th>
+                <td class="bg-white px-6 py-5 text-ink">게임멤버 중 1명 생성 후 초대</td>
+                <td class="bg-white px-6 py-5 text-ink">모임장 조편성 후 알림</td>
+                <td class="bg-white px-6 py-5 text-ink">관리자 선수 등록</td>
+              </tr>
+              <tr class="border-t border-black/5">
+                <th scope="row" class="bg-ground-dark px-6 py-5 text-sm font-bold text-ink">기록자</th>
+                <td class="bg-white px-6 py-5 text-ink">플레이어 중 1명 이상</td>
+                <td class="bg-white px-6 py-5 text-ink">플레이어 중 1명 이상</td>
+                <td class="bg-white px-6 py-5 text-ink">심판</td>
+              </tr>
+              <tr class="border-t border-black/5">
+                <th scope="row" class="bg-ground-dark px-6 py-5 text-sm font-bold text-ink">사용방법</th>
+                <td class="bg-white px-6 py-5 text-ink">구장선택 후 게임 생성</td>
+                <td class="bg-white px-6 py-5 text-ink">동호회 내 게임모임 생성</td>
+                <td class="bg-white px-6 py-5 text-ink">대회운영 시스템으로 대회 생성 후 태블릿 채점</td>
+              </tr>
+              <tr class="border-t border-black/5">
+                <th scope="row" class="bg-ground-dark px-6 py-5 text-sm font-bold text-ink">비용</th>
+                <td class="bg-white px-6 py-5 text-ink">무료</td>
+                <td class="bg-white px-6 py-5 text-ink">무료</td>
+                <td class="bg-white px-6 py-5">
+                  <span class="inline-flex flex-wrap items-center justify-center gap-2 text-ink">도입 비용 협의
+                    <a href="/pages/partnership.html" class="group/btn inline-flex items-center gap-1.5 rounded-full bg-brand px-3 py-1 text-xs font-bold text-white transition-colors hover:bg-brand-600">
+                      문의하기 <iconify-icon icon="solar:arrow-right-linear" class="transition-transform duration-500 ease-spring group-hover/btn:translate-x-1"></iconify-icon>
+                    </a>
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
@@ -380,12 +448,12 @@
           <p class="mt-5 text-lg text-muted">파크골프의 모든 순간, 더 스마트하게</p>
         </div>
       </div>
-      <div class="no-scrollbar mt-10 flex snap-x snap-mandatory gap-8 overflow-x-auto scroll-smooth px-[max(1.5rem,calc((100vw-72rem)/2))] pt-8" role="list" aria-label="앱 스크린샷">
-        <img src="assets/images/screen-ai.png" alt="AI 분석 화면" loading="lazy" decoding="async" role="listitem" class="aspect-[393/560] w-[clamp(220px,60vw,300px)] shrink-0 snap-center rounded-t-[1.75rem] object-cover object-top shadow-[0_20px_50px_-18px_rgba(0,0,0,0.28)] ring-1 ring-black/5 origin-bottom transition-transform duration-500 ease-spring hover:scale-105" />
-        <img src="assets/images/screen-community.png" alt="커뮤니티 화면" loading="lazy" decoding="async" role="listitem" class="aspect-[393/560] w-[clamp(220px,60vw,300px)] shrink-0 snap-center rounded-t-[1.75rem] object-cover object-top shadow-[0_20px_50px_-18px_rgba(0,0,0,0.28)] ring-1 ring-black/5 origin-bottom transition-transform duration-500 ease-spring hover:scale-105" />
-        <img src="assets/images/screen-record.png" alt="구력관리 화면" loading="lazy" decoding="async" role="listitem" class="aspect-[393/560] w-[clamp(220px,60vw,300px)] shrink-0 snap-center rounded-t-[1.75rem] object-cover object-top shadow-[0_20px_50px_-18px_rgba(0,0,0,0.28)] ring-1 ring-black/5 origin-bottom transition-transform duration-500 ease-spring hover:scale-105" />
-        <img src="assets/images/screen-scorecard.png" alt="스코어카드 화면" loading="lazy" decoding="async" role="listitem" class="aspect-[393/560] w-[clamp(220px,60vw,300px)] shrink-0 snap-center rounded-t-[1.75rem] object-cover object-top shadow-[0_20px_50px_-18px_rgba(0,0,0,0.28)] ring-1 ring-black/5 origin-bottom transition-transform duration-500 ease-spring hover:scale-105" />
-        <img src="assets/images/screen-club.png" alt="동호회 화면" loading="lazy" decoding="async" role="listitem" class="aspect-[393/560] w-[clamp(220px,60vw,300px)] shrink-0 snap-center rounded-t-[1.75rem] object-cover object-top shadow-[0_20px_50px_-18px_rgba(0,0,0,0.28)] ring-1 ring-black/5 origin-bottom transition-transform duration-500 ease-spring hover:scale-105" />
+      <div class="no-scrollbar mt-10 flex snap-x snap-mandatory gap-8 overflow-x-auto scroll-smooth px-[calc(50vw-clamp(110px,30vw,150px))] pt-12" role="list" aria-label="앱 스크린샷">
+        <img src="assets/images/screen-ai.png" alt="AI 분석 화면" loading="lazy" decoding="async" role="listitem" class="shot-card" />
+        <img src="assets/images/screen-community.png" alt="커뮤니티 화면" loading="lazy" decoding="async" role="listitem" class="shot-card" />
+        <img src="assets/images/screen-record.png" alt="구력관리 화면" loading="lazy" decoding="async" role="listitem" class="shot-card" />
+        <img src="assets/images/screen-scorecard.png" alt="스코어카드 화면" loading="lazy" decoding="async" role="listitem" class="shot-card" />
+        <img src="assets/images/screen-club.png" alt="동호회 화면" loading="lazy" decoding="async" role="listitem" class="shot-card" />
       </div>
     </section>
 
@@ -423,14 +491,14 @@
               대회 운영 시스템은 어떻게 도입하나요?
               <iconify-icon icon="solar:alt-arrow-down-linear" class="shrink-0 text-xl text-muted transition-transform duration-500 ease-spring group-open:rotate-180 group-open:text-brand"></iconify-icon>
             </summary>
-            <p class="faq-answer px-6 pb-5 leading-relaxed text-muted">100명 이상 규모의 대회는 심판이 태블릿으로 채점하는 전문 대회 운영 시스템을 지원합니다. <a href="pages/partnership.html" class="font-medium text-brand-600 underline underline-offset-2">제휴문의 페이지</a>에서 문의해 주시면 안내해 드립니다.</p>
+            <p class="faq-answer px-6 pb-5 leading-relaxed text-muted">100명 이상 규모의 대회는 심판이 태블릿으로 채점하는 전문 대회 운영 시스템을 지원합니다. <a href="/pages/partnership.html" class="font-medium text-brand-600 underline underline-offset-2">제휴문의 페이지</a>에서 문의해 주시면 안내해 드립니다.</p>
           </details>
           <details class="faq-item group">
             <summary class="flex cursor-pointer list-none items-center justify-between gap-5 px-6 py-5 font-semibold text-ink transition-colors hover:bg-black/[0.02]">
               개인정보는 안전하게 보호되나요?
               <iconify-icon icon="solar:alt-arrow-down-linear" class="shrink-0 text-xl text-muted transition-transform duration-500 ease-spring group-open:rotate-180 group-open:text-brand"></iconify-icon>
             </summary>
-            <p class="faq-answer px-6 pb-5 leading-relaxed text-muted">네, 회원님의 개인정보는 관련 법령에 따라 안전하게 보호됩니다. 자세한 내용은 <a href="pages/privacy.html" class="font-medium text-brand-600 underline underline-offset-2">개인정보처리방침</a>을 확인해 주세요.</p>
+            <p class="faq-answer px-6 pb-5 leading-relaxed text-muted">네, 회원님의 개인정보는 관련 법령에 따라 안전하게 보호됩니다. 자세한 내용은 <a href="/pages/privacy.html" class="font-medium text-brand-600 underline underline-offset-2">개인정보처리방침</a>을 확인해 주세요.</p>
           </details>
         </div>
       </div>
@@ -499,8 +567,9 @@
       <div class="flex flex-col items-center justify-between gap-4 pt-8 text-sm text-white/50 sm:flex-row">
         <p>© <span data-year></span> (주)7데이즈. All rights reserved.</p>
         <nav class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 sm:justify-end" aria-label="푸터 링크">
-          <a href="pages/privacy.html" class="hover:text-white">개인정보처리방침</a>
-          <a href="pages/partnership.html" class="hover:text-white">제휴문의</a>
+          <a href="/pages/privacy.html" class="hover:text-white">개인정보처리방침</a>
+          <a href="/pages/terms.html" class="hover:text-white">이용약관</a>
+          <a href="/pages/partnership.html" class="hover:text-white">제휴문의</a>
           <a href="https://ppscreen.playpark.app/" target="_blank" rel="noopener" class="footer-link-external">관리자센터<iconify-icon icon="solar:arrow-right-up-linear" class="text-sm"></iconify-icon><span class="sr-only">(새 창에서 열림)</span></a>
           <a href="https://league.playpark.app" target="_blank" rel="noopener" class="footer-link-external">대회관리시스템<iconify-icon icon="solar:arrow-right-up-linear" class="text-sm"></iconify-icon><span class="sr-only">(새 창에서 열림)</span></a>
           <a href="https://ppscreen.playpark.app/reserve" target="_blank" rel="noopener" class="footer-link-external">무인 매장 예약<iconify-icon icon="solar:arrow-right-up-linear" class="text-sm"></iconify-icon><span class="sr-only">(새 창에서 열림)</span></a>
@@ -509,149 +578,5 @@
     </div>
   </footer>
 
-  <script>
-    (function () {
-      "use strict";
-      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-      /* 플로팅 내비 — 스크롤 시 축소/그림자 */
-      var nav = document.getElementById("nav");
-      if (nav) {
-        var onScroll = function () {
-          var s = window.scrollY > 12;
-          nav.classList.toggle("shadow-[0_8px_30px_rgba(0,0,0,0.06)]", !s);
-          nav.classList.toggle("shadow-[0_12px_40px_rgba(0,0,0,0.12)]", s);
-          nav.classList.toggle("bg-white/70", !s);
-          nav.classList.toggle("bg-white/90", s);
-        };
-        window.addEventListener("scroll", onScroll, { passive: true });
-      }
-
-      /* 모바일 메뉴 */
-      var toggle = document.getElementById("navToggle");
-      var menu = document.getElementById("mobileMenu");
-      var close = document.getElementById("navClose");
-      function openMenu(open) {
-        if (!menu) return;
-        menu.classList.toggle("hidden", !open);
-        menu.classList.toggle("flex", open);
-        if (toggle) toggle.setAttribute("aria-expanded", String(open));
-        document.body.style.overflow = open ? "hidden" : "";
-      }
-      if (toggle) toggle.addEventListener("click", function () { openMenu(true); });
-      if (close) close.addEventListener("click", function () { openMenu(false); });
-      if (menu) menu.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { openMenu(false); }); });
-
-      /* 스크롤 등장(reveal) */
-      var reveals = document.querySelectorAll(".reveal");
-      if (reveals.length) {
-        if (reduce || !("IntersectionObserver" in window)) {
-          reveals.forEach(function (el) { el.classList.add("in"); });
-        } else {
-          var io = new IntersectionObserver(function (entries) {
-            entries.forEach(function (e) {
-              if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
-            });
-          }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
-          reveals.forEach(function (el) { io.observe(el); });
-        }
-      }
-
-      /* 앱 스크린샷 — 화면에 들어오면 왼쪽으로 살짝 스르륵 흐름 */
-      var shots = document.querySelector('[aria-label="앱 스크린샷"]');
-      if (shots && !reduce && "IntersectionObserver" in window) {
-        var shotsIO = new IntersectionObserver(function (entries) {
-          entries.forEach(function (e) {
-            if (!e.isIntersecting) return;
-            shotsIO.unobserve(e.target);
-            /* 처음부터 끝까지 — 스크롤 가능한 전체 거리 */
-            if (shots.scrollWidth - shots.clientWidth <= 0) return;
-            /* rAF 동안 CSS smooth·snap 간섭 차단 */
-            shots.style.scrollBehavior = "auto";
-            shots.style.scrollSnapType = "none";
-            /* 거리에 비례한 시간(1.4~3.2초)으로 일정 속도 유지 */
-            var t0 = null, dur = Math.min(3200, Math.max(1400, (shots.scrollWidth - shots.clientWidth) * 3));
-            function ease(p) { /* easeInOutCubic */
-              return p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2;
-            }
-            function step(now) {
-              if (!t0) t0 = now;
-              var p = Math.min((now - t0) / dur, 1);
-              var d = shots.scrollWidth - shots.clientWidth; /* lazy 로드로 늘어나는 폭을 매 프레임 추적 */
-              shots.scrollLeft = ease(p) * d;
-              if (p < 1) { requestAnimationFrame(step); }
-              else { shots.scrollLeft = d; shots.style.scrollBehavior = ""; shots.style.scrollSnapType = ""; }
-            }
-            requestAnimationFrame(step);
-          });
-        }, { threshold: 0.25 });
-        shotsIO.observe(shots);
-      }
-
-      /* 숫자 카운트업 */
-      function countUp(el) {
-        var target = parseFloat(el.dataset.count) || 0;
-        var suffix = el.dataset.suffix || "";
-        var start = null, dur = 1200;
-        function step(now) {
-          if (!start) start = now;
-          var p = Math.min((now - start) / dur, 1);
-          var eased = 1 - Math.pow(1 - p, 3);
-          el.textContent = Math.round(eased * target) + suffix;
-          if (p < 1) requestAnimationFrame(step);
-        }
-        requestAnimationFrame(step);
-      }
-      var counters = document.querySelectorAll("[data-count]");
-      if (counters.length && "IntersectionObserver" in window && !reduce) {
-        var co = new IntersectionObserver(function (entries) {
-          entries.forEach(function (e) {
-            if (e.isIntersecting) { countUp(e.target); co.unobserve(e.target); }
-          });
-        }, { threshold: 0.6 });
-        counters.forEach(function (el) { co.observe(el); });
-      }
-
-      /* FAQ 아코디언 — 부드러운 height/opacity */
-      document.querySelectorAll(".faq-item").forEach(function (item) {
-        var summary = item.querySelector("summary");
-        var answer = item.querySelector(".faq-answer");
-        if (!summary || !answer) return;
-        var anim = null;
-        summary.addEventListener("click", function (e) {
-          if (reduce || typeof answer.animate !== "function") return;
-          e.preventDefault();
-          if (anim) anim.cancel();
-          var pb = getComputedStyle(answer).paddingBottom;
-          var opening = !item.open;
-          answer.style.overflow = "hidden";
-          if (opening) {
-            item.open = true;
-            var endH = answer.offsetHeight;
-            anim = answer.animate(
-              [{ height: "0px", paddingBottom: "0px", opacity: 0 }, { height: endH + "px", paddingBottom: pb, opacity: 1 }],
-              { duration: 340, easing: "cubic-bezier(0.16,1,0.3,1)" }
-            );
-          } else {
-            var startH = answer.offsetHeight;
-            anim = answer.animate(
-              [{ height: startH + "px", paddingBottom: pb, opacity: 1 }, { height: "0px", paddingBottom: "0px", opacity: 0 }],
-              { duration: 280, easing: "cubic-bezier(0.4,0,0.2,1)" }
-            );
-          }
-          anim.onfinish = function () {
-            if (!opening) item.open = false;
-            answer.style.overflow = ""; answer.style.height = ""; answer.style.paddingBottom = "";
-            anim = null;
-          };
-          anim.oncancel = function () { anim = null; };
-        });
-      });
-
-      /* 푸터 연도 */
-      var y = document.querySelector("[data-year]");
-      if (y) y.textContent = new Date().getFullYear();
-    })();
-  </script>
 </body>
 </html>

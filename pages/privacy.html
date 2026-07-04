@@ -11,24 +11,29 @@
   <meta property="og:url" content="https://playpark.app/pages/privacy.html" />
   <meta property="og:locale" content="ko_KR" />
   <link rel="canonical" href="https://playpark.app/pages/privacy.html" />
-  <link rel="icon" href="../assets/images/favicon.png" type="image/png" />
-  <link rel="apple-touch-icon" href="../assets/images/favicon.png" />
+  <link rel="icon" href="/assets/images/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/assets/images/favicon.png" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.min.css" />
-  <link rel="stylesheet" href="../dist/output.css" />
+  <link rel="stylesheet" href="/dist/output.css" />
   <script src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
+
+  <!-- Turbo Drive — 링크 클릭 시 body만 교체해 헤더를 유지 -->
+  <script src="https://cdn.jsdelivr.net/npm/@hotwired/turbo@8.0.13/dist/turbo.es2017-umd.min.js" defer></script>
+  <!-- 사이트 스크립트 — head+defer (Turbo가 body 스크립트를 방문마다 재실행하지 않도록 head에서 로드) -->
+  <script src="/src/js/common.js" defer></script>
 </head>
 <body class="antialiased selection:bg-brand/20">
   <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-white">본문 바로가기</a>
 
-  <header class="fixed inset-x-0 top-0 z-40 px-3">
+  <header id="siteHeader" data-turbo-permanent class="fixed inset-x-0 top-0 z-40 px-3">
     <nav id="nav" aria-label="주 네비게이션" class="mx-auto mt-3 flex max-w-container items-center justify-between gap-4 rounded-full border border-black/5 bg-white/70 px-4 py-2.5 pl-5 shadow-[0_8px_30px_rgba(0,0,0,0.06)] backdrop-blur-xl transition-all duration-500 ease-spring sm:px-5">
-      <a href="../index.html" class="inline-flex items-center" aria-label="PlayPark 홈"><img src="../assets/images/logo.png" alt="PlayPark" width="586" height="175" class="h-7 w-auto sm:h-8" /></a>
+      <a href="/" class="inline-flex items-center" aria-label="PlayPark 홈"><img src="/assets/images/logo.png" alt="PlayPark" width="586" height="175" class="h-7 w-auto sm:h-8" /></a>
       <div class="hidden items-center gap-1 md:flex">
         <ul class="flex items-center gap-1" role="list">
-          <li><a href="guide.html" class="rounded-full px-3.5 py-2 text-sm font-medium text-muted transition-colors duration-300 hover:bg-black/5 hover:text-ink">활용가이드</a></li>
-          <li><a href="about.html" class="rounded-full px-3.5 py-2 text-sm font-medium text-muted transition-colors duration-300 hover:bg-black/5 hover:text-ink">회사소개</a></li>
-          <li><a href="partnership.html" class="rounded-full px-3.5 py-2 text-sm font-medium text-muted transition-colors duration-300 hover:bg-black/5 hover:text-ink">제휴문의</a></li>
+          <li><a href="/pages/guide.html" class="rounded-full px-3.5 py-2 text-sm font-medium text-muted transition-colors duration-300 hover:bg-black/5 hover:text-ink">활용가이드</a></li>
+          <li><a href="/pages/about.html" class="rounded-full px-3.5 py-2 text-sm font-medium text-muted transition-colors duration-300 hover:bg-black/5 hover:text-ink">회사소개</a></li>
+          <li><a href="/pages/partnership.html" class="rounded-full px-3.5 py-2 text-sm font-medium text-muted transition-colors duration-300 hover:bg-black/5 hover:text-ink">제휴문의</a></li>
         </ul>
         <span class="mx-1 hidden h-4 w-px bg-black/10 lg:block" aria-hidden="true"></span>
         <ul class="hidden items-center gap-1 lg:flex" role="list">
@@ -38,21 +43,21 @@
       </div>
       <div class="hidden items-center gap-2 md:flex">
         <a href="https://ppscreen.playpark.app/reserve" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 rounded-full bg-ink px-4 py-2 text-sm font-bold text-white transition-all duration-500 ease-spring hover:scale-[1.03] active:scale-95">무인 매장 예약<iconify-icon icon="solar:arrow-right-up-linear" class="text-base"></iconify-icon><span class="sr-only">(새 창에서 열림)</span></a>
-        <a href="partnership.html" class="inline-flex items-center gap-1.5 rounded-full bg-ink px-4 py-2 text-sm font-bold text-white transition-all duration-500 ease-spring hover:scale-[1.03] active:scale-95"><iconify-icon icon="solar:letter-bold" class="text-base"></iconify-icon>문의하기</a>
+        <a href="/#download" class="inline-flex items-center gap-1.5 rounded-full bg-ink px-4 py-2 text-sm font-bold text-white transition-all duration-500 ease-spring hover:scale-[1.03] active:scale-95">앱 다운로드<iconify-icon icon="solar:download-minimalistic-bold" class="text-base"></iconify-icon></a>
       </div>
       <button id="navToggle" class="grid h-10 w-10 place-items-center rounded-full text-ink transition-colors hover:bg-black/5 md:hidden" aria-expanded="false" aria-controls="mobileMenu" aria-label="메뉴 열기"><iconify-icon icon="solar:hamburger-menu-linear" class="text-2xl"></iconify-icon></button>
     </nav>
   </header>
 
-  <div id="mobileMenu" class="fixed inset-0 z-50 hidden flex-col bg-white/95 backdrop-blur-2xl">
+  <div id="mobileMenu" data-turbo-permanent class="fixed inset-0 z-50 hidden flex-col bg-white/95 backdrop-blur-2xl">
     <div class="flex items-center justify-between px-6 py-5">
-      <img src="../assets/images/logo.png" alt="PlayPark" width="586" height="175" class="h-8 w-auto" />
+      <img src="/assets/images/logo.png" alt="PlayPark" width="586" height="175" class="h-8 w-auto" />
       <button id="navClose" class="grid h-10 w-10 place-items-center rounded-full text-ink hover:bg-black/5" aria-label="메뉴 닫기"><iconify-icon icon="solar:close-circle-linear" class="text-3xl"></iconify-icon></button>
     </div>
     <nav class="flex flex-col gap-2 px-6 pt-6" aria-label="모바일 네비게이션">
-      <a href="guide.html" class="rounded-2xl px-4 py-4 text-2xl font-bold text-muted">활용가이드</a>
-      <a href="about.html" class="rounded-2xl px-4 py-4 text-2xl font-bold text-muted">회사소개</a>
-      <a href="partnership.html" class="rounded-2xl px-4 py-4 text-2xl font-bold text-muted">제휴문의</a>
+      <a href="/pages/guide.html" class="rounded-2xl px-4 py-4 text-2xl font-bold text-muted">활용가이드</a>
+      <a href="/pages/about.html" class="rounded-2xl px-4 py-4 text-2xl font-bold text-muted">회사소개</a>
+      <a href="/pages/partnership.html" class="rounded-2xl px-4 py-4 text-2xl font-bold text-muted">제휴문의</a>
 
       <div class="mt-2 flex flex-col gap-1 border-t border-black/10 pt-4">
         <a href="https://ppscreen.playpark.app/" target="_blank" rel="noopener" class="mobile-link-external">관리자센터<iconify-icon icon="solar:arrow-right-up-linear" class="text-xl"></iconify-icon><span class="sr-only">(새 창에서 열림)</span></a>
@@ -60,7 +65,7 @@
       </div>
 
       <a href="https://ppscreen.playpark.app/reserve" target="_blank" rel="noopener" class="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-brand px-6 py-4 text-lg font-bold text-white">무인 매장 예약 <iconify-icon icon="solar:arrow-right-up-linear"></iconify-icon><span class="sr-only">(새 창에서 열림)</span></a>
-      <a href="partnership.html" class="inline-flex items-center justify-center gap-2 rounded-full bg-brand px-6 py-4 text-lg font-bold text-white">문의하기 <iconify-icon icon="solar:letter-bold"></iconify-icon></a>
+      <a href="/#download" class="inline-flex items-center justify-center gap-2 rounded-full bg-brand px-6 py-4 text-lg font-bold text-white">앱 다운로드 <iconify-icon icon="solar:download-minimalistic-bold"></iconify-icon></a>
     </nav>
   </div>
 
@@ -128,31 +133,10 @@
       </div>
       <div class="flex flex-col items-center justify-between gap-4 pt-8 text-sm text-white/50 sm:flex-row">
         <p>© <span data-year></span> (주)7데이즈. All rights reserved.</p>
-        <nav class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 sm:justify-end" aria-label="푸터 링크"><a href="privacy.html" class="hover:text-white">개인정보처리방침</a><a href="terms.html" class="hover:text-white">이용약관</a><a href="partnership.html" class="hover:text-white">제휴문의</a><a href="https://ppscreen.playpark.app/" target="_blank" rel="noopener" class="footer-link-external">관리자센터<iconify-icon icon="solar:arrow-right-up-linear" class="text-sm"></iconify-icon><span class="sr-only">(새 창에서 열림)</span></a><a href="https://league.playpark.app" target="_blank" rel="noopener" class="footer-link-external">대회관리시스템<iconify-icon icon="solar:arrow-right-up-linear" class="text-sm"></iconify-icon><span class="sr-only">(새 창에서 열림)</span></a><a href="https://ppscreen.playpark.app/reserve" target="_blank" rel="noopener" class="footer-link-external">무인 매장 예약<iconify-icon icon="solar:arrow-right-up-linear" class="text-sm"></iconify-icon><span class="sr-only">(새 창에서 열림)</span></a></nav>
+        <nav class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 sm:justify-end" aria-label="푸터 링크"><a href="/pages/privacy.html" class="hover:text-white">개인정보처리방침</a><a href="/pages/terms.html" class="hover:text-white">이용약관</a><a href="/pages/partnership.html" class="hover:text-white">제휴문의</a><a href="https://ppscreen.playpark.app/" target="_blank" rel="noopener" class="footer-link-external">관리자센터<iconify-icon icon="solar:arrow-right-up-linear" class="text-sm"></iconify-icon><span class="sr-only">(새 창에서 열림)</span></a><a href="https://league.playpark.app" target="_blank" rel="noopener" class="footer-link-external">대회관리시스템<iconify-icon icon="solar:arrow-right-up-linear" class="text-sm"></iconify-icon><span class="sr-only">(새 창에서 열림)</span></a><a href="https://ppscreen.playpark.app/reserve" target="_blank" rel="noopener" class="footer-link-external">무인 매장 예약<iconify-icon icon="solar:arrow-right-up-linear" class="text-sm"></iconify-icon><span class="sr-only">(새 창에서 열림)</span></a></nav>
       </div>
     </div>
   </footer>
 
-  <script>
-    (function () {
-      "use strict";
-      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      var nav = document.getElementById("nav");
-      if (nav) window.addEventListener("scroll", function () {
-        var s = window.scrollY > 12;
-        nav.classList.toggle("shadow-[0_8px_30px_rgba(0,0,0,0.06)]", !s);
-        nav.classList.toggle("shadow-[0_12px_40px_rgba(0,0,0,0.12)]", s);
-        nav.classList.toggle("bg-white/70", !s);
-        nav.classList.toggle("bg-white/90", s);
-      }, { passive: true });
-      var toggle = document.getElementById("navToggle"), menu = document.getElementById("mobileMenu"), close = document.getElementById("navClose");
-      function openMenu(open) { if (!menu) return; menu.classList.toggle("hidden", !open); menu.classList.toggle("flex", open); if (toggle) toggle.setAttribute("aria-expanded", String(open)); document.body.style.overflow = open ? "hidden" : ""; }
-      if (toggle) toggle.addEventListener("click", function () { openMenu(true); });
-      if (close) close.addEventListener("click", function () { openMenu(false); });
-      if (menu) menu.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { openMenu(false); }); });
-      var yearEl = document.querySelector("[data-year]");
-      if (yearEl) yearEl.textContent = new Date().getFullYear();
-    })();
-  </script>
 </body>
 </html>

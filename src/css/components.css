@@ -50,4 +50,39 @@
     overflow: hidden;
   }
 
+  /* ===== 홈 앱 스크린샷 카드 =====
+     --shot-scale은 home.js가 스크롤 위치에 따라 주입(중앙에 가까울수록 확대) */
+
+  .shot-card {
+    @apply aspect-[393/560] w-[clamp(220px,60vw,300px)] shrink-0 snap-center
+           rounded-t-[1.75rem] object-cover object-top
+           shadow-[0_20px_50px_-18px_rgba(0,0,0,0.28)] ring-1 ring-black/5 origin-bottom;
+    transform: scale(var(--shot-scale, 1));
+  }
+
+}
+
+/* ===== 폼 검증 (제휴문의) — JS가 토글/생성하므로 @layer 밖에 선언 (purge 방지) ===== */
+/* 오류 빨강은 상태 피드백 전용 — 브랜드 강조색(골드)과 용도가 다르다.
+   red-600 on white 4.5:1 이상(WCAG AA). */
+
+.form-error {
+  @apply mt-2 text-sm font-medium text-red-600;
+}
+
+/* 클래스 대신 aria-invalid 상태로 스타일링 — @tailwind utilities보다 먼저 로드되어도
+   element+attribute 셀렉터(0,1,1)가 유틸리티(0,1,0)를 이긴다 */
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  @apply border-red-400 focus:border-red-500;
+}
+
+.form-status-success {
+  @apply mt-4 rounded-lg bg-brand-light px-4 py-3
+         text-center text-base font-bold text-brand-600;
+}
+
+.form-status-error {
+  @apply mt-4 rounded-lg bg-red-50 px-4 py-3
+         text-center text-base font-bold text-red-600;
 }

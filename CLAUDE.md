@@ -8,7 +8,8 @@
 ## 기술 스택
 - **CSS**: Tailwind CSS v3 + PostCSS **빌드** (`src/css/main.css` → `dist/output.css`). **CDN 방식 아님.**
 - **마크업**: 순수 HTML5 (프레임워크 없음)
-- **JS**: 바닐라 JavaScript (`src/js/main.js`)
+- **JS**: 바닐라 JavaScript (`src/js/common.js` 공통 + `src/js/components/` 화면별)
+- **페이지 전환**: Turbo Drive (CDN, head defer) — 링크 클릭 시 body만 교체, 헤더는 `data-turbo-permanent`로 유지
 - **폰트**: Pretendard (CDN) · **아이콘**: Iconify Solar (`<iconify-icon icon="solar:...">`)
 - **빌드**: `npm run build` / `npm run watch` / `npm run dev`
 
@@ -24,7 +25,8 @@
 ├── src/
 │   ├── css/              # main.css(진입점) + base/layout/components/animations.css
 │   └── js/
-│       └── main.js
+│       ├── common.js     # 전 페이지 공통 동작 (내비·모바일 메뉴·reveal·연도)
+│       └── components/   # 화면별 동작 (home.js · guide.js · partnership.js)
 ├── pages/
 │   ├── _template.html    # 새 페이지 만들 때 복사하는 기본 템플릿
 │   ├── guide.html        # 활용가이드 (운영 중)
@@ -47,7 +49,7 @@
 ## 작업 규칙 (요약 — 상세·근거는 `.claude/rules/coding.md`)
 - 스타일은 **Tailwind 유틸리티 클래스**로 작성한다. 인라인 `style`·HTML `<style>` 태그 금지(coding.md §2의 예외만 허용).
 - 같은 유틸 조합이 3회 이상 반복되면 `src/css/`의 알맞은 파일(`@layer`)로 추출한다(분류 기준은 coding.md §2-2).
-- CSS 참조 경로: 루트는 `dist/output.css`, `pages/` 하위는 `../dist/output.css`.
+- CSS·JS·파비콘·헤더 내부 링크는 루트 절대 경로를 쓴다(`/dist/output.css`, `/src/js/...`, `/pages/guide.html`, `/#download`). Turbo 영속 헤더가 페이지를 넘나들며 유지되므로 상대 경로는 깨진다.
 - 색상·폰트·간격은 임의 hex가 아니라 `tailwind.config.js`의 토큰으로 등록 후 클래스로 쓴다.
 - 새 페이지는 `pages/_template.html`을 복사해 `pages/새페이지명.html`로 저장한다.
 - 이미지는 `assets/images/`, 아이콘은 `assets/icons/`, 로컬 폰트는 `assets/fonts/`.
