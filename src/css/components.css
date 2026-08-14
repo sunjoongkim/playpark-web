@@ -7,21 +7,71 @@
 
   /* ===== 버튼 ===== */
 
+  /* 주 CTA — 골드 필(pill) */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-1.5
-           px-6 py-3 rounded-lg
-           bg-brand text-white font-bold
-           transition-colors duration-200
-           hover:bg-brand-600
-           active:scale-[0.97];
+    @apply inline-flex items-center justify-center gap-2.5
+           px-7 py-4 rounded-full
+           bg-brand text-white text-lg font-bold shadow-brand
+           transition-all duration-500 ease-spring
+           hover:scale-[1.02] hover:bg-brand-600
+           active:scale-[0.98];
   }
 
+  /* 보조 CTA — 흰 배경 아웃라인 필 */
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-1.5
-           px-6 py-3 rounded-lg
-           border border-black/15 text-ink font-medium
-           transition-colors duration-200
+    @apply inline-flex items-center justify-center gap-2
+           px-6 py-4 rounded-full
+           border border-black/10 bg-white text-ink text-lg font-bold
+           transition-all duration-500 ease-spring
+           hover:scale-[1.02] hover:border-black/20
+           active:scale-[0.98];
+  }
+
+  /* 다크 섹션 위 보조 CTA */
+  .btn-secondary-dark {
+    @apply inline-flex items-center justify-center gap-2
+           px-6 py-4 rounded-full
+           border border-white/20 bg-white/5 text-white text-lg font-bold
+           transition-all duration-500 ease-spring
+           hover:scale-[1.02] hover:border-white/40 hover:bg-white/10
+           active:scale-[0.98];
+  }
+
+  /* GNB 우측 다크 필 (작은 크기) */
+  .btn-nav {
+    @apply inline-flex items-center gap-1.5
+           px-4 py-2 rounded-full
+           bg-ink text-white text-sm font-bold
+           transition-all duration-500 ease-spring
+           hover:scale-[1.03] active:scale-95;
+  }
+
+  /* ===== 내비게이션 링크 ===== */
+
+  .nav-link {
+    @apply rounded-full px-3.5 py-2 text-sm font-medium text-muted
+           transition-colors duration-300
+           hover:bg-black/5 hover:text-ink;
+  }
+
+  .nav-link-active {
+    @apply rounded-full px-3.5 py-2 text-sm font-bold text-ink
+           transition-colors duration-300
            hover:bg-black/5;
+  }
+
+  .mobile-nav-link {
+    @apply rounded-2xl px-4 py-4 text-2xl font-bold text-muted;
+  }
+
+  .mobile-nav-link-active {
+    @apply rounded-2xl px-4 py-4 text-2xl font-bold text-ink;
+  }
+
+  /* 모바일 메뉴 하단 골드 필 */
+  .mobile-btn {
+    @apply inline-flex items-center justify-center gap-2
+           rounded-full bg-brand px-6 py-4 text-lg font-bold text-white;
   }
 
   /* ===== 외부 시스템 링크 (새 창으로 열림: GNB·모바일메뉴·푸터) ===== */
@@ -44,19 +94,310 @@
     @apply inline-flex items-center gap-1 hover:text-white;
   }
 
+  /* ===== 골드 화살표 인라인 링크 (섹션 하단 "자세히 보기" 류) =====
+     화살표 타일의 hover 이동은 부모의 .group에 반응하므로,
+     링크 태그에 `group` 클래스를 함께 붙여야 한다. */
+
+  .link-arrow {
+    @apply inline-flex items-center gap-2 font-bold text-brand-600
+           transition-colors hover:text-brand;
+  }
+
+  .link-arrow-tile {
+    @apply grid h-7 w-7 place-items-center rounded-full bg-brand/10
+           transition-transform duration-500 ease-spring
+           group-hover:translate-x-1;
+  }
+
+  /* ===== 섹션 아이브로우 배지 ===== */
+
+  .eyebrow {
+    @apply inline-flex items-center rounded-full bg-brand/10 px-3 py-1
+           text-[11px] font-bold uppercase tracking-[0.15em] text-brand-600;
+  }
+
+  /* 다크 섹션용 아이브로우 */
+  .eyebrow-dark {
+    @apply inline-flex items-center rounded-full bg-white/10 px-3 py-1
+           text-[11px] font-bold uppercase tracking-[0.15em] text-brand;
+  }
+
+  /* ===== Double-Bezel 카드 (바깥 틴트 패딩 + 안쪽 흰 카드) =====
+     .card-bezel 안에 .card-bezel-inner 를 한 겹 넣어 쓴다. */
+
+  .card-bezel {
+    @apply rounded-[2rem] bg-black/[0.035] p-1.5 ring-1 ring-black/5
+           transition-all duration-500 ease-spring
+           hover:-translate-y-1.5 hover:bg-black/[0.05];
+  }
+
+  .card-bezel-inner {
+    @apply h-full rounded-[1.625rem] bg-white p-8 shadow-card;
+  }
+
+  /* ===== 아이콘 타일 (카드 상단 라운드 아이콘 박스) ===== */
+
+  .icon-tile {
+    @apply grid h-14 w-14 place-items-center rounded-2xl bg-brand/10 text-3xl text-brand;
+  }
+
+  /* ===== 사업 영역 사진 카드 (홈 브랜드 스테이트먼트 섹션) =====
+     카드 전체가 <a> 이고 `group` 을 함께 붙여야
+     사진 확대·플러스 버튼이 카드 호버에 반응한다. */
+
+  .photo-card {
+    @apply relative block aspect-[4/5] overflow-hidden rounded-[1.75rem] bg-ink
+           ring-1 ring-black/5 shadow-[0_12px_28px_-20px_rgba(22,22,26,0.5)]
+           transition-[transform,box-shadow] duration-500 ease-spring
+           hover:-translate-y-2.5 hover:shadow-[0_40px_64px_-28px_rgba(22,22,26,0.6)];
+  }
+
+  .photo-card-media {
+    @apply absolute inset-0 h-full w-full object-cover
+           transition-transform duration-700 ease-spring group-hover:scale-[1.12];
+  }
+
+  /* ⚠️ 사진 밝기와 무관하게 흰 글자 대비(WCAG AA)를 보장하는 상단 스크림이다.
+     사진을 교체해도 지우지 않는다. */
+  .photo-card-scrim {
+    @apply absolute inset-0 bg-gradient-to-b from-black/75 via-black/35 to-black/5
+           transition-opacity duration-500 group-hover:opacity-90;
+  }
+
+  /* ⚠️ 아이콘(solar:add-circle-linear)이 원을 직접 그리므로 border 를 주지 않는다 — 외곽선이 두 줄이 된다. */
+  .photo-card-plus {
+    @apply inline-grid h-10 w-10 place-items-center text-[2.25rem] text-white/80
+           transition-[transform,color] duration-500 ease-spring
+           group-hover:rotate-90 group-hover:scale-110 group-hover:text-white;
+  }
+
+  /* ===== 비교 카드 리스트 (무인매장 매장 유형 2단 비교) =====
+     두 카드가 같은 축(.compare-axis)을 같은 순서로 답한다.
+     한쪽 축을 늘리거나 줄이면 반대쪽도 함께 고쳐야 행이 어긋나지 않는다.
+     밝기는 기본(반투명) → -lead(순백) 두 단계다. */
+
+  .compare-card {
+    @apply rounded-[1.75rem] bg-white/[0.06] p-8 ring-1 ring-white/10
+           transition-all duration-500 ease-spring
+           hover:-translate-y-1.5 hover:bg-white/[0.09];
+  }
+
+  /* 결론 카드 — 다크 배경 위에서 순백으로 뒤집는다.
+     ⚠️ 카드 전체에 골드 틴트를 깔면 night 와 섞여 탁한 겨자색이 된다. 골드는 배지·부제에만 점으로 쓴다. */
+  .compare-card-lead {
+    @apply bg-white text-ink ring-0 hover:bg-white;
+  }
+
+  .compare-list {
+    @apply mt-6 divide-y divide-white/10;
+  }
+
+  .compare-list > li {
+    @apply py-3.5 first:pt-0 last:pb-0;
+  }
+
+  .compare-axis {
+    @apply text-[11px] font-semibold text-white/50;
+  }
+
+  /* ⚠️ white/55 아래로 내리지 않는다 — night 배경에서 4.5:1(WCAG AA)이 깨진다. */
+  .compare-value {
+    @apply mt-1 font-bold leading-snug text-white/75;
+  }
+
+  /* 흰 카드 안쪽 — 축 라벨에 brand-600 을 쓰면 흰 배경에서 3.8:1 이라 muted 로 둔다. */
+  .compare-card-lead .compare-list {
+    @apply divide-black/[0.07];
+  }
+
+  .compare-card-lead .compare-axis {
+    @apply text-muted;
+  }
+
+  .compare-card-lead .compare-value {
+    @apply text-ink;
+  }
+
+  /* ===== 제공 항목 (무인매장 서비스 제공 항목) =====
+     항목이 많은 지면이라 카드·패널로 감싸지 않고 배경 위에 바로 얹는다.
+     항목명과 설명의 크기·색을 벌려 위계로 읽히게 한다. */
+
+  .spec-group {
+    @apply border-t border-black/[0.08] pt-8;
+  }
+
+  .spec-group-label {
+    @apply text-xl font-black tracking-tight text-ink sm:text-2xl;
+  }
+
+  .spec-item-name {
+    @apply text-lg font-bold leading-snug tracking-tight text-ink;
+  }
+
+  .spec-item-desc {
+    @apply mt-1.5 text-sm leading-relaxed text-muted;
+  }
+
+  /* 예외 표시용 태그. 기본값(포함)에는 붙이지 않고 선택 항목에만 쓴다. */
+  .spec-tag {
+    @apply ml-2 inline-flex translate-y-[-1px] items-center rounded-full
+           bg-black/[0.06] px-2 py-0.5 align-middle text-[11px] font-bold text-muted;
+  }
+
+  /* ===== 스텝 타임라인 (무인매장 룸 자동화 4단계) =====
+     번호 원이 섹션을 가로지르는 연결선 위에 얹히므로, ring 으로 배경색을 둘러
+     선이 원 뒤에서 끊긴 것처럼 보이게 한다.
+     ⚠️ 지금 쓰이는 곳이 다크 섹션이라 ring 은 night 다. 라이트 섹션으로 옮기면
+     ring-white 로 함께 바꿔야 하고, 글자색도 골드 위 흰색은 2.45:1 이라 text-night 를 유지한다. */
+
+  .step-num {
+    @apply relative z-10 grid h-12 w-12 place-items-center rounded-full
+           bg-brand text-base font-black tabular-nums text-night ring-8 ring-night;
+  }
+
+  /* ===== 매장 카드 (무인매장 매장 찾기) =====
+     사진이 없는 카드라 위계를 글자 크기·색으로만 만든다.
+     배지는 운영 형태 하나만 두고, 룸 수 같은 수량은 아래 명세(.store-spec)로 내린다. */
+
+  .store-badge {
+    @apply inline-flex items-center gap-1.5 self-start rounded-full bg-brand/10
+           px-3 py-1.5 text-xs font-bold text-ink;
+  }
+
+  /* ⚠️ 배지 글자를 text-brand-600 으로 바꾸지 않는다 — 골드 틴트 위에서 3.5:1 로 AA 가 깨진다.
+     골드는 아이콘으로만 남긴다(장식이라 3:1 기준을 넘으면 된다). */
+  .store-badge iconify-icon {
+    @apply text-sm text-brand-600;
+  }
+
+  /* 주간 유인 · 야간 무인 — 24시간 무인과 구분되게 뉴트럴 틴트로 둔다 */
+  .store-badge-alt {
+    @apply bg-ink/[0.07];
+  }
+
+  .store-badge-alt iconify-icon {
+    @apply text-ink;
+  }
+
+  .store-name {
+    @apply mt-4 text-lg font-black leading-snug tracking-tight text-ink;
+  }
+
+  /* mb 로 명세와의 최소 간격을 확보한다 — 아래 .store-spec 이 mt-auto 라 남는 공간을 다 먹는다 */
+  .store-address {
+    @apply mb-6 mt-2 text-sm leading-relaxed text-muted;
+  }
+
+  /* 명세 — 라벨 고정폭 + 값. `mt-auto` 라 주소 줄 수가 달라도 카드 하단이 가로로 일직선에 놓인다.
+     ⚠️ 항목은 지점마다 2개로 맞추고 값은 한 줄에 떨어지게 짧게 쓴다 — 한 카드만 두 줄이 되면 정렬이 깨진다. */
+  .store-spec {
+    @apply mt-auto divide-y divide-black/[0.06] border-t border-black/[0.06];
+  }
+
+  .store-spec > div {
+    @apply flex gap-3 py-2.5;
+  }
+
+  .store-spec dt {
+    @apply w-9 shrink-0 pt-0.5 text-xs font-bold text-muted;
+  }
+
+  .store-spec dd {
+    @apply flex-1 text-sm font-semibold leading-snug text-ink;
+  }
+
+  /* ===== 운영 방식 스위치 (무인매장 "100% 완전 무인 / 유·무인 병행") =====
+     전환은 라디오 `:checked` + 뒤 형제 선택자로 CSS 만 쓴다(JS 없음).
+     라디오라서 화살표 키 이동·선택 상태 안내가 브라우저 기본으로 따라온다.
+     ⚠️ 마크업 순서(라디오 2개 → .mode-switch → .mode-grid)는 `~` 가 뒤 형제만 짚기 때문에 고정이다. */
+
+  .mode-picker {
+    /* fieldset 기본 min-inline-size 가 안쪽 그리드를 밀어내지 않게 푼다 */
+    @apply relative min-w-0 border-0 p-0;
+  }
+
+  /* 트랙 — 모바일은 누르기 쉽게 폭을 다 쓰고, sm 이상은 `w-fit` 으로 글자 폭에 붙인다.
+     ⚠️ 안쪽 그림자와 테두리 한 줄을 box-shadow 한 선언에 함께 쓴다.
+     `ring-1` 유틸과 나눠 쓰면 뒤에 오는 raw box-shadow 가 ring 을 덮어 테두리가 사라진다. */
+  .mode-switch {
+    @apply relative mx-auto grid w-full max-w-md grid-cols-2 rounded-full
+           bg-ground-dark p-1.5 sm:w-fit sm:max-w-none;
+    box-shadow:
+      inset 0 1px 3px rgb(0 0 0 / 6%),
+      0 0 0 1px rgb(0 0 0 / 6%);
+  }
+
+  /* 노브 — 폭이 트랙의 절반(양쪽 패딩 제외)이라 translateX(100%) 한 번으로 오른쪽 칸에 정확히 맞는다. */
+  .mode-switch-knob {
+    @apply pointer-events-none absolute inset-y-1.5 left-1.5 z-0 w-[calc(50%-0.375rem)]
+           rounded-full bg-brand shadow-brand-sm transition-transform duration-500 ease-spring;
+  }
+
+  /* ⚠️ 고르지 않은 쪽 라벨을 text-muted 로 내리지 않는다 — ground.dark 위에서 4.1:1 로 AA 가 깨진다(ink/70 은 6.2:1).
+     골드 노브 위 라벨은 흰색이 아니라 night 다(6.9:1). */
+  .mode-switch-label {
+    @apply relative z-10 cursor-pointer select-none whitespace-nowrap rounded-full
+           px-4 py-3.5 text-center text-sm font-bold text-ink/70
+           transition-colors duration-300 hover:text-ink sm:px-10 sm:text-base;
+  }
+
+  .mode-grid {
+    @apply mt-8 grid gap-5 md:mt-10 md:grid-cols-2;
+  }
+
+  /* ⚠️ `ring-2 ring-transparent` 은 보이지 않지만 지우지 않는다. ring 을 아예 두지 않으면
+     골드 링이 붙는 순간 box-shadow 가 none 에서 튀어 전환이 끊긴다.
+     두 카드의 패딩도 같아야 스위치를 눌렀을 때 레이아웃이 흔들리지 않는다. */
+  .mode-card {
+    @apply relative rounded-[2rem] bg-white p-8 text-center ring-2 ring-transparent
+           transition-all duration-500 ease-spring md:p-10;
+  }
+
+  /* 카드 전체를 덮는 라벨 — 어디를 눌러도 고를 수 있게 한다.
+     제목·리스트는 라벨 안에 넣을 수 없어(라벨은 phrasing content 만 담는다) 내용 위에 투명하게 얹는다. */
+  .mode-card-hit {
+    @apply absolute inset-0 z-10 cursor-pointer rounded-[2rem];
+  }
+
+  /* 고른 쪽 — 골드 링 + 부양 그림자.
+     ⚠️ transform 으로 띄우지 않는다 — `.reveal` 이 @layer 밖에서 transform 을 잡고 있어
+     스크롤 등장이 끝나면 값이 덮인다. 높이 차이는 그림자로만 만든다. */
+  .mode-picker > input:first-of-type:checked ~ .mode-grid > .mode-card:first-child,
+  .mode-picker > input:nth-of-type(2):checked ~ .mode-grid > .mode-card:nth-child(2) {
+    @apply shadow-lift ring-brand;
+  }
+
+  .mode-picker > input:nth-of-type(2):checked ~ .mode-switch .mode-switch-knob {
+    @apply translate-x-full;
+  }
+
+  .mode-picker > input:first-of-type:checked ~ .mode-switch > .mode-switch-label:first-of-type,
+  .mode-picker > input:nth-of-type(2):checked ~ .mode-switch > .mode-switch-label:nth-of-type(2) {
+    @apply text-night;
+  }
+
+  /* 라디오가 sr-only 라 전역 :focus-visible 링이 화면 밖에서 잘린다. 링을 눌리는 라벨로 옮긴다.
+     ⚠️ 색은 전역 골드가 아니라 ink 다 — 골드 노브 위에 골드 링을 두면 보이지 않는다. */
+  .mode-picker > input:first-of-type:focus-visible ~ .mode-switch > .mode-switch-label:first-of-type,
+  .mode-picker > input:nth-of-type(2):focus-visible ~ .mode-switch > .mode-switch-label:nth-of-type(2) {
+    outline: 2px solid theme('colors.ink');
+    outline-offset: 3px;
+  }
+
   /* ===== FAQ ===== */
 
+  /* main.js 가 높이를 애니메이션하므로 넘침을 잘라 둔다 */
   .faq-answer {
     overflow: hidden;
   }
 
   /* ===== 홈 앱 스크린샷 카드 =====
-     --shot-scale은 home.js가 스크롤 위치에 따라 주입(중앙에 가까울수록 확대) */
+     --shot-scale은 main.js가 스크롤 위치에 따라 주입(중앙에 가까울수록 확대) */
 
   .shot-card {
     @apply aspect-[393/560] w-[clamp(220px,60vw,300px)] shrink-0 snap-center
            rounded-t-[1.75rem] object-cover object-top
-           shadow-[0_20px_50px_-18px_rgba(0,0,0,0.28)] ring-1 ring-black/5 origin-bottom;
+           shadow-lift ring-1 ring-black/5 origin-bottom;
     transform: scale(var(--shot-scale, 1));
   }
 

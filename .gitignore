@@ -2,3 +2,9 @@ node_modules/
 dist/
 .DS_Store
 *.log
+
+# Firebase 배포 캐시 (로컬 산출물)
+.firebase/
+
+# 이미지 원본(webp 변환 전 소스). 배포에 올리지 않는다.
+assets/images/_source/

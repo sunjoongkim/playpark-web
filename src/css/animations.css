@@ -52,6 +52,37 @@
 }
 .orb { animation: orbDrift 14s ease-in-out infinite; }
 
+/* --- 룸 렌더 위 장비 위치 표시 점 (pages/store.html 룸 자동화 섹션) ---
+   위치는 HTML 에서 `left-[..%] top-[..%]` 로 준다(이미지 폭이 변해도 같은 지점을 짚는다).
+   점은 자기 크기의 절반만큼 당겨져 있어 지정한 좌표가 점의 중심이 된다.
+   퍼지는 링은 ::after 라 마크업이 한 겹으로 끝나고, 펄스 지연은 `--hd` 로 준다.
+   ⚠️ 좌표 기준은 이미지와 같은 크기의 부모여야 한다. 패딩 있는 패널을 기준으로 잡으면 점이 밀린다. */
+@keyframes hotspotPing {
+  0%       { transform: scale(1);   opacity: .55; }
+  70%, 100% { transform: scale(3);   opacity: 0; }
+}
+.hotspot {
+  position: absolute;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: -.625rem 0 0 -.625rem;
+  border-radius: 9999px;
+  background: theme('colors.brand.DEFAULT');
+  /* 렌더의 밝은 벽·잔디 위에서도 점이 뜨도록 얇은 흰 테두리 + 골드 헤일로를 겹친다 */
+  box-shadow:
+    0 0 0 .1875rem rgb(255 255 255 / .9),
+    0 0 0 .5rem theme('colors.brand.DEFAULT' / 30%);
+}
+.hotspot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: theme('colors.brand.DEFAULT');
+  animation: hotspotPing 2.6s cubic-bezier(0, 0, .2, 1) infinite;
+  animation-delay: var(--hd, 0ms);
+}
+
 /* --- 페이지 전환 (cross-document View Transitions) ---
    정적 멀티페이지 사이트라 링크 이동마다 문서 전체가 새로 로드된다.
    헤더에 같은 view-transition-name을 주면 전환 중 그대로 유지되어
@@ -67,5 +98,6 @@
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; filter: none; transition: none; }
   .marquee, .floaty, .orb { animation: none; }
+  .hotspot::after { animation: none; }
   @view-transition { navigation: none; }
 }
