@@ -306,6 +306,17 @@
     @apply flex-1 text-sm font-semibold leading-snug text-ink;
   }
 
+  /* 카드 하단 예약 링크 안내. 카드 전체가 예약화면(외부 ppscreen)으로 가는 <a> 이고
+     부양 모션은 .card-bezel 이 맡으므로 여기서는 화살표만 호버에 반응시킨다.
+     ⚠️ <a> 에 `group` 을 함께 붙여야 group-hover 가 걸린다. */
+  .store-card-cta {
+    @apply mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-brand-600;
+  }
+
+  .store-card-cta iconify-icon {
+    @apply transition-transform duration-500 ease-spring group-hover:translate-x-0.5 group-hover:-translate-y-0.5;
+  }
+
   /* ===== 운영 방식 스위치 (무인매장 "100% 완전 무인 / 유·무인 병행") =====
      전환은 라디오 `:checked` + 뒤 형제 선택자로 CSS 만 쓴다(JS 없음).
      라디오라서 화살표 키 이동·선택 상태 안내가 브라우저 기본으로 따라온다.
