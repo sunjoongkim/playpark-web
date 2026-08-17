@@ -170,7 +170,7 @@
               </span>
               <span class="sr-only">(새 창에서 열림)</span>
             </a>
-            <a href="#business" class="btn-secondary-dark">창업·도입 문의</a>
+            <a href="partnership.html?type=unmanned-store#contact" class="btn-secondary-dark">창업·도입 문의</a>
           </div>
         </div>
       </div>
@@ -192,22 +192,10 @@
         </div>
 
         <figure class="reveal mx-auto mt-12 max-w-4xl" style="--d:100ms">
-          <!-- 핫스팟 좌표 기준이 되는 층. 이미지와 정확히 같은 크기여야 점이 밀리지 않는다. -->
-          <div class="relative">
-            <img src="../assets/images/room.webp" width="1792" height="1548" loading="lazy"
-                 class="h-auto w-full"
-                 alt="무인 스크린 파크골프 룸 내부 구조. 출입문 옆에 스마트 도어락과 키오스크가 있고, 천장에는 트랙 조명과 에어컨, 빔프로젝터가 달려 있으며, 정면 스크린 앞에 인조 잔디 타석과 볼 공급기가 놓여 있다." />
-
-            <!-- 자동 제어되는 장비 위치. 좌표는 렌더 기준이라 이미지를 교체하면 함께 조정한다.
-                 `--hd` 는 점마다 다른 펄스 지연이며, 부모 .reveal 의 `--d` 와 섞이지 않도록 이름을 따로 뒀다.
-                 정보는 아래 4단계가 텍스트로 담으므로 점은 장식(aria-hidden)이다. -->
-            <span aria-hidden="true" class="hotspot left-[29%] top-[30%]"></span>
-            <span aria-hidden="true" class="hotspot left-[49%] top-[20%]" style="--hd:400ms"></span>
-            <span aria-hidden="true" class="hotspot left-[53%] top-[37%]" style="--hd:800ms"></span>
-            <span aria-hidden="true" class="hotspot left-[72%] top-[36%]" style="--hd:1200ms"></span>
-            <span aria-hidden="true" class="hotspot left-[20%] top-[63%]" style="--hd:1600ms"></span>
-            <span aria-hidden="true" class="hotspot left-[33%] top-[66%]" style="--hd:2000ms"></span>
-          </div>
+          <!-- 렌더 자체에 장비 라벨과 지시선이 들어 있어 별도 핫스팟 오버레이를 얹지 않는다. -->
+          <img src="../assets/images/room.png" width="3086" height="2395" loading="lazy"
+               class="h-auto w-full"
+               alt="무인 스크린 파크골프 룸 내부 구조와 자동 제어되는 장비 위치. 매장 밖에 예약·결제 키오스크, 출입문에 도어 제어 단말, 타석마다 남은 시간을 띄우는 타이머가 있고, 천장에는 메인 조명과 에어컨·CCTV·타석별 조명과 프로젝터가 달려 있으며, 정면 스크린 앞 인조 잔디 타석에 볼 공급기와 PC가 놓여 있다." />
         </figure>
 
         <div class="relative mt-16">
