@@ -108,16 +108,16 @@
             <div class="grid gap-5 sm:grid-cols-2">
               <label class="block">
                 <span class="text-sm font-bold text-ink">이름 <span class="text-brand">*</span></span>
-                <input type="text" name="name" required autocomplete="name" placeholder="홍길동" class="mt-2 w-full rounded-lg border border-black/10 bg-ground px-4 py-3 text-ink outline-none transition-colors focus:border-brand" />
+                <input type="text" name="name" required autocomplete="name" placeholder="홍길동" class="form-input" />
               </label>
               <label class="block">
                 <span class="text-sm font-bold text-ink">연락처 <span class="text-brand">*</span></span>
-                <input type="tel" name="phone" required autocomplete="tel" placeholder="010-0000-0000" class="mt-2 w-full rounded-lg border border-black/10 bg-ground px-4 py-3 text-ink outline-none transition-colors focus:border-brand" />
+                <input type="tel" name="phone" required autocomplete="tel" placeholder="010-0000-0000" class="form-input" />
               </label>
             </div>
             <label class="mt-5 block">
               <span class="text-sm font-bold text-ink">이메일 <span class="text-brand">*</span></span>
-              <input type="email" name="email" required autocomplete="email" placeholder="example@email.com" class="mt-2 w-full rounded-lg border border-black/10 bg-ground px-4 py-3 text-ink outline-none transition-colors focus:border-brand" />
+              <input type="email" name="email" required autocomplete="email" placeholder="example@email.com" class="form-input" />
             </label>
             <fieldset class="mt-6">
               <legend class="text-sm font-bold text-ink">문의 유형</legend>
@@ -161,7 +161,7 @@
             </fieldset>
             <label class="mt-5 block">
               <span class="text-sm font-bold text-ink">문의 내용 <span class="text-brand">*</span></span>
-              <textarea name="message" required rows="6" placeholder="문의하실 내용을 자유롭게 적어주세요" class="mt-2 w-full resize-y rounded-lg border border-black/10 bg-ground px-4 py-3 text-ink outline-none transition-colors focus:border-brand"></textarea>
+              <textarea name="message" required rows="6" placeholder="문의하실 내용을 자유롭게 적어주세요" class="form-input resize-y"></textarea>
             </label>
             <p class="mt-5 text-sm leading-relaxed text-muted">문의를 요청하실 경우 <a href="privacy.html" class="font-medium text-brand-600 underline underline-offset-2 hover:text-brand">개인정보 처리방침</a> 및 <a href="terms.html" class="font-medium text-brand-600 underline underline-offset-2 hover:text-brand">이용약관</a>에 동의한 것으로 간주됩니다.</p>
             <button type="submit" class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand px-7 py-4 text-lg font-bold text-white shadow-brand transition-all duration-500 ease-spring hover:scale-[1.01] hover:bg-brand-600 active:scale-[0.98]"><iconify-icon icon="solar:letter-bold"></iconify-icon> 문의하기</button>

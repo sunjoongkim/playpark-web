@@ -83,6 +83,28 @@
   animation-delay: var(--hd, 0ms);
 }
 
+/* --- 모달 / 바텀시트 등장 (무인매장 소개서 팝업) ---
+   main.js 가 .hidden 을 벗기는 순간 재생된다.
+   모바일은 아래에서 올라오는 시트, sm 이상은 살짝 커지며 페이드인. */
+@keyframes overlayIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes sheetIn {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+@keyframes panelIn {
+  from { opacity: 0; transform: translateY(.75rem) scale(.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+.modal-overlay { animation: overlayIn .25s ease-out; }
+.modal-panel   { animation: sheetIn .38s cubic-bezier(0.16, 1, 0.3, 1); }
+
+@media (min-width: 640px) {
+  .modal-panel { animation: panelIn .38s cubic-bezier(0.16, 1, 0.3, 1); }
+}
+
 /* --- 페이지 전환 (cross-document View Transitions) ---
    정적 멀티페이지 사이트라 링크 이동마다 문서 전체가 새로 로드된다.
    헤더에 같은 view-transition-name을 주면 전환 중 그대로 유지되어
@@ -98,6 +120,7 @@
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; filter: none; transition: none; }
   .marquee, .floaty, .orb { animation: none; }
+  .modal-overlay, .modal-panel { animation: none; }
   .hotspot::after { animation: none; }
   @view-transition { navigation: none; }
 }

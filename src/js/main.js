@@ -19,6 +19,33 @@
   var SPRING = "cubic-bezier(0.16,1,0.3,1)";
 
   /* ----------------------------------------------------------
+     EmailJS — 제휴 문의 폼(8)과 소개서 신청 폼(9)이 함께 쓴다.
+     public key 는 클라이언트 노출을 전제로 발급된 키다.
+     ---------------------------------------------------------- */
+  var EMAILJS = {
+    serviceId: "service_k454clt",
+    templateId: "template_ppqsbsd",
+    publicKey: "ktCALr_hZ9pgEFIqU"
+  };
+
+  function sendEmail(params) {
+    return fetch("https://api.emailjs.com/api/v1.0/email/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        service_id: EMAILJS.serviceId,
+        template_id: EMAILJS.templateId,
+        user_id: EMAILJS.publicKey,
+        template_params: params
+      })
+    }).then(function (res) {
+      if (!res.ok) {
+        return res.text().then(function (t) { throw new Error(t || String(res.status)); });
+      }
+    });
+  }
+
+  /* ----------------------------------------------------------
      1. 플로팅 글래스 내비 — 스크롤 시 배경/그림자 강화
      ---------------------------------------------------------- */
   (function navScroll() {
@@ -382,12 +409,6 @@
     var form = document.querySelector("form[aria-label='제휴 문의 양식']");
     if (!form) return;
 
-    /* EmailJS — public key는 클라이언트 노출 전제의 키 */
-    var EMAILJS = {
-      serviceId: "service_k454clt",
-      templateId: "template_ppqsbsd",
-      publicKey: "ktCALr_hZ9pgEFIqU"
-    };
     var TYPE_LABELS = {
       "golf-course": "파크골프장 제휴",
       "club": "동호회·협회",
@@ -408,23 +429,6 @@
     if (preset) {
       var radio = form.querySelector('input[name="type"][value="' + preset + '"]');
       if (radio) radio.checked = true;
-    }
-
-    function sendEmail(params) {
-      return fetch("https://api.emailjs.com/api/v1.0/email/send", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          service_id: EMAILJS.serviceId,
-          template_id: EMAILJS.templateId,
-          user_id: EMAILJS.publicKey,
-          template_params: params
-        })
-      }).then(function (res) {
-        if (!res.ok) {
-          return res.text().then(function (t) { throw new Error(t || String(res.status)); });
-        }
-      });
     }
 
     function setError(input, msg) {
@@ -538,7 +542,154 @@
   })();
 
   /* ----------------------------------------------------------
-     9. 푸터 저작권 연도
+     9. 무인매장 소개서 신청 팝업 (#brochureModal)
+        - [data-brochure-open] 으로 열고, 배경 클릭·Esc·닫기 버튼으로 닫는다
+          (영상 라이트박스(7)와 같은 hidden↔flex 토글 규약)
+        - 휴대폰 번호만 받아 제휴 문의와 같은 EmailJS 템플릿으로 보낸다
+     ---------------------------------------------------------- */
+  (function brochureModal() {
+    var modal = document.getElementById("brochureModal");
+    var openers = document.querySelectorAll("[data-brochure-open]");
+    if (!modal || !openers.length) return;
+
+    var form = modal.querySelector("form");
+    var phone = form.elements["phone"];
+    var status = form.querySelector("[data-form-status]");
+    var submitBtn = form.querySelector("button[type=submit]");
+    var lastFocused = null;
+    var sending = false;
+
+    /* 010-1234-5678 / 01012345678 / 공백·하이픈 혼용까지 허용하고 숫자만 검사한다 */
+    var PHONE_RE = /^01[0-9]{8,9}$/;
+
+    function digits(v) {
+      return v.replace(/[^0-9]/g, "");
+    }
+
+    /* 하이픈 없이 입력해도 메일에는 010-0000-0000 형태로 나가게 맞춘다.
+       검증을 통과한 10~11자리 숫자만 들어온다. */
+    function formatPhone(d) {
+      return d.length === 11
+        ? d.slice(0, 3) + "-" + d.slice(3, 7) + "-" + d.slice(7)
+        : d.slice(0, 3) + "-" + d.slice(3, 6) + "-" + d.slice(6);
+    }
+
+    function hideStatus() {
+      status.classList.add("hidden");
+      status.classList.remove("form-status-success", "form-status-error");
+      status.textContent = "";
+    }
+
+    function showStatus(msg, ok) {
+      status.textContent = msg;
+      status.classList.remove("hidden");
+      status.classList.add(ok ? "form-status-success" : "form-status-error");
+    }
+
+    function setError(msg) {
+      var err = document.getElementById("error-brochure-phone");
+      if (!err) {
+        err = document.createElement("p");
+        err.id = "error-brochure-phone";
+        err.className = "form-error";
+        phone.insertAdjacentElement("afterend", err);
+      }
+      err.textContent = msg;
+      phone.setAttribute("aria-invalid", "true");
+      phone.setAttribute("aria-describedby", err.id);
+    }
+
+    function clearError() {
+      var err = document.getElementById("error-brochure-phone");
+      if (err) err.remove();
+      phone.removeAttribute("aria-invalid");
+      phone.removeAttribute("aria-describedby");
+    }
+
+    function open() {
+      lastFocused = document.activeElement;
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+      document.body.style.overflow = "hidden";
+      phone.focus();
+    }
+
+    function close() {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      document.body.style.overflow = "";
+      if (lastFocused && typeof lastFocused.focus === "function") lastFocused.focus();
+    }
+
+    openers.forEach(function (el) {
+      el.addEventListener("click", function () { open(); });
+    });
+
+    modal.querySelectorAll("[data-brochure-close]").forEach(function (el) {
+      el.addEventListener("click", close);
+    });
+
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) close();
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !modal.classList.contains("hidden")) close();
+    });
+
+    phone.addEventListener("input", clearError);
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (sending) return;
+      hideStatus();
+
+      var value = digits(phone.value);
+      if (!value) {
+        setError("휴대폰 번호를 입력해 주세요.");
+        phone.focus();
+        return;
+      }
+      if (!PHONE_RE.test(value)) {
+        setError("휴대폰 번호 형식을 확인해 주세요. (예: 010-0000-0000)");
+        phone.focus();
+        return;
+      }
+      clearError();
+
+      var params = {
+        name: "무인매장 소개서 신청",
+        phone: formatPhone(value),
+        organization: "",
+        email: "",
+        message:
+          "홈페이지 무인매장 섹션의 '무인매장 소개서 받기'로 접수된 신청입니다.\n\n" +
+          "담당자 확인 후 문자로 소개서 다운로드 링크를 보내주세요."
+      };
+
+      sending = true;
+      var btnHtml = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.textContent = "신청 중…";
+
+      sendEmail(params)
+        .then(function () {
+          showStatus("신청이 접수되었습니다. 담당자가 확인 후 문자로 소개서 링크를 보내드립니다.", true);
+          form.reset();
+        })
+        .catch(function () {
+          showStatus("신청 전송에 실패했습니다. 잠시 후 다시 시도하시거나 02-6949-2277로 연락해 주세요.", false);
+        })
+        .then(function () {
+          sending = false;
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = btnHtml;
+        });
+    });
+  })();
+
+  /* ----------------------------------------------------------
+     10. 푸터 저작권 연도
      ---------------------------------------------------------- */
   (function footerYear() {
     document.querySelectorAll("[data-year]").forEach(function (el) {

@@ -412,6 +412,16 @@
     transform: scale(var(--shot-scale, 1));
   }
 
+  /* ===== 폼 입력 ===== */
+
+  /* 제휴 문의 폼 · 소개서 신청 폼이 공유하는 입력 필드.
+     textarea 는 여기에 `resize-y` 를 덧붙여 쓴다. */
+  .form-input {
+    @apply mt-2 w-full rounded-lg
+           border border-black/10 bg-ground px-4 py-3 text-ink
+           outline-none transition-colors focus:border-brand;
+  }
+
 }
 
 /* ===== 폼 검증 (제휴문의) — JS가 토글/생성하므로 @layer 밖에 선언 (purge 방지) ===== */
