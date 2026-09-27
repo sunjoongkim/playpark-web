@@ -30,6 +30,7 @@ const escape = (value) => String(value)
 function card(video) {
   const episode = `EP${String(video.episode).padStart(2, '0')}`;
   const title = escape(video.title);
+  const summary = escape(video.steps.slice(0, 2).join(' · '));
   const search = escape([episode, `EP${video.episode}`, video.episode, video.title, ...video.steps].join(' '));
   const image = `../assets/images/guide/${escape(video.thumbnail)}`;
   const inner = `
@@ -40,6 +41,7 @@ function card(video) {
           <span class="guide-card__body">
             <span class="guide-card__eyebrow">플레이파크 2.0 사용 설명</span>
             <strong class="guide-card__title">${title}</strong>
+            <span class="guide-card__summary">${summary}</span>
             <span class="guide-card__action">${video.published === false ? '공개 준비 중' : '영상 보기 <span aria-hidden="true">↗</span>'}</span>
           </span>`;
   if (video.published === false) {

@@ -192,6 +192,15 @@ button.guide-card:not(:disabled):hover {
   word-break: keep-all;
 }
 
+.guide-card__summary {
+  display: block;
+  margin-top: .55rem;
+  color: #626872;
+  font-size: .82rem;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
 .guide-card__action {
   display: inline-block;
   margin-top: auto;
@@ -236,6 +245,7 @@ button.guide-card:not(:disabled):hover {
 @media (max-width: 390px) {
   .guide-card__image-wrap { width: 5.7rem; flex-basis: 5.7rem; }
   .guide-card__body { padding: .9rem; }
+  .guide-card__summary { font-size: .76rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
