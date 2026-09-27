@@ -1,0 +1,571 @@
+[
+  {
+    "episode": 1,
+    "title": "바뀐 홈에서 필요한 메뉴 찾기",
+    "steps": [
+      "홈 전체 화면과 홈 버튼 강조",
+      "아래쪽 주요 메뉴 전체 강조",
+      "게임 버튼 2.8배 확대: 기록된 게임 결과 확인",
+      "홈의 다양한 기능 메뉴 영역 강조"
+    ],
+    "videoId": "NSt6r4SFhsY",
+    "thumbnail": "EP01_썸네일.webp"
+  },
+  {
+    "episode": 2,
+    "title": "오늘의 메시지와 날씨 확인하기",
+    "steps": [
+      "홈 위쪽 오늘의 메시지 영역 강조",
+      "날짜 아래 메시지 본문을 1.35배 확대하여 읽기",
+      "메시지 바로 아래 날씨 영역 전체 강조",
+      "왼쪽 기온과 날씨를 2.7배 확대"
+    ],
+    "videoId": "ZlqNf6V3ixM",
+    "thumbnail": "EP02_썸네일.webp"
+  },
+  {
+    "episode": 3,
+    "title": "글씨를 크게 보는 방법",
+    "steps": [
+      "전체 서비스 열기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 3.2배 확대",
+      "아래쪽 메뉴 찾기 · 실제 화면 스크롤",
+      "글씨 크기 열기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.5배 확대",
+      "더크게 선택 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.4배 확대"
+    ],
+    "videoId": "zoPByq6MyX8",
+    "thumbnail": "EP03_썸네일.webp"
+  },
+  {
+    "episode": 4,
+    "title": "플팍이에게 파크골프와 앱 사용법 물어보기",
+    "steps": [
+      "플팍이 열기",
+      "규칙과 구장도 질문",
+      "사용법 질문 예시",
+      "답변 읽기"
+    ],
+    "videoId": "spCag8VzWUs",
+    "thumbnail": "EP04_썸네일.webp"
+  },
+  {
+    "episode": 5,
+    "title": "내 주변 파크골프장 쉽게 찾기",
+    "steps": [
+      "골프장 메뉴 열기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.8배 확대",
+      "실외골프장 선택 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.4배 확대",
+      "거리로 비교 · 해당 영역 3배 확대",
+      "구장 상세 열기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 1.45배 확대"
+    ],
+    "videoId": "Weh7EjNmsno",
+    "thumbnail": "EP05_썸네일.webp"
+  },
+  {
+    "episode": 6,
+    "title": "다른 지역 파크골프장과 지도 찾아보기",
+    "steps": [
+      "지역 선택 열기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.8배 확대",
+      "경기 선택 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.6배 확대",
+      "지도보기 누르기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.6배 확대",
+      "지도 움직이기 · 실제 화면 스크롤"
+    ],
+    "videoId": "_EQLljo8JBo",
+    "thumbnail": "EP06_썸네일.webp"
+  },
+  {
+    "episode": 7,
+    "title": "구장 정보와 리뷰 살펴보기",
+    "steps": [
+      "구장 상세 열기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 1.4배 확대",
+      "기본 정보 확인 · 해당 영역 2.5배 확대",
+      "주소·연락처 보기 · 실제 화면 스크롤",
+      "이용 안내 찾기 · 실제 화면 스크롤"
+    ],
+    "videoId": "AWW62hRlUW4",
+    "thumbnail": "EP07_썸네일.webp"
+  },
+  {
+    "episode": 8,
+    "title": "AI 구장 분석으로 경기 준비하기",
+    "steps": [
+      "구장 분석 열기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.4배 확대",
+      "분석 경기 수 확인 · 해당 영역 1.1배 확대",
+      "코스별 분석 찾기 · 실제 화면 스크롤",
+      "코스 설명 읽기 · 해당 영역 1.04배 확대"
+    ],
+    "videoId": "Wag6NKWz-AY",
+    "thumbnail": "EP08_썸네일.webp"
+  },
+  {
+    "episode": 9,
+    "title": "홀별 거리와 공략 리뷰 확인하기",
+    "steps": [
+      "구장 분석 열기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.45배 확대",
+      "홀 목록 찾기 · 실제 화면 스크롤",
+      "1번홀 열기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.2배 확대",
+      "홀 거리 확인 · 해당 영역 2.7배 확대"
+    ],
+    "videoId": "nJtWaQTqhVc",
+    "thumbnail": "EP09_썸네일.webp"
+  },
+  {
+    "episode": 10,
+    "title": "홀별 공략 읽고 나만의 기록 남기기",
+    "steps": [
+      "홀별 공략 활용",
+      "공개 글 읽기",
+      "내 공략 입력",
+      "등록 범위 선택"
+    ],
+    "videoId": "t02BPxCwIvw",
+    "thumbnail": "EP10_썸네일.webp"
+  },
+  {
+    "episode": 11,
+    "title": "구장 정보에서 게임 만들기",
+    "steps": [
+      "게임 예약하기",
+      "함께 칠 날짜",
+      "시간·코스 찾기",
+      "시작 시간 선택"
+    ],
+    "videoId": "BFJOrOnPHfM",
+    "thumbnail": "EP11_썸네일.webp"
+  },
+  {
+    "episode": 12,
+    "title": "스크린 매장 찾고 모임 일정 준비하기",
+    "steps": [
+      "골프장 메뉴 열기",
+      "스크린 목록 보기",
+      "매장 상세 열기",
+      "모임 일정 열기"
+    ],
+    "videoId": "xgK3a4zirRs",
+    "thumbnail": "EP12_썸네일.webp"
+  },
+  {
+    "episode": 13,
+    "title": "특수 상황에서 수동 스코어카드 작성하기",
+    "steps": [
+      "스코어카드 열기",
+      "구장명 직접 입력",
+      "코스·기준타수 확인",
+      "홀 기준타수 누르기"
+    ],
+    "videoId": "RYIwWe_150w",
+    "thumbnail": "EP13_썸네일.webp"
+  },
+  {
+    "episode": 14,
+    "title": "친구 초대와 실시간 기록 공유",
+    "steps": [
+      "친구 메뉴 열기",
+      "새 친구 초대하기",
+      "초대 방법 고르기",
+      "초대 주소 복사"
+    ],
+    "videoId": "Wi0i9YvvIXE",
+    "thumbnail": "EP14_썸네일.webp"
+  },
+  {
+    "episode": 15,
+    "title": "게스트 추가와 경기 결과 나누기",
+    "steps": [
+      "첫 게스트 만들기",
+      "만들어진 이름 확인",
+      "두 번째 게스트",
+      "선택 상태 확인"
+    ],
+    "videoId": "bUspgv25jgc",
+    "thumbnail": "EP15_썸네일.webp"
+  },
+  {
+    "episode": 16,
+    "title": "타수 기록과 친구 경기 공유",
+    "steps": [
+      "기록할 사람 확인",
+      "더하기 한 번",
+      "늘어난 타수 확인",
+      "빼기 한 번"
+    ],
+    "videoId": "0AEhwYd8XYU",
+    "thumbnail": "EP16_썸네일.webp"
+  },
+  {
+    "episode": 17,
+    "title": "볼륨 버튼으로 타수와 사람·홀 이동하기",
+    "steps": [
+      "한 번 누르는 동작",
+      "선택된 사람 확인",
+      "한 타 늘리기",
+      "한 타 줄이기"
+    ],
+    "videoId": "o6RJ0yHYNLM",
+    "thumbnail": "EP17_썸네일.webp"
+  },
+  {
+    "episode": 18,
+    "title": "일반 경기 결과와 사진 공유",
+    "steps": [
+      "마지막 홀 마무리",
+      "종료 전에 확인",
+      "경기 종료하기",
+      "자동 우승자 확인"
+    ],
+    "videoId": "SVCytgLXfRo",
+    "thumbnail": "EP18_썸네일.webp"
+  },
+  {
+    "episode": 19,
+    "title": "AI 경기 해설 읽기",
+    "steps": [
+      "해설 메뉴 찾기",
+      "분석 결과 열기",
+      "첫 해설 읽기",
+      "경기 요약 살펴보기"
+    ],
+    "videoId": "Cm2SQRbj9_E",
+    "thumbnail": "EP19_썸네일.webp"
+  },
+  {
+    "episode": 20,
+    "title": "파크일지에 경기 메모 작성하기",
+    "steps": [
+      "파크일지 열기",
+      "기록할 게임 찾기",
+      "게임에서도 바로 작성",
+      "경기 느낌 입력"
+    ],
+    "videoId": "zHw9HOpMmk4",
+    "thumbnail": "EP20_썸네일.webp"
+  },
+  {
+    "episode": 21,
+    "title": "게임과 연결하지 않고 일지 작성하기",
+    "steps": [
+      "일지 쓰기 열기",
+      "자유롭게 작성 선택",
+      "제목과 내용 구분",
+      "연습 메모 입력"
+    ],
+    "videoId": "-kMrdR6Vvp0",
+    "thumbnail": "EP21_썸네일.webp"
+  },
+  {
+    "episode": 22,
+    "title": "내 경기 기록 한눈에 보기",
+    "steps": [
+      "내 정보 열기",
+      "평균 타수 확인",
+      "베스트 스코어 확인",
+      "최근 경기 찾기"
+    ],
+    "videoId": "aXfjOJzS5iM",
+    "thumbnail": "EP22_썸네일.webp"
+  },
+  {
+    "episode": 23,
+    "title": "게임 삭제 전에 확인하기",
+    "steps": [
+      "구장 이름 확인",
+      "날짜 확인",
+      "휴지통 버튼 열기",
+      "확인 문구 읽기"
+    ],
+    "videoId": "JibbcWI05kI",
+    "thumbnail": "EP23_썸네일.webp"
+  },
+  {
+    "episode": 24,
+    "title": "내 주변 동호회와 가입 화면 살펴보기",
+    "steps": [
+      "동호회 메뉴 열기",
+      "주변 목록 확인",
+      "관심 동호회 선택",
+      "소개와 지역 읽기"
+    ],
+    "videoId": "aMBsRRfaoSM",
+    "thumbnail": "EP24_썸네일.webp"
+  },
+  {
+    "episode": 25,
+    "title": "우리 동호회 만들기",
+    "steps": [
+      "만들기 화면 열기",
+      "동호회명 입력",
+      "최대 인원 확인",
+      "즐겨찾는 구장"
+    ],
+    "videoId": "ngSWVBScJ5g",
+    "thumbnail": "EP25_썸네일.webp"
+  },
+  {
+    "episode": 26,
+    "title": "동호회 게임 모임 만들기",
+    "steps": [
+      "모임 메뉴 열기",
+      "모임 만들기",
+      "게임 모임 선택",
+      "게임 예약 항목"
+    ],
+    "videoId": "DswvwhbwfZ0",
+    "thumbnail": "EP26_썸네일.webp"
+  },
+  {
+    "episode": 27,
+    "title": "동호회 초대 주소 보내기",
+    "steps": [
+      "내 동호회 열기",
+      "초대하기 열기",
+      "링크 공유하기",
+      "초대 주소 복사"
+    ],
+    "videoId": "BNOBIOndITQ",
+    "thumbnail": "EP27_썸네일.webp"
+  },
+  {
+    "episode": 28,
+    "title": "동호회 초대받아 가입하기",
+    "steps": [
+      "동호회 소개 열기",
+      "가입 신청 화면",
+      "가입 프로필 확인",
+      "가입 신청 실행"
+    ],
+    "videoId": "vdUZXiU-pBA",
+    "thumbnail": "EP28_썸네일.webp"
+  },
+  {
+    "episode": 29,
+    "title": "동호회 게임 모임 참가 확인",
+    "steps": [
+      "모임에서 초대하기",
+      "함께할 회원 선택",
+      "회원 초대 실행",
+      "참가자 수 확인"
+    ],
+    "videoId": "_vIGndI25X4",
+    "thumbnail": "EP29_썸네일.webp"
+  },
+  {
+    "episode": 30,
+    "title": "9명 참가자, 3개 조로 편성하기",
+    "steps": [
+      "동호회 회원 열기",
+      "회원 선택 표시",
+      "회원 목록 더 보기",
+      "8명 초대해 9명 등록"
+    ],
+    "videoId": "haGrtBoMRc0",
+    "thumbnail": "EP30_썸네일.webp"
+  },
+  {
+    "episode": 31,
+    "title": "동호회에서 내 조의 경기 시작하기",
+    "steps": [
+      "각 조원의 게임카드",
+      "게임카드 상세 열기",
+      "상세에서 내 조 확인",
+      "시작 화면 열기"
+    ],
+    "videoId": "8Y6LhvWJSEg",
+    "thumbnail": "EP31_썸네일.webp"
+  },
+  {
+    "episode": 32,
+    "title": "동호회 조별 결과와 상세 점수",
+    "steps": [
+      "조별 집계 확인",
+      "상세 기록 열기",
+      "어느 조인지 확인",
+      "코스별 점수와 총점"
+    ],
+    "videoId": "OKC741onWDU",
+    "thumbnail": "EP32_썸네일.webp"
+  },
+  {
+    "episode": 33,
+    "title": "친목 모임 등록 전 입력 준비",
+    "steps": [
+      "동호회 모임 열기",
+      "모임 만들기 메뉴",
+      "친목 모임 선택",
+      "모임 이름 입력"
+    ],
+    "videoId": "S3HwfjYXvD8",
+    "thumbnail": "EP33_썸네일.webp"
+  },
+  {
+    "episode": 34,
+    "title": "회원·공지·랭킹 살펴보기",
+    "steps": [
+      "내 동호회 열기",
+      "회원 목록 열기",
+      "회원 정보 확인",
+      "공지사항 모아보기"
+    ],
+    "videoId": "cqUKhK4FL3I",
+    "thumbnail": "EP34_썸네일.webp"
+  },
+  {
+    "episode": 35,
+    "title": "동호회 챌린지 함께하기",
+    "steps": [
+      "챌린지 열기",
+      "레벨과 포인트",
+      "가입·게임 미션",
+      "아래 미션 보기"
+    ],
+    "videoId": "8kAcOXQXrQw",
+    "thumbnail": "EP35_썸네일.webp"
+  },
+  {
+    "episode": 36,
+    "title": "주제에 맞게 파크수다 글 준비하기",
+    "steps": [
+      "커뮤니티 열기",
+      "글쓰기 메뉴",
+      "작성 화면 열기",
+      "주제 목록 열기"
+    ],
+    "videoId": "q5u_Z8G4bqc",
+    "thumbnail": "EP36_썸네일.webp"
+  },
+  {
+    "episode": 37,
+    "title": "같이쳐요 글쓰기와 참가 댓글",
+    "steps": [
+      "같이쳐요 글쓰기",
+      "내용 적기",
+      "구장 목록 열기",
+      "화천 검색"
+    ],
+    "videoId": "4t2ufV3uMyA",
+    "thumbnail": "EP37_썸네일.webp"
+  },
+  {
+    "episode": 38,
+    "title": "장터에서 용품 정보 살펴보기",
+    "steps": [
+      "장터 목록 열기",
+      "용품 소개 글 열기",
+      "제목과 가격 확인",
+      "작성일 확인"
+    ],
+    "videoId": "P1WfovXzhhM",
+    "thumbnail": "EP38_썸네일.webp"
+  },
+  {
+    "episode": 39,
+    "title": "장터에 용품 소개 글 준비하기",
+    "steps": [
+      "장터 글쓰기",
+      "사진 선택 화면",
+      "예시 사진 선택",
+      "사진 첨부하기"
+    ],
+    "videoId": "lbXPVAl1Qn4",
+    "thumbnail": "EP39_썸네일.webp"
+  },
+  {
+    "episode": 40,
+    "title": "문의 내용 작성과 내역 확인하기",
+    "steps": [
+      "홈에서 문의하기",
+      "필요한 사진 준비",
+      "문의 내용 입력",
+      "설명과 오타 확인"
+    ],
+    "videoId": "IGV-kjpElQc",
+    "thumbnail": "EP40_썸네일.webp"
+  },
+  {
+    "episode": 41,
+    "title": "홈에서 길라잡이로 기본 지식 배우기",
+    "steps": [
+      "길라잡이 열기",
+      "기본 지식 분야",
+      "기본 용어 선택",
+      "파크골프 알아보기"
+    ],
+    "videoId": "3rl8iGHk7y0",
+    "thumbnail": "EP41_썸네일.webp"
+  },
+  {
+    "episode": 42,
+    "title": "파크골프 뉴스 읽기",
+    "steps": [
+      "파크 뉴스 열기",
+      "기사 제목 살펴보기",
+      "언론사와 날짜",
+      "기사 원문 열기"
+    ],
+    "videoId": "UE7t3wZ6Va4",
+    "thumbnail": "EP42_썸네일.webp"
+  },
+  {
+    "episode": 43,
+    "title": "파크TV에서 레슨과 사용법 찾기",
+    "steps": [
+      "홈에서 파크TV",
+      "주제 탭 살펴보기",
+      "앱 사용설명 선택",
+      "영상 제목 확인"
+    ],
+    "thumbnail": "EP43_썸네일.webp",
+    "published": false,
+    "videoId": "De7prTvsdYo"
+  },
+  {
+    "episode": 44,
+    "title": "오늘의 퀴즈와 파크골프 마스터",
+    "steps": [
+      "홈에서 퀴즈 찾기",
+      "오늘의 OX 답 선택",
+      "정답과 해설",
+      "마스터 도전 열기"
+    ],
+    "thumbnail": "EP44_썸네일.webp",
+    "published": false,
+    "videoId": "PTyH6YXUKDo"
+  },
+  {
+    "episode": 45,
+    "title": "대회 소식과 참가 안내 찾기",
+    "steps": [
+      "홈에서 대회 소식 찾기",
+      "홈 대회 정보 미리보기",
+      "대회 목록 열기",
+      "대회 안내 선택"
+    ],
+    "thumbnail": "EP45_썸네일.webp",
+    "published": false,
+    "videoId": "5B_iNKoGYvQ"
+  },
+  {
+    "episode": 46,
+    "title": "홈에서 공지사항 찾아 읽기",
+    "steps": [
+      "홈 메뉴 찾기",
+      "공지사항 선택",
+      "제목과 날짜",
+      "공지 상세 열기"
+    ],
+    "thumbnail": "EP46_썸네일.webp",
+    "published": false,
+    "videoId": "56YnUGssOw4"
+  },
+  {
+    "episode": 47,
+    "title": "처음이라면 입문 안내부터 보기",
+    "steps": [
+      "입문 안내 열기",
+      "입문하기 탭",
+      "영상 제목 읽기",
+      "유튜브에서 보기"
+    ],
+    "thumbnail": "EP47_썸네일.webp",
+    "published": false,
+    "videoId": "hNEWF1D_h2M"
+  }
+]

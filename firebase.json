@@ -7,6 +7,8 @@
       "**/.*",
       "**/node_modules/**",
       "**/*.md",
+      "data/**",
+      "scripts/**",
       "package.json",
       "package-lock.json",
       "tailwind.config.js",

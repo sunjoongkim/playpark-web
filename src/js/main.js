@@ -364,8 +364,11 @@
 
     var lastFocused = null;
 
-    function openVideo(videoId) {
+    function openVideo(videoId, isShort) {
       lastFocused = document.activeElement;
+      modal.classList.toggle("guide-modal--short", isShort);
+      var externalLink = document.getElementById("videoExternalLink");
+      if (externalLink) externalLink.href = "https://youtube.com/shorts/" + videoId;
       frame.src = "https://www.youtube-nocookie.com/embed/" + videoId + "?autoplay=1&rel=0";
       modal.classList.remove("hidden");
       modal.classList.add("flex");
@@ -377,6 +380,7 @@
       modal.classList.add("hidden");
       modal.classList.remove("flex");
       frame.src = "";
+      modal.classList.remove("guide-modal--short");
       document.body.style.overflow = "";
       if (lastFocused && typeof lastFocused.focus === "function") lastFocused.focus();
     }
@@ -394,9 +398,59 @@
         var videoId = this.getAttribute("data-video-id");
         if (!videoId) return;
         e.preventDefault();
-        openVideo(videoId);
+        openVideo(videoId, this.classList.contains("guide-card"));
       });
     });
+  })();
+
+  (function guidePendingVideos() {
+    var pending = Array.from(document.querySelectorAll("[data-pending-video]"));
+    if (!pending.length) return;
+
+    function check(card) {
+      if (!card.hasAttribute("data-pending-video")) return;
+      var id = card.getAttribute("data-video-id");
+      var url = "https://www.youtube.com/oembed?url=" + encodeURIComponent("https://www.youtube.com/watch?v=" + id) + "&format=json";
+      fetch(url, { cache: "no-store" }).then(function (response) {
+        if (!response.ok) return;
+        card.disabled = false;
+        card.classList.remove("guide-card--pending");
+        card.removeAttribute("data-pending-video");
+        var count = document.getElementById("guidePlayableCount");
+        if (count) count.textContent = document.querySelectorAll("[data-guide-item][data-video-id]:not([disabled])").length;
+        card.setAttribute("aria-label", card.getAttribute("aria-label").replace("공개 준비 중", "영상 보기"));
+        var action = card.querySelector(".guide-card__action");
+        if (action) action.textContent = "영상 보기 ↗";
+      }).catch(function () { /* 연결 불가 시 준비 중 상태 유지 */ });
+    }
+
+    function checkAll() { pending.forEach(check); }
+    checkAll();
+    window.setInterval(function () { if (!document.hidden) checkAll(); }, 15 * 60 * 1000);
+    document.addEventListener("visibilitychange", function () { if (!document.hidden) checkAll(); });
+  })();
+
+  (function guideVideoSearch() {
+    var input = document.getElementById("guideSearch");
+    var count = document.getElementById("guideResultCount");
+    var empty = document.getElementById("guideEmpty");
+    var cards = Array.from(document.querySelectorAll("[data-guide-item]"));
+    if (!input || !count || !cards.length) return;
+
+    function update() {
+      var query = input.value.trim().toLocaleLowerCase("ko");
+      var visible = 0;
+      cards.forEach(function (card) {
+        var matches = !query || (card.getAttribute("data-guide-search") || "").toLocaleLowerCase("ko").includes(query);
+        card.hidden = !matches;
+        if (matches) visible += 1;
+      });
+      count.textContent = cards.length + "편 중 " + visible + "편 표시";
+      if (empty) empty.hidden = visible !== 0;
+    }
+
+    input.addEventListener("input", update);
+    update();
   })();
 
   /* ----------------------------------------------------------
