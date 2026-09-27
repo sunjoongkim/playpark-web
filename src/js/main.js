@@ -416,8 +416,6 @@
         card.disabled = false;
         card.classList.remove("guide-card--pending");
         card.removeAttribute("data-pending-video");
-        var count = document.getElementById("guidePlayableCount");
-        if (count) count.textContent = document.querySelectorAll("[data-guide-item][data-video-id]:not([disabled])").length;
         card.setAttribute("aria-label", card.getAttribute("aria-label").replace("공개 준비 중", "영상 보기"));
         var action = card.querySelector(".guide-card__action");
         if (action) action.textContent = "영상 보기 ↗";
@@ -445,7 +443,7 @@
         card.hidden = !matches;
         if (matches) visible += 1;
       });
-      count.textContent = cards.length + "편 중 " + visible + "편 표시";
+      count.textContent = query ? "검색 결과" : "영상 목록";
       if (empty) empty.hidden = visible !== 0;
     }
 

@@ -10,7 +10,6 @@ let html = readFileSync(htmlPath, 'utf8');
 if (data.length !== 47 || data.some((video, index) => video.episode !== index + 1)) {
   throw new Error('안내 영상은 EP01–EP47이 빠짐없이 순서대로 있어야 합니다.');
 }
-const publishedVideos = data.filter((video) => video.published !== false);
 if (data.some((video) => !/^[A-Za-z0-9_-]{11}$/.test(video.videoId))) {
   throw new Error('잘못된 YouTube 영상 ID가 있습니다.');
 }
@@ -58,7 +57,7 @@ const section = `    <!-- GUIDE_VIDEOS_START: data/guide-videos.json에서 생�
         <div class="guide-intro">
           <span class="guide-eyebrow">플레이파크 2.0 사용 설명</span>
           <h2 id="manual-title">새 영상으로 차근차근 따라 해보세요</h2>
-          <p>홈 화면부터 경기 기록, 동호회와 커뮤니티까지. 필요한 사용법을 골라 보세요. 공개된 <span id="guidePlayableCount">${publishedVideos.length}</span>편은 바로 시청할 수 있습니다.</p>
+          <p>홈 화면부터 경기 기록, 동호회와 커뮤니티까지. 필요한 사용법을 골라 보세요.</p>
         </div>
         <div class="guide-toolbar">
           <div class="guide-search-wrap">
@@ -67,7 +66,7 @@ const section = `    <!-- GUIDE_VIDEOS_START: data/guide-videos.json에서 생�
           </div>
           <a class="guide-playlist" href="https://www.youtube.com/playlist?list=PLKzPdEpjVhekKJzsrL_0VkjC2Gj1pSzVg" target="_blank" rel="noopener noreferrer">전체 재생목록 보기 <span aria-hidden="true">↗</span></a>
         </div>
-        <p id="guideResultCount" class="guide-result" aria-live="polite">${data.length}편 중 ${data.length}편 표시</p>
+        <p id="guideResultCount" class="guide-result" aria-live="polite">영상 목록</p>
         <div class="guide-grid">
 ${data.map(card).join('\n')}
         </div>
@@ -97,11 +96,11 @@ if (!html.includes('guide-videos.css')) {
 }
 html = html.replace(
   /<meta name="description" content="[^"]*" \/>/,
-  `<meta name="description" content="플레이파크 2.0 앱 사용 설명 ${data.length}편 목록. 홈 화면, 경기 기록, 동호회와 커뮤니티 사용법을 영상으로 쉽게 따라 해보세요." />`,
+  `<meta name="description" content="플레이파크 2.0 앱 사용 설명 영상 모음. 홈 화면, 경기 기록, 동호회와 커뮤니티 사용법을 영상으로 쉽게 따라 해보세요." />`,
 );
 html = html.replace(
   /<meta property="og:description" content="[^"]*" \/>/,
-  `<meta property="og:description" content="플레이파크 2.0 앱 사용 설명 ${data.length}편 목록을 한곳에서 확인하세요." />`,
+  `<meta property="og:description" content="플레이파크 2.0 앱 사용 설명 영상을 한곳에서 확인하세요." />`,
 );
 writeFileSync(htmlPath, html, 'utf8');
 console.log(`EP01–EP${String(data.length).padStart(2, '0')} 안내 목록 생성 완료: ${data.length}편`);
