@@ -452,54 +452,68 @@
   })();
 
   /* ----------------------------------------------------------
-     8. 제휴 문의 폼
-        - ?type=... 쿼리로 넘어오면 해당 문의 유형을 미리 선택
-        - 필드별 인라인 검증 후 EmailJS REST API로 전송
-          (기존 playpark_webapp과 동일 서비스/템플릿)
+     8. 문의 폼 — 제휴문의 페이지와 무인매장 소개서 팝업이 공유한다.
+        두 폼의 입력 필드·검증·전송 규약이 같고, 문의 유형을 정하는 방식만 다르다.
+          · 제휴문의  — 라디오로 선택 (?type= 쿼리로 미리 선택 가능)
+          · 소개서 팝업 — 'unmanned-store' 로 고정 (UI 에 노출하지 않음)
      ---------------------------------------------------------- */
-  (function partnershipForm() {
-    var form = document.querySelector("form[aria-label='제휴 문의 양식']");
-    if (!form) return;
 
-    var TYPE_LABELS = {
-      "golf-course": "파크골프장 제휴",
-      "club": "동호회·협회",
-      "tournament": "대회 운영 시스템",
-      "unmanned-store": "무인매장",
-      "other": "기타"
-    };
-    var FIELDS = ["name", "phone", "email", "message"];
-    var REQUIRED_MSG = {
-      name: "이름을 입력해 주세요.",
-      phone: "연락처를 입력해 주세요.",
-      email: "이메일을 입력해 주세요.",
-      message: "문의하실 내용을 입력해 주세요."
-    };
-    var EMAIL_FORMAT_MSG = "이메일 주소 형식을 확인해 주세요. (예: example@email.com)";
+  var TYPE_LABELS = {
+    "golf-course": "파크골프장 제휴",
+    "club": "동호회·협회",
+    "tournament": "대회 운영 시스템",
+    "unmanned-store": "무인매장 창업·도입",
+    "other": "기타"
+  };
 
-    var preset = new URLSearchParams(window.location.search).get("type");
-    if (preset) {
-      var radio = form.querySelector('input[name="type"][value="' + preset + '"]');
-      if (radio) radio.checked = true;
+  /* 필수 입력 — 소속(organization)은 선택이라 여기에 넣지 않는다.
+     템플릿이 {{#organization}} 섹션으로 감싸고 있어 빈 값이면 줄째로 사라진다. */
+  var REQUIRED_FIELDS = ["name", "phone", "email", "message"];
+  var REQUIRED_MSG = {
+    name: "이름을 입력해 주세요.",
+    phone: "연락처를 입력해 주세요.",
+    email: "이메일을 입력해 주세요.",
+    message: "문의하실 내용을 입력해 주세요."
+  };
+  var EMAIL_FORMAT_MSG = "이메일 주소 형식을 확인해 주세요. (예: example@email.com)";
+
+  /* 휴대폰(01x)만 하이픈을 맞춰 보낸다.
+     연락처에 골프장 대표번호 같은 유선번호가 올 수 있어 그 외는 입력한 그대로 둔다. */
+  function formatPhone(v) {
+    var d = v.replace(/[^0-9]/g, "");
+    if (!/^01[0-9]{8,9}$/.test(d)) return v.trim();
+    return d.length === 11
+      ? d.slice(0, 3) + "-" + d.slice(3, 7) + "-" + d.slice(7)
+      : d.slice(0, 3) + "-" + d.slice(3, 6) + "-" + d.slice(6);
+  }
+
+  function initInquiryForm(form, opts) {
+    var status = form.querySelector("[data-form-status]");
+    var submitBtn = form.querySelector("button[type=submit]");
+    var sending = false;
+
+    /* 한 문서에 두 폼이 함께 놓여도 오류 id 가 겹치지 않게 폼별 접두사를 둔다 */
+    function errorId(input) {
+      return "error-" + opts.ns + "-" + input.name;
     }
 
     function setError(input, msg) {
-      var errId = "error-" + input.name;
-      var err = document.getElementById(errId);
+      var id = errorId(input);
+      var err = document.getElementById(id);
       if (!err) {
         err = document.createElement("p");
-        err.id = errId;
+        err.id = id;
         err.className = "form-error";
         /* label 안 input 뒤에 붙여 시각적으로 필드 바로 아래 표시 */
         input.insertAdjacentElement("afterend", err);
       }
       err.textContent = msg;
       input.setAttribute("aria-invalid", "true");
-      input.setAttribute("aria-describedby", errId);
+      input.setAttribute("aria-describedby", id);
     }
 
     function clearError(input) {
-      var err = document.getElementById("error-" + input.name);
+      var err = document.getElementById(errorId(input));
       if (err) err.remove();
       input.removeAttribute("aria-invalid");
       input.removeAttribute("aria-describedby");
@@ -519,10 +533,6 @@
       return true;
     }
 
-    var status = form.querySelector("[data-form-status]");
-    var submitBtn = form.querySelector("button[type=submit]");
-    var sending = false;
-
     function hideStatus() {
       if (!status) return;
       status.classList.add("hidden");
@@ -537,7 +547,7 @@
       status.classList.add(ok ? "form-status-success" : "form-status-error");
     }
 
-    FIELDS.forEach(function (name) {
+    REQUIRED_FIELDS.forEach(function (name) {
       var input = form.elements[name];
       if (input) input.addEventListener("input", function () { clearError(input); });
     });
@@ -548,7 +558,7 @@
       hideStatus();
 
       var firstInvalid = null;
-      FIELDS.forEach(function (name) {
+      REQUIRED_FIELDS.forEach(function (name) {
         var input = form.elements[name];
         if (input && !validateField(input) && !firstInvalid) firstInvalid = input;
       });
@@ -557,13 +567,16 @@
         return;
       }
 
-      var typeInput = form.querySelector("input[name='type']:checked");
-      var typeLabel = typeInput ? TYPE_LABELS[typeInput.value] || typeInput.value : "";
+      var checked = form.querySelector("input[name='type']:checked");
+      var typeValue = opts.fixedType || (checked ? checked.value : "");
+      var typeLabel = typeValue ? TYPE_LABELS[typeValue] || typeValue : "";
+      var org = form.elements["organization"];
       var message = form.elements["message"].value.trim();
+
       var params = {
         name: form.elements["name"].value.trim(),
-        phone: form.elements["phone"].value.trim(),
-        organization: "",  /* 기존 템플릿 필드 — 현재 폼에는 소속 입력이 없음 */
+        phone: formatPhone(form.elements["phone"].value),
+        organization: org ? org.value.trim() : "",
         email: form.elements["email"].value.trim(),
         message: typeLabel ? "[문의 유형] " + typeLabel + "\n\n" + message : message
       };
@@ -572,16 +585,18 @@
       var btnHtml = submitBtn ? submitBtn.innerHTML : "";
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.textContent = "전송 중…";
+        submitBtn.textContent = opts.sendingLabel;
       }
 
       sendEmail(params)
         .then(function () {
-          showStatus("문의가 접수되었습니다. 영업일 기준 1~2일 내에 담당자가 연락드립니다.", true);
+          /* 팝업처럼 성공 배너 없이 닫아버리는 폼도 있어 successMsg 는 선택이다 */
+          if (opts.successMsg) showStatus(opts.successMsg, true);
           form.reset();
+          form.dispatchEvent(new CustomEvent("inquiry:sent", { bubbles: true }));
         })
         .catch(function () {
-          showStatus("문의 전송에 실패했습니다. 잠시 후 다시 시도하시거나 info@playpark.app로 보내주세요.", false);
+          showStatus(opts.errorMsg, false);
         })
         .then(function () {
           sending = false;
@@ -591,71 +606,64 @@
           }
         });
     });
+  }
+
+  (function inquiryForms() {
+    var partnership = document.querySelector("form[aria-label='제휴 문의 양식']");
+    if (partnership) {
+      var preset = new URLSearchParams(window.location.search).get("type");
+      if (preset) {
+        var radio = partnership.querySelector('input[name="type"][value="' + preset + '"]');
+        if (radio) radio.checked = true;
+      }
+      initInquiryForm(partnership, {
+        ns: "partnership",
+        sendingLabel: "전송 중…",
+        successMsg: "문의가 접수되었습니다. 영업일 기준 1~2일 내에 담당자가 연락드립니다.",
+        errorMsg: "문의 전송에 실패했습니다. 잠시 후 다시 시도하시거나 info@playpark.app로 보내주세요."
+      });
+    }
+
+    var brochure = document.querySelector("form[aria-label='무인매장 소개서 신청 양식']");
+    if (brochure) {
+      initInquiryForm(brochure, {
+        ns: "brochure",
+        fixedType: "unmanned-store",
+        sendingLabel: "신청 중…",
+        /* 성공 배너를 띄우지 않는다 — 전송되면 9가 소개서를 내려받고 팝업을 닫는다 */
+        errorMsg: "신청 전송에 실패했습니다. 잠시 후 다시 시도하시거나 02-6949-2277로 연락해 주세요."
+      });
+    }
   })();
 
   /* ----------------------------------------------------------
-     9. 무인매장 소개서 신청 팝업 (#brochureModal)
+     9. 무인매장 소개서 팝업 (#brochureModal)
         - [data-brochure-open] 으로 열고, 배경 클릭·Esc·닫기 버튼으로 닫는다
           (영상 라이트박스(7)와 같은 hidden↔flex 토글 규약)
-        - 휴대폰 번호만 받아 제휴 문의와 같은 EmailJS 템플릿으로 보낸다
+        - 폼 검증·전송은 8의 공용 핸들러가 맡고, 여기서는 전송 완료(inquiry:sent)만 받아
+          소개서를 내려받고 팝업을 닫는다
      ---------------------------------------------------------- */
   (function brochureModal() {
     var modal = document.getElementById("brochureModal");
     var openers = document.querySelectorAll("[data-brochure-open]");
     if (!modal || !openers.length) return;
 
-    var form = modal.querySelector("form");
-    var phone = form.elements["phone"];
-    var status = form.querySelector("[data-form-status]");
-    var submitBtn = form.querySelector("button[type=submit]");
+    /* 소개서 PDF — 저장 위치를 옮기면 이 두 줄만 고치면 된다.
+       다른 도메인(스토리지 등)이 되면 <a download> 이 무시되므로,
+       그때는 파일 메타데이터에 Content-Disposition: attachment 를 걸어야 한다. */
+    var BROCHURE_URL = "/assets/docs/playpark-unmanned-store-guide.pdf";
+    var BROCHURE_FILENAME = "플레이파크_무인매장_창업가이드.pdf";
+
+    var firstField = modal.querySelector("input[name='name']");
     var lastFocused = null;
-    var sending = false;
 
-    /* 010-1234-5678 / 01012345678 / 공백·하이픈 혼용까지 허용하고 숫자만 검사한다 */
-    var PHONE_RE = /^01[0-9]{8,9}$/;
-
-    function digits(v) {
-      return v.replace(/[^0-9]/g, "");
-    }
-
-    /* 하이픈 없이 입력해도 메일에는 010-0000-0000 형태로 나가게 맞춘다.
-       검증을 통과한 10~11자리 숫자만 들어온다. */
-    function formatPhone(d) {
-      return d.length === 11
-        ? d.slice(0, 3) + "-" + d.slice(3, 7) + "-" + d.slice(7)
-        : d.slice(0, 3) + "-" + d.slice(3, 6) + "-" + d.slice(6);
-    }
-
-    function hideStatus() {
-      status.classList.add("hidden");
-      status.classList.remove("form-status-success", "form-status-error");
-      status.textContent = "";
-    }
-
-    function showStatus(msg, ok) {
-      status.textContent = msg;
-      status.classList.remove("hidden");
-      status.classList.add(ok ? "form-status-success" : "form-status-error");
-    }
-
-    function setError(msg) {
-      var err = document.getElementById("error-brochure-phone");
-      if (!err) {
-        err = document.createElement("p");
-        err.id = "error-brochure-phone";
-        err.className = "form-error";
-        phone.insertAdjacentElement("afterend", err);
-      }
-      err.textContent = msg;
-      phone.setAttribute("aria-invalid", "true");
-      phone.setAttribute("aria-describedby", err.id);
-    }
-
-    function clearError() {
-      var err = document.getElementById("error-brochure-phone");
-      if (err) err.remove();
-      phone.removeAttribute("aria-invalid");
-      phone.removeAttribute("aria-describedby");
+    function downloadBrochure() {
+      var a = document.createElement("a");
+      a.href = BROCHURE_URL;
+      a.download = BROCHURE_FILENAME;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
     }
 
     function open() {
@@ -663,7 +671,7 @@
       modal.classList.remove("hidden");
       modal.classList.add("flex");
       document.body.style.overflow = "hidden";
-      phone.focus();
+      firstField.focus();
     }
 
     function close() {
@@ -689,54 +697,9 @@
       if (e.key === "Escape" && !modal.classList.contains("hidden")) close();
     });
 
-    phone.addEventListener("input", clearError);
-
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      if (sending) return;
-      hideStatus();
-
-      var value = digits(phone.value);
-      if (!value) {
-        setError("휴대폰 번호를 입력해 주세요.");
-        phone.focus();
-        return;
-      }
-      if (!PHONE_RE.test(value)) {
-        setError("휴대폰 번호 형식을 확인해 주세요. (예: 010-0000-0000)");
-        phone.focus();
-        return;
-      }
-      clearError();
-
-      var params = {
-        name: "무인매장 소개서 신청",
-        phone: formatPhone(value),
-        organization: "",
-        email: "",
-        message:
-          "홈페이지 무인매장 섹션의 '무인매장 소개서 받기'로 접수된 신청입니다.\n\n" +
-          "담당자 확인 후 문자로 소개서 다운로드 링크를 보내주세요."
-      };
-
-      sending = true;
-      var btnHtml = submitBtn.innerHTML;
-      submitBtn.disabled = true;
-      submitBtn.textContent = "신청 중…";
-
-      sendEmail(params)
-        .then(function () {
-          showStatus("신청이 접수되었습니다. 담당자가 확인 후 문자로 소개서 링크를 보내드립니다.", true);
-          form.reset();
-        })
-        .catch(function () {
-          showStatus("신청 전송에 실패했습니다. 잠시 후 다시 시도하시거나 02-6949-2277로 연락해 주세요.", false);
-        })
-        .then(function () {
-          sending = false;
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = btnHtml;
-        });
+    modal.addEventListener("inquiry:sent", function () {
+      downloadBrochure();
+      close();
     });
   })();
 
