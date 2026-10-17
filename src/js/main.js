@@ -432,22 +432,37 @@
     var input = document.getElementById("guideSearch");
     var count = document.getElementById("guideResultCount");
     var empty = document.getElementById("guideEmpty");
+    var legacy = document.getElementById("guideLegacy");
     var cards = Array.from(document.querySelectorAll("[data-guide-item]"));
     if (!input || !count || !cards.length) return;
 
     function update() {
       var query = input.value.trim().toLocaleLowerCase("ko");
       var visible = 0;
+      var legacyVisible = 0;
       cards.forEach(function (card) {
         var matches = !query || (card.getAttribute("data-guide-search") || "").toLocaleLowerCase("ko").includes(query);
         card.hidden = !matches;
-        if (matches) visible += 1;
+        if (matches) {
+          visible += 1;
+          if (legacy && legacy.contains(card)) legacyVisible += 1;
+        }
       });
-      count.textContent = query ? "검색 결과" : "영상 목록";
+      if (legacy && query) legacy.open = legacyVisible > 0;
+      if (legacy && !query) legacy.open = false;
+      count.textContent = query ? "검색 결과를 확인해 주세요." : "최신 영상부터 살펴보세요.";
       if (empty) empty.hidden = visible !== 0;
     }
 
     input.addEventListener("input", update);
+    update();
+  })();
+
+  (function guideBackToTop() {
+    var button = document.getElementById("guideBackToTop");
+    if (!button) return;
+    function update() { button.hidden = window.scrollY < 400; }
+    window.addEventListener("scroll", update, { passive: true });
     update();
   })();
 

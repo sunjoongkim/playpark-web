@@ -1,0 +1,314 @@
+[
+  {
+    "episode": 1,
+    "title": "홈에서 메뉴와 새 모임 찾기",
+    "steps": [
+      "홈의 다양한 메뉴",
+      "새로운 모임 보기",
+      "모임 상세 확인",
+      "모든 모임 보기"
+    ],
+    "videoId": "LaqjnTVR93g",
+    "thumbnail": "v22/EP01_썸네일.jpg"
+  },
+  {
+    "episode": 11,
+    "title": "구장 정보에서 게임 만들기",
+    "steps": [
+      "골프장 정보 찾기",
+      "화천 산천어 선택",
+      "게임 예약하기",
+      "함께 칠 날짜"
+    ],
+    "videoId": "NRZevmzOKgo",
+    "thumbnail": "v22/EP11_썸네일.jpg"
+  },
+  {
+    "episode": 13,
+    "title": "특수 상황에서 수동 스코어 카드 작성하기",
+    "steps": [
+      "게임 탭 새 게임",
+      "스코어 카드 작성",
+      "구장명·코스 입력",
+      "홀 기준타수 열기"
+    ],
+    "videoId": "RB8LE5mZ0kk",
+    "thumbnail": "v22/EP13_썸네일.jpg"
+  },
+  {
+    "episode": 14,
+    "title": "친구 초대와 실시간 기록 공유",
+    "steps": [
+      "게임 멤버 확인",
+      "친구 폰에서 확인",
+      "게임 시작 알림",
+      "같은 경기 화면"
+    ],
+    "videoId": "xkj781ymHmA",
+    "thumbnail": "v22/EP14_썸네일.jpg"
+  },
+  {
+    "episode": 15,
+    "title": "게임에 게스트 추가하기",
+    "steps": [
+      "게임 멤버 초대 열기",
+      "등록 친구 선택",
+      "첫 게스트 추가",
+      "둘째 게스트 추가"
+    ],
+    "videoId": "uBZjqCVliaY",
+    "thumbnail": "v22/EP15_썸네일.jpg"
+  },
+  {
+    "episode": 16,
+    "title": "터치로 타수 기록하기",
+    "steps": [
+      "홀·참가자 확인",
+      "내 점수 1타 추가",
+      "바뀐 5타 확인",
+      "−로 다시 조정"
+    ],
+    "videoId": "RhcSmuyOvW0",
+    "thumbnail": "v22/EP16_썸네일.jpg"
+  },
+  {
+    "episode": 17,
+    "title": "볼륨 버튼으로 타수와 사람·홀 이동하기",
+    "steps": [
+      "볼륨 올리기 1회",
+      "볼륨 내리기 1회",
+      "내리기 2회로 사람 이동",
+      "올리기 2회로 다음 홀"
+    ],
+    "videoId": "_0LAE9_p6LU",
+    "thumbnail": "v22/EP17_썸네일.jpg"
+  },
+  {
+    "episode": 18,
+    "title": "끝난 게임 결과와 홀별 점수 다시보기",
+    "steps": [
+      "경기 종료",
+      "종료 목록 찾기",
+      "게임 결과 열기",
+      "우승자와 총점"
+    ],
+    "videoId": "iquEff6SgFU",
+    "thumbnail": "v22/EP18_썸네일.jpg"
+  },
+  {
+    "episode": 26,
+    "title": "동호회 게임 모임 만들기",
+    "steps": [
+      "동호회 모임",
+      "모임 만들기",
+      "게임 모임 선택",
+      "일정 입력"
+    ],
+    "videoId": "LRM9KA0I468",
+    "thumbnail": "v22/EP26_썸네일.jpg"
+  },
+  {
+    "episode": 27,
+    "title": "동호회 초대 코드·링크·QR 보내기",
+    "steps": [
+      "동호회 선택",
+      "초대하기 열기",
+      "6자리 코드와 QR",
+      "링크·카카오톡 공유"
+    ],
+    "videoId": "Xzy8xxWea6c",
+    "thumbnail": "v22/EP27_썸네일.jpg"
+  },
+  {
+    "episode": 29,
+    "title": "동호회 모임 초대와 참가 확인",
+    "steps": [
+      "모임과 회원 구분",
+      "등록 회원 보기",
+      "회원·게스트 선택",
+      "6명 참가 확인"
+    ],
+    "videoId": "tC_dV0b-QNo",
+    "thumbnail": "v22/EP29_썸네일.jpg"
+  },
+  {
+    "episode": 30,
+    "title": "8명 모임의 두 조 확인하기",
+    "steps": [
+      "8명 모임 찾기",
+      "모임 카드 열기",
+      "참가자와 조 수",
+      "두 조의 구성원"
+    ],
+    "videoId": "vjaIKd7RqaA",
+    "thumbnail": "v22/EP30_썸네일.jpg"
+  },
+  {
+    "episode": 31,
+    "title": "동호회 조별 경기 진행과 모임장 기록",
+    "steps": [
+      "두 조 편성",
+      "내 조 먼저 확인",
+      "내 조 경기 시작",
+      "다른 조 시작"
+    ],
+    "videoId": "vr5V10PUfCw",
+    "thumbnail": "v22/EP31_썸네일.jpg"
+  },
+  {
+    "episode": 32,
+    "title": "동호회 조별 결과와 홀별 점수",
+    "steps": [
+      "종료 경기 찾기",
+      "조별 집계 열기",
+      "조별 순위",
+      "꽃잎조 선택"
+    ],
+    "videoId": "1-1fCwCXS94",
+    "thumbnail": "v22/EP32_썸네일.jpg"
+  },
+  {
+    "episode": 45,
+    "title": "기타 대회 소식과 참가 안내 찾기",
+    "steps": [
+      "홈 대회 소식",
+      "전체보기 누르기",
+      "기타 대회 선택",
+      "대회 카드 고르기"
+    ],
+    "videoId": "u33WcLeJlVo",
+    "thumbnail": "v22/EP45_썸네일.jpg"
+  },
+  {
+    "episode": 48,
+    "title": "새 게임 한곳에서 만들기",
+    "steps": [
+      "새 게임 열기",
+      "일반 게임",
+      "동호회 게임",
+      "직접 스코어 카드"
+    ],
+    "videoId": "nOH8Cf32k4c",
+    "thumbnail": "v22/EP48_썸네일.jpg"
+  },
+  {
+    "episode": 49,
+    "title": "전국 골프장 통계 보기",
+    "steps": [
+      "골프장 분석 열기",
+      "인기·급상승 구장",
+      "난이도 높은 구장",
+      "월별 순위 보기"
+    ],
+    "videoId": "WIafBbma1mI",
+    "thumbnail": "v22/EP49_썸네일.jpg"
+  },
+  {
+    "episode": 50,
+    "title": "5명 이상 게임 조 편성",
+    "steps": [
+      "다섯 명 이상 등록",
+      "조 편성 방법 선택",
+      "조별 명단 확인",
+      "내 조 먼저 보기"
+    ],
+    "videoId": "aaJ1--fK0l4",
+    "thumbnail": "v22/EP50_썸네일.jpg"
+  },
+  {
+    "episode": 51,
+    "title": "다른 조 점수 기록과 조별 결과",
+    "steps": [
+      "다른 조 게임 시작",
+      "코스와 홀 확인",
+      "세 명의 타수 기록",
+      "조별 결과 확인"
+    ],
+    "videoId": "eOIgkkgQA5g",
+    "thumbnail": "v22/EP51_썸네일.jpg"
+  },
+  {
+    "episode": 52,
+    "title": "앱과 홈페이지에서 미니게임 즐기기",
+    "steps": [
+      "앱 홈 미니게임 찾기",
+      "필수 이용 안내",
+      "라운드 방식 선택",
+      "혼자 18홀 시작"
+    ],
+    "videoId": "mmi6Xu5e4eQ",
+    "thumbnail": "v22/EP52_썸네일.jpg"
+  },
+  {
+    "episode": 53,
+    "title": "동호회 게스트 회원 등록하기",
+    "steps": [
+      "동호회 회원 열기",
+      "회원 추가 선택",
+      "게스트 추가",
+      "이름·연락처 확인"
+    ],
+    "videoId": "jEMyJxYZu14",
+    "thumbnail": "v22/EP53_썸네일.jpg"
+  },
+  {
+    "episode": 54,
+    "title": "동호회 회원 연락처 확인·저장",
+    "steps": [
+      "동호회 회원 열기",
+      "연락처 보기",
+      "역할과 연락처 확인",
+      "사진으로 저장"
+    ],
+    "videoId": "n8Jdwf46uU8",
+    "thumbnail": "v22/EP54_썸네일.jpg"
+  },
+  {
+    "episode": 55,
+    "title": "동호회 모임에 두 종류 게스트 넣기",
+    "steps": [
+      "모임 초대",
+      "회원 게스트",
+      "모임 게스트",
+      "3명 참가 확인"
+    ],
+    "videoId": "ukle2Ag85WM",
+    "thumbnail": "v22/EP55_썸네일.jpg"
+  },
+  {
+    "episode": 56,
+    "title": "플레이 중 이전 코스 점수 수정하기",
+    "steps": [
+      "점수표 열기",
+      "B코스 선택",
+      "홀 점수 선택",
+      "4타로 수정"
+    ],
+    "videoId": "k1rFWDKHEoI",
+    "thumbnail": "v22/EP56_썸네일.jpg"
+  },
+  {
+    "episode": 57,
+    "title": "두 코스 점수 한 장으로 저장하기",
+    "steps": [
+      "B코스 완료",
+      "A코스 완료",
+      "전체 점수표",
+      "한 장 저장"
+    ],
+    "videoId": "tR-ie85oSMM",
+    "thumbnail": "v22/EP57_썸네일.jpg"
+  },
+  {
+    "episode": 58,
+    "title": "리그매니저 대회 소식 보기",
+    "steps": [
+      "홈 대회 소식",
+      "대회 전체보기",
+      "지난 대회 사례",
+      "전용 대회 페이지"
+    ],
+    "videoId": "CwSOuB2BaJc",
+    "thumbnail": "v22/EP58_썸네일.jpg"
+  }
+]

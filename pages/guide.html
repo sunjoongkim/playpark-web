@@ -4,10 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>플레이파크 앱 | PlayPark — 파크골프 앱 기능과 사용법</title>
-  <meta name="description" content="플레이파크 2.0 앱 사용 설명 영상 모음. 홈 화면, 경기 기록, 동호회와 커뮤니티 사용법을 영상으로 쉽게 따라 해보세요." />
+  <meta name="description" content="플레이파크 V2.2와 이전 버전의 앱 사용 설명 영상 모음. 홈 화면, 경기 기록, 동호회와 커뮤니티 사용법을 영상으로 따라 해보세요." />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="플레이파크 앱 | PlayPark" />
-  <meta property="og:description" content="플레이파크 2.0 앱 사용 설명 영상을 한곳에서 확인하세요." />
+  <meta property="og:description" content="플레이파크 최신 앱 사용 설명 영상을 한곳에서 확인하세요." />
   <meta property="og:image" content="https://playpark.app/assets/images/og-image.jpg" />
   <meta property="og:url" content="https://playpark.app/pages/guide.html" />
   <meta property="og:locale" content="ko_KR" />
@@ -27,7 +27,7 @@
     "mainEntity": [
       { "@type": "Question", "name": "플레이파크 앱은 무료로 이용할 수 있나요?", "acceptedAnswer": { "@type": "Answer", "text": "네. 현재 앱의 모든 기능을 무료로 제공하고 있습니다." } },
       { "@type": "Question", "name": "iOS와 안드로이드 모두 지원하나요?", "acceptedAnswer": { "@type": "Answer", "text": "네, App Store(아이폰)와 Google Play(안드로이드) 모두 출시되어 있습니다." } },
-      { "@type": "Question", "name": "동호회 게임은 몇 명부터 사용할 수 있나요?", "acceptedAnswer": { "@type": "Answer", "text": "인원 제한이 있지는 않습니다. 동호회 정례 모임이나 번개 시 편하게 인원을 모집하셔서 게임을 즐기실 수 있습니다. 다만 실제 대회 형태로 치르게 될 경우 플레이어가 아닌 심판이 채점해야 하고, 폰 화면으로 많은 인원을 관리하기에는 어려움이 있어 대회 운영 시스템을 사용하시기를 추천합니다." } },
+      { "@type": "Question", "name": "동호회 게임은 몇 명부터 사용할 수 있나요?", "acceptedAnswer": { "@type": "Answer", "text": "동호회 게임 모임은 1명부터 100명까지 함께할 수 있습니다. 모임장이 멤버를 등록하거나 참가자가 신청할 수 있습니다. 다만 실제 대회 형태로 치르게 될 경우 플레이어가 아닌 심판이 채점해야 하고, 폰 화면으로 많은 인원을 관리하기에는 어려움이 있어 대회 운영 시스템을 사용하시기를 추천합니다." } },
       { "@type": "Question", "name": "대회 운영 시스템은 어떻게 도입하나요?", "acceptedAnswer": { "@type": "Answer", "text": "100명 이상 규모의 대회는 선수가 아닌 심판이 채점하는 방식의 전문 대회 운영 시스템을 사용하실 수 있도록 지원합니다. 제휴문의 페이지에서 문의해 주시면 안내해 드립니다." } },
       { "@type": "Question", "name": "개인정보는 안전하게 보호되나요?", "acceptedAnswer": { "@type": "Answer", "text": "네, 회원님의 개인정보는 관련 법령에 따라 안전하게 보호됩니다. 자세한 내용은 개인정보처리방침을 확인해 주세요." } }
     ]
@@ -66,6 +66,14 @@
               aria-expanded="false" aria-controls="mobileMenu" aria-label="메뉴 열기">
         <iconify-icon icon="solar:hamburger-menu-linear" class="text-2xl"></iconify-icon>
       </button>
+    </nav>
+    <nav class="guide-subnav" aria-label="이 페이지 바로가기">
+      <a href="#playpark-intro">앱 소개</a>
+      <a href="#features">주요 기능</a>
+      <a href="#game-types">게임 유형</a>
+      <a href="#app-manual">사용 설명 영상</a>
+      <a href="#faq">자주 묻는 질문</a>
+      <a href="#download">앱 다운로드</a>
     </nav>
   </header>
 
@@ -110,7 +118,7 @@
   <main id="main">
 
     <!-- ===== 대표 서비스 — 페이지 헤더 겸 PlayPark 소개 ===== -->
-    <section id="playpark-intro" class="relative overflow-hidden bg-ground pt-32 pb-24 md:pt-40 md:pb-32" aria-labelledby="service-title">
+    <section id="playpark-intro" class="relative overflow-hidden bg-ground pt-40 pb-24 md:pt-40 md:pb-32" aria-labelledby="service-title">
       <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
         <div class="orb absolute -right-24 -top-10 h-[32rem] w-[32rem] rounded-full bg-brand/20 blur-[100px]"></div>
         <div class="orb absolute -left-32 top-40 h-96 w-96 rounded-full bg-amber-200/30 blur-[90px]" style="animation-delay:-5s"></div>
@@ -266,7 +274,7 @@
           <div class="reveal grid items-center gap-10 md:grid-cols-2 md:gap-60">
             <div class="order-2 text-center md:order-1 md:ml-auto md:text-left">
               <div class="mb-5 mx-auto icon-tile md:mx-0"><iconify-icon icon="solar:people-nearby-bold-duotone"></iconify-icon></div>
-              <p class="text-sm font-bold text-brand-600">4명부터 100명까지 한번에</p>
+              <p class="text-sm font-bold text-brand-600">1명부터 100명까지 한 번에</p>
               <h3 class="mt-2 text-2xl font-black tracking-tight text-ink sm:text-3xl">동호회가 하나로</h3>
               <ul class="mt-6 space-y-1 text-muted md:space-y-3">
                 <li class="flex items-start justify-center gap-3 md:justify-start"><iconify-icon icon="solar:check-circle-bold" class="mt-0.5 hidden shrink-0 text-xl text-brand md:inline-block"></iconify-icon> 자동 조편성으로 모임 준비 끝</li>
@@ -285,7 +293,7 @@
 
     <!-- ===== 타겟 — Double-Bezel 카드 =====
          앞 특장점 섹션과 배경(white)이 같아 상단 border-t 한 줄로 끊는다. -->
-    <section class="border-t border-black/5 bg-white py-24 md:py-32" aria-labelledby="target-title">
+    <section id="game-types" class="border-t border-black/5 bg-white py-24 md:py-32" aria-labelledby="target-title">
       <div class="mx-auto max-w-container px-6">
         <div class="reveal text-center">
           <span class="eyebrow">나에게 맞는 플레이파크</span>
@@ -298,8 +306,8 @@
           <article class="overflow-hidden rounded-3xl ring-1 ring-black/5">
             <h3 class="bg-brand-light px-6 py-4 text-lg font-bold text-ink">일반 게임</h3>
             <dl class="divide-y divide-black/5 bg-white">
-              <div class="flex gap-4 px-6 py-4"><dt class="w-20 shrink-0 text-sm font-bold text-muted">게임 인원</dt><dd class="text-ink">4명 이하</dd></div>
-              <div class="flex gap-4 px-6 py-4"><dt class="w-20 shrink-0 text-sm font-bold text-muted">생성방법</dt><dd class="text-ink">게임멤버 중 1명 생성 후 초대</dd></div>
+              <div class="flex gap-4 px-6 py-4"><dt class="w-20 shrink-0 text-sm font-bold text-muted">게임 인원</dt><dd class="text-ink">1~100명</dd></div>
+              <div class="flex gap-4 px-6 py-4"><dt class="w-20 shrink-0 text-sm font-bold text-muted">생성방법</dt><dd class="text-ink">게임 생성 후 친구·게스트 등록</dd></div>
               <div class="flex gap-4 px-6 py-4"><dt class="w-20 shrink-0 text-sm font-bold text-muted">기록자</dt><dd class="text-ink">플레이어 중 1명 이상</dd></div>
               <div class="flex gap-4 px-6 py-4"><dt class="w-20 shrink-0 text-sm font-bold text-muted">사용방법</dt><dd class="text-ink">앱에서 구장선택 후 게임 생성</dd></div>
               <div class="flex gap-4 px-6 py-4"><dt class="w-20 shrink-0 text-sm font-bold text-muted">비용</dt><dd class="font-bold text-brand-600">무료</dd></div>
@@ -309,8 +317,8 @@
           <article class="overflow-hidden rounded-3xl ring-1 ring-black/5">
             <h3 class="bg-brand/40 px-6 py-4 text-lg font-bold text-ink">동호회 게임 모임</h3>
             <dl class="divide-y divide-black/5 bg-white">
-              <div class="flex gap-4 px-6 py-4"><dt class="w-20 shrink-0 text-sm font-bold text-muted">게임 인원</dt><dd class="text-ink">1명 ~ 100명</dd></div>
-              <div class="flex gap-4 px-6 py-4"><dt class="w-20 shrink-0 text-sm font-bold text-muted">생성방법</dt><dd class="text-ink">모임장 조편성 후 알림</dd></div>
+              <div class="flex gap-4 px-6 py-4"><dt class="w-20 shrink-0 text-sm font-bold text-muted">게임 인원</dt><dd class="text-ink">1~100명</dd></div>
+              <div class="flex gap-4 px-6 py-4"><dt class="w-20 shrink-0 text-sm font-bold text-muted">생성방법</dt><dd class="text-ink">모임장이 멤버 등록 또는 참가자가 신청</dd></div>
               <div class="flex gap-4 px-6 py-4"><dt class="w-20 shrink-0 text-sm font-bold text-muted">기록자</dt><dd class="text-ink">플레이어 중 1명 이상</dd></div>
               <div class="flex gap-4 px-6 py-4"><dt class="w-20 shrink-0 text-sm font-bold text-muted">사용방법</dt><dd class="text-ink">앱에서 동호회 내 게임모임 생성</dd></div>
               <div class="flex gap-4 px-6 py-4"><dt class="w-20 shrink-0 text-sm font-bold text-muted">비용</dt><dd class="font-bold text-brand-600">무료</dd></div>
@@ -350,14 +358,14 @@
             <tbody>
               <tr class="border-t border-black/5">
                 <th scope="row" class="bg-ground-dark px-6 py-5 text-sm font-bold text-ink">게임 인원</th>
-                <td class="bg-white px-6 py-5 text-ink">4명 이하</td>
-                <td class="bg-white px-6 py-5 text-ink">1명 ~ 100명</td>
+                <td class="bg-white px-6 py-5 text-ink">1~100명</td>
+                <td class="bg-white px-6 py-5 text-ink">1~100명</td>
                 <td class="bg-white px-6 py-5 text-ink">100명 이상</td>
               </tr>
               <tr class="border-t border-black/5">
                 <th scope="row" class="bg-ground-dark px-6 py-5 text-sm font-bold text-ink">생성방법</th>
-                <td class="bg-white px-6 py-5 text-ink">게임멤버 중 1명 생성 후 초대</td>
-                <td class="bg-white px-6 py-5 text-ink">모임장 조편성 후 알림</td>
+                <td class="bg-white px-6 py-5 text-ink">게임 생성 후 친구·게스트 등록</td>
+                <td class="bg-white px-6 py-5 text-ink">모임장이 멤버 등록 또는 참가자가 신청</td>
                 <td class="bg-white px-6 py-5 text-ink">관리자 선수 등록</td>
               </tr>
               <tr class="border-t border-black/5">
@@ -390,11 +398,11 @@
       </div>
     </section>
 
-    <!-- GUIDE_VIDEOS_START: data/guide-videos.json에서 생성. npm run build:guide -->
+    <!-- GUIDE_VIDEOS_START: data/guide-videos*.json에서 생성. npm run build:guide -->
     <section id="app-manual" class="guide-section" aria-labelledby="manual-title">
       <div class="guide-container">
         <div class="guide-intro">
-          <span class="guide-eyebrow">플레이파크 2.0 사용 설명</span>
+          <span class="guide-eyebrow">플레이파크 사용 설명 영상</span>
           <h2 id="manual-title">새 영상으로 차근차근 따라 해보세요</h2>
           <p>홈 화면부터 경기 기록, 동호회와 커뮤니티까지. 필요한 사용법을 골라 보세요.</p>
         </div>
@@ -405,9 +413,327 @@
           </div>
           <a class="guide-playlist" href="https://www.youtube.com/playlist?list=PLKzPdEpjVhekKJzsrL_0VkjC2Gj1pSzVg" target="_blank" rel="noopener noreferrer">전체 재생목록 보기 <span aria-hidden="true">↗</span></a>
         </div>
-        <p id="guideResultCount" class="guide-result" aria-live="polite">영상 목록</p>
+        <p id="guideResultCount" class="guide-result" aria-live="polite">최신 영상부터 살펴보세요.</p>
+        <h3 class="guide-group-heading">V2.2 최신 사용 설명</h3>
         <div class="guide-grid">
-        <a class="guide-card" href="https://youtube.com/shorts/NSt6r4SFhsY" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP01 EP1 1 바뀐 홈에서 필요한 메뉴 찾기 홈 전체 화면과 홈 버튼 강조 아래쪽 주요 메뉴 전체 강조 게임 버튼 2.8배 확대: 기록된 게임 결과 확인 홈의 다양한 기능 메뉴 영역 강조" data-video-id="NSt6r4SFhsY" aria-label="EP01 바뀐 홈에서 필요한 메뉴 찾기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/LaqjnTVR93g" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.2 EP01 EP1 1 홈에서 메뉴와 새 모임 찾기 홈의 다양한 메뉴 새로운 모임 보기 모임 상세 확인 모든 모임 보기" data-video-id="LaqjnTVR93g" aria-label="EP01 홈에서 메뉴와 새 모임 찾기 영상 보기">
+          <span class="guide-card__image-wrap">
+            <img src="../assets/images/guide/v22/EP01_썸네일.jpg" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
+            <span class="guide-card__number">EP01</span>
+          </span>
+          <span class="guide-card__body">
+            <span class="guide-card__eyebrow">플레이파크 2.2 사용 설명</span>
+            <strong class="guide-card__title">홈에서 메뉴와 새 모임 찾기</strong>
+            <span class="guide-card__summary">홈의 다양한 메뉴 · 새로운 모임 보기</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+        <a class="guide-card" href="https://youtube.com/shorts/NRZevmzOKgo" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.2 EP11 EP11 11 구장 정보에서 게임 만들기 골프장 정보 찾기 화천 산천어 선택 게임 예약하기 함께 칠 날짜" data-video-id="NRZevmzOKgo" aria-label="EP11 구장 정보에서 게임 만들기 영상 보기">
+          <span class="guide-card__image-wrap">
+            <img src="../assets/images/guide/v22/EP11_썸네일.jpg" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
+            <span class="guide-card__number">EP11</span>
+          </span>
+          <span class="guide-card__body">
+            <span class="guide-card__eyebrow">플레이파크 2.2 사용 설명</span>
+            <strong class="guide-card__title">구장 정보에서 게임 만들기</strong>
+            <span class="guide-card__summary">골프장 정보 찾기 · 화천 산천어 선택</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+        <a class="guide-card" href="https://youtube.com/shorts/RB8LE5mZ0kk" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.2 EP13 EP13 13 특수 상황에서 수동 스코어 카드 작성하기 게임 탭 새 게임 스코어 카드 작성 구장명·코스 입력 홀 기준타수 열기" data-video-id="RB8LE5mZ0kk" aria-label="EP13 특수 상황에서 수동 스코어 카드 작성하기 영상 보기">
+          <span class="guide-card__image-wrap">
+            <img src="../assets/images/guide/v22/EP13_썸네일.jpg" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
+            <span class="guide-card__number">EP13</span>
+          </span>
+          <span class="guide-card__body">
+            <span class="guide-card__eyebrow">플레이파크 2.2 사용 설명</span>
+            <strong class="guide-card__title">특수 상황에서 수동 스코어 카드 작성하기</strong>
+            <span class="guide-card__summary">게임 탭 새 게임 · 스코어 카드 작성</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+        <a class="guide-card" href="https://youtube.com/shorts/xkj781ymHmA" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.2 EP14 EP14 14 친구 초대와 실시간 기록 공유 게임 멤버 확인 친구 폰에서 확인 게임 시작 알림 같은 경기 화면" data-video-id="xkj781ymHmA" aria-label="EP14 친구 초대와 실시간 기록 공유 영상 보기">
+          <span class="guide-card__image-wrap">
+            <img src="../assets/images/guide/v22/EP14_썸네일.jpg" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
+            <span class="guide-card__number">EP14</span>
+          </span>
+          <span class="guide-card__body">
+            <span class="guide-card__eyebrow">플레이파크 2.2 사용 설명</span>
+            <strong class="guide-card__title">친구 초대와 실시간 기록 공유</strong>
+            <span class="guide-card__summary">게임 멤버 확인 · 친구 폰에서 확인</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+        <a class="guide-card" href="https://youtube.com/shorts/uBZjqCVliaY" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.2 EP15 EP15 15 게임에 게스트 추가하기 게임 멤버 초대 열기 등록 친구 선택 첫 게스트 추가 둘째 게스트 추가" data-video-id="uBZjqCVliaY" aria-label="EP15 게임에 게스트 추가하기 영상 보기">
+          <span class="guide-card__image-wrap">
+            <img src="../assets/images/guide/v22/EP15_썸네일.jpg" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
+            <span class="guide-card__number">EP15</span>
+          </span>
+          <span class="guide-card__body">
+            <span class="guide-card__eyebrow">플레이파크 2.2 사용 설명</span>
+            <strong class="guide-card__title">게임에 게스트 추가하기</strong>
+            <span class="guide-card__summary">게임 멤버 초대 열기 · 등록 친구 선택</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+        <a class="guide-card" href="https://youtube.com/shorts/RhcSmuyOvW0" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.2 EP16 EP16 16 터치로 타수 기록하기 홀·참가자 확인 내 점수 1타 추가 바뀐 5타 확인 −로 다시 조정" data-video-id="RhcSmuyOvW0" aria-label="EP16 터치로 타수 기록하기 영상 보기">
+          <span class="guide-card__image-wrap">
+            <img src="../assets/images/guide/v22/EP16_썸네일.jpg" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
+            <span class="guide-card__number">EP16</span>
+          </span>
+          <span class="guide-card__body">
+            <span class="guide-card__eyebrow">플레이파크 2.2 사용 설명</span>
+            <strong class="guide-card__title">터치로 타수 기록하기</strong>
+            <span class="guide-card__summary">홀·참가자 확인 · 내 점수 1타 추가</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+        <a class="guide-card" href="https://youtube.com/shorts/_0LAE9_p6LU" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.2 EP17 EP17 17 볼륨 버튼으로 타수와 사람·홀 이동하기 볼륨 올리기 1회 볼륨 내리기 1회 내리기 2회로 사람 이동 올리기 2회로 다음 홀" data-video-id="_0LAE9_p6LU" aria-label="EP17 볼륨 버튼으로 타수와 사람·홀 이동하기 영상 보기">
+          <span class="guide-card__image-wrap">
+            <img src="../assets/images/guide/v22/EP17_썸네일.jpg" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
+            <span class="guide-card__number">EP17</span>
+          </span>
+          <span class="guide-card__body">
+            <span class="guide-card__eyebrow">플레이파크 2.2 사용 설명</span>
+            <strong class="guide-card__title">볼륨 버튼으로 타수와 사람·홀 이동하기</strong>
+            <span class="guide-card__summary">볼륨 올리기 1회 · 볼륨 내리기 1회</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+        <a class="guide-card" href="https://youtube.com/shorts/iquEff6SgFU" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.2 EP18 EP18 18 끝난 게임 결과와 홀별 점수 다시보기 경기 종료 종료 목록 찾기 게임 결과 열기 우승자와 총점" data-video-id="iquEff6SgFU" aria-label="EP18 끝난 게임 결과와 홀별 점수 다시보기 영상 보기">
+          <span class="guide-card__image-wrap">
+            <img src="../assets/images/guide/v22/EP18_썸네일.jpg" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
+            <span class="guide-card__number">EP18</span>
+          </span>
+          <span class="guide-card__body">
+            <span class="guide-card__eyebrow">플레이파크 2.2 사용 설명</span>
+            <strong class="guide-card__title">끝난 게임 결과와 홀별 점수 다시보기</strong>
+            <span class="guide-card__summary">경기 종료 · 종료 목록 찾기</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+        <a class="guide-card" href="https://youtube.com/shorts/LRM9KA0I468" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.2 EP26 EP26 26 동호회 게임 모임 만들기 동호회 모임 모임 만들기 게임 모임 선택 일정 입력" data-video-id="LRM9KA0I468" aria-label="EP26 동호회 게임 모임 만들기 영상 보기">
+          <span class="guide-card__image-wrap">
+            <img src="../assets/images/guide/v22/EP26_썸네일.jpg" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
+            <span class="guide-card__number">EP26</span>
+          </span>
+          <span class="guide-card__body">
+            <span class="guide-card__eyebrow">플레이파크 2.2 사용 설명</span>
+            <strong class="guide-card__title">동호회 게임 모임 만들기</strong>
+            <span class="guide-card__summary">동호회 모임 · 모임 만들기</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+        <a class="guide-card" href="https://youtube.com/shorts/Xzy8xxWea6c" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.2 EP27 EP27 27 동호회 초대 코드·링크·QR 보내기 동호회 선택 초대하기 열기 6자리 코드와 QR 링크·카카오톡 공유" data-video-id="Xzy8xxWea6c" aria-label="EP27 동호회 초대 코드·링크·QR 보내기 영상 보기">
+          <span class="guide-card__image-wrap">
+            <img src="../assets/images/guide/v22/EP27_썸네일.jpg" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
+            <span class="guide-card__number">EP27</span>
+          </span>
+          <span class="guide-card__body">
+            <span class="guide-card__eyebrow">플레이파크 2.2 사용 설명</span>
+            <strong class="guide-card__title">동호회 초대 코드·링크·QR 보내기</strong>
+            <span class="guide-card__summary">동호회 선택 · 초대하기 열기</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+        <a class="guide-card" href="https://youtube.com/shorts/tC_dV0b-QNo" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.2 EP29 EP29 29 동호회 모임 초대와 참가 확인 모임과 회원 구분 등록 회원 보기 회원·게스트 선택 6명 참가 확인" data-video-id="tC_dV0b-QNo" aria-label="EP29 동호회 모임 초대와 참가 확인 영상 보기">
+          <span class="guide-card__image-wrap">
+            <img src="../assets/images/guide/v22/EP29_썸네일.jpg" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
+            <span class="guide-card__number">EP29</span>
+          </span>
+          <span class="guide-card__body">
+            <span class="guide-card__eyebrow">플레이파크 2.2 사용 설명</span>
+            <strong class="guide-card__title">동호회 모임 초대와 참가 확인</strong>
+            <span class="guide-card__summary">모임과 회원 구분 · 등록 회원 보기</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+        <a class="guide-card" href="https://youtube.com/shorts/vjaIKd7RqaA" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.2 EP30 EP30 30 8명 모임의 두 조 확인하기 8명 모임 찾기 모임 카드 열기 참가자와 조 수 두 조의 구성원" data-video-id="vjaIKd7RqaA" aria-label="EP30 8명 모임의 두 조 확인하기 영상 보기">
+          <span class="guide-card__image-wrap">
+            <img src="../assets/images/guide/v22/EP30_썸네일.jpg" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
+            <span class="guide-card__number">EP30</span>
+          </span>
+          <span class="guide-card__body">
+            <span class="guide-card__eyebrow">플레이파크 2.2 사용 설명</span>
+            <strong class="guide-card__title">8명 모임의 두 조 확인하기</strong>
+            <span class="guide-card__summary">8명 모임 찾기 · 모임 카드 열기</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+        <a class="guide-card" href="https://youtube.com/shorts/vr5V10PUfCw" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.2 EP31 EP31 31 동호회 조별 경기 진행과 모임장 기록 두 조 편성 내 조 먼저 확인 내 조 경기 시작 다른 조 시작" data-video-id="vr5V10PUfCw" aria-label="EP31 동호회 조별 경기 진행과 모임장 기록 영상 보기">
+          <span class="guide-card__image-wrap">
+            <img src="../assets/images/guide/v22/EP31_썸네일.jpg" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
+            <span class="guide-card__number">EP31</span>
+          </span>
+          <span class="guide-card__body">
+            <span class="guide-card__eyebrow">플레이파크 2.2 사용 설명</span>
+            <strong class="guide-card__title">동호회 조별 경기 진행과 모임장 기록</strong>
+            <span class="guide-card__summary">두 조 편성 · 내 조 먼저 확인</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+        <a class="guide-card" href="https://youtube.com/shorts/1-1fCwCXS94" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.2 EP32 EP32 32 동호회 조별 결과와 홀별 점수 종료 경기 찾기 조별 집계 열기 조별 순위 꽃잎조 선택" data-video-id="1-1fCwCXS94" aria-label="EP32 동호회 조별 결과와 홀별 점수 영상 보기">
+          <span class="guide-card__image-wrap">
+            <img src="../assets/images/guide/v22/EP32_썸네일.jpg" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
+            <span class="guide-card__number">EP32</span>
+          </span>
+          <span class="guide-card__body">
+            <span class="guide-card__eyebrow">플레이파크 2.2 사용 설명</span>
+            <strong class="guide-card__title">동호회 조별 결과와 홀별 점수</strong>
+            <span class="guide-card__summary">종료 경기 찾기 · 조별 집계 열기</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+        <a class="guide-card" href="https://youtube.com/shorts/u33WcLeJlVo" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.2 EP45 EP45 45 기타 대회 소식과 참가 안내 찾기 홈 대회 소식 전체보기 누르기 기타 대회 선택 대회 카드 고르기" data-video-id="u33WcLeJlVo" aria-label="EP45 기타 대회 소식과 참가 안내 찾기 영상 보기">
+          <span class="guide-card__image-wrap">
+            <img src="../assets/images/guide/v22/EP45_썸네일.jpg" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
+            <span class="guide-card__number">EP45</span>
+          </span>
+          <span class="guide-card__body">
+            <span class="guide-card__eyebrow">플레이파크 2.2 사용 설명</span>
+            <strong class="guide-card__title">기타 대회 소식과 참가 안내 찾기</strong>
+            <span class="guide-card__summary">홈 대회 소식 · 전체보기 누르기</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+        <a class="guide-card" href="https://youtube.com/shorts/nOH8Cf32k4c" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.2 EP48 EP48 48 새 게임 한곳에서 만들기 새 게임 열기 일반 게임 동호회 게임 직접 스코어 카드" data-video-id="nOH8Cf32k4c" aria-label="EP48 새 게임 한곳에서 만들기 영상 보기">
+          <span class="guide-card__image-wrap">
+            <img src="../assets/images/guide/v22/EP48_썸네일.jpg" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
+            <span class="guide-card__number">EP48</span>
+          </span>
+          <span class="guide-card__body">
+            <span class="guide-card__eyebrow">플레이파크 2.2 사용 설명</span>
+            <strong class="guide-card__title">새 게임 한곳에서 만들기</strong>
+            <span class="guide-card__summary">새 게임 열기 · 일반 게임</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+        <a class="guide-card" href="https://youtube.com/shorts/WIafBbma1mI" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.2 EP49 EP49 49 전국 골프장 통계 보기 골프장 분석 열기 인기·급상승 구장 난이도 높은 구장 월별 순위 보기" data-video-id="WIafBbma1mI" aria-label="EP49 전국 골프장 통계 보기 영상 보기">
+          <span class="guide-card__image-wrap">
+            <img src="../assets/images/guide/v22/EP49_썸네일.jpg" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
+            <span class="guide-card__number">EP49</span>
+          </span>
+          <span class="guide-card__body">
+            <span class="guide-card__eyebrow">플레이파크 2.2 사용 설명</span>
+            <strong class="guide-card__title">전국 골프장 통계 보기</strong>
+            <span class="guide-card__summary">골프장 분석 열기 · 인기·급상승 구장</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+        <a class="guide-card" href="https://youtube.com/shorts/aaJ1--fK0l4" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.2 EP50 EP50 50 5명 이상 게임 조 편성 다섯 명 이상 등록 조 편성 방법 선택 조별 명단 확인 내 조 먼저 보기" data-video-id="aaJ1--fK0l4" aria-label="EP50 5명 이상 게임 조 편성 영상 보기">
+          <span class="guide-card__image-wrap">
+            <img src="../assets/images/guide/v22/EP50_썸네일.jpg" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
+            <span class="guide-card__number">EP50</span>
+          </span>
+          <span class="guide-card__body">
+            <span class="guide-card__eyebrow">플레이파크 2.2 사용 설명</span>
+            <strong class="guide-card__title">5명 이상 게임 조 편성</strong>
+            <span class="guide-card__summary">다섯 명 이상 등록 · 조 편성 방법 선택</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+        <a class="guide-card" href="https://youtube.com/shorts/eOIgkkgQA5g" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.2 EP51 EP51 51 다른 조 점수 기록과 조별 결과 다른 조 게임 시작 코스와 홀 확인 세 명의 타수 기록 조별 결과 확인" data-video-id="eOIgkkgQA5g" aria-label="EP51 다른 조 점수 기록과 조별 결과 영상 보기">
+          <span class="guide-card__image-wrap">
+            <img src="../assets/images/guide/v22/EP51_썸네일.jpg" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
+            <span class="guide-card__number">EP51</span>
+          </span>
+          <span class="guide-card__body">
+            <span class="guide-card__eyebrow">플레이파크 2.2 사용 설명</span>
+            <strong class="guide-card__title">다른 조 점수 기록과 조별 결과</strong>
+            <span class="guide-card__summary">다른 조 게임 시작 · 코스와 홀 확인</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+        <a class="guide-card" href="https://youtube.com/shorts/mmi6Xu5e4eQ" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.2 EP52 EP52 52 앱과 홈페이지에서 미니게임 즐기기 앱 홈 미니게임 찾기 필수 이용 안내 라운드 방식 선택 혼자 18홀 시작" data-video-id="mmi6Xu5e4eQ" aria-label="EP52 앱과 홈페이지에서 미니게임 즐기기 영상 보기">
+          <span class="guide-card__image-wrap">
+            <img src="../assets/images/guide/v22/EP52_썸네일.jpg" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
+            <span class="guide-card__number">EP52</span>
+          </span>
+          <span class="guide-card__body">
+            <span class="guide-card__eyebrow">플레이파크 2.2 사용 설명</span>
+            <strong class="guide-card__title">앱과 홈페이지에서 미니게임 즐기기</strong>
+            <span class="guide-card__summary">앱 홈 미니게임 찾기 · 필수 이용 안내</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+        <a class="guide-card" href="https://youtube.com/shorts/jEMyJxYZu14" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.2 EP53 EP53 53 동호회 게스트 회원 등록하기 동호회 회원 열기 회원 추가 선택 게스트 추가 이름·연락처 확인" data-video-id="jEMyJxYZu14" aria-label="EP53 동호회 게스트 회원 등록하기 영상 보기">
+          <span class="guide-card__image-wrap">
+            <img src="../assets/images/guide/v22/EP53_썸네일.jpg" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
+            <span class="guide-card__number">EP53</span>
+          </span>
+          <span class="guide-card__body">
+            <span class="guide-card__eyebrow">플레이파크 2.2 사용 설명</span>
+            <strong class="guide-card__title">동호회 게스트 회원 등록하기</strong>
+            <span class="guide-card__summary">동호회 회원 열기 · 회원 추가 선택</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+        <a class="guide-card" href="https://youtube.com/shorts/n8Jdwf46uU8" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.2 EP54 EP54 54 동호회 회원 연락처 확인·저장 동호회 회원 열기 연락처 보기 역할과 연락처 확인 사진으로 저장" data-video-id="n8Jdwf46uU8" aria-label="EP54 동호회 회원 연락처 확인·저장 영상 보기">
+          <span class="guide-card__image-wrap">
+            <img src="../assets/images/guide/v22/EP54_썸네일.jpg" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
+            <span class="guide-card__number">EP54</span>
+          </span>
+          <span class="guide-card__body">
+            <span class="guide-card__eyebrow">플레이파크 2.2 사용 설명</span>
+            <strong class="guide-card__title">동호회 회원 연락처 확인·저장</strong>
+            <span class="guide-card__summary">동호회 회원 열기 · 연락처 보기</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+        <a class="guide-card" href="https://youtube.com/shorts/ukle2Ag85WM" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.2 EP55 EP55 55 동호회 모임에 두 종류 게스트 넣기 모임 초대 회원 게스트 모임 게스트 3명 참가 확인" data-video-id="ukle2Ag85WM" aria-label="EP55 동호회 모임에 두 종류 게스트 넣기 영상 보기">
+          <span class="guide-card__image-wrap">
+            <img src="../assets/images/guide/v22/EP55_썸네일.jpg" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
+            <span class="guide-card__number">EP55</span>
+          </span>
+          <span class="guide-card__body">
+            <span class="guide-card__eyebrow">플레이파크 2.2 사용 설명</span>
+            <strong class="guide-card__title">동호회 모임에 두 종류 게스트 넣기</strong>
+            <span class="guide-card__summary">모임 초대 · 회원 게스트</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+        <a class="guide-card" href="https://youtube.com/shorts/k1rFWDKHEoI" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.2 EP56 EP56 56 플레이 중 이전 코스 점수 수정하기 점수표 열기 B코스 선택 홀 점수 선택 4타로 수정" data-video-id="k1rFWDKHEoI" aria-label="EP56 플레이 중 이전 코스 점수 수정하기 영상 보기">
+          <span class="guide-card__image-wrap">
+            <img src="../assets/images/guide/v22/EP56_썸네일.jpg" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
+            <span class="guide-card__number">EP56</span>
+          </span>
+          <span class="guide-card__body">
+            <span class="guide-card__eyebrow">플레이파크 2.2 사용 설명</span>
+            <strong class="guide-card__title">플레이 중 이전 코스 점수 수정하기</strong>
+            <span class="guide-card__summary">점수표 열기 · B코스 선택</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+        <a class="guide-card" href="https://youtube.com/shorts/tR-ie85oSMM" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.2 EP57 EP57 57 두 코스 점수 한 장으로 저장하기 B코스 완료 A코스 완료 전체 점수표 한 장 저장" data-video-id="tR-ie85oSMM" aria-label="EP57 두 코스 점수 한 장으로 저장하기 영상 보기">
+          <span class="guide-card__image-wrap">
+            <img src="../assets/images/guide/v22/EP57_썸네일.jpg" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
+            <span class="guide-card__number">EP57</span>
+          </span>
+          <span class="guide-card__body">
+            <span class="guide-card__eyebrow">플레이파크 2.2 사용 설명</span>
+            <strong class="guide-card__title">두 코스 점수 한 장으로 저장하기</strong>
+            <span class="guide-card__summary">B코스 완료 · A코스 완료</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+        <a class="guide-card" href="https://youtube.com/shorts/CwSOuB2BaJc" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.2 EP58 EP58 58 리그매니저 대회 소식 보기 홈 대회 소식 대회 전체보기 지난 대회 사례 전용 대회 페이지" data-video-id="CwSOuB2BaJc" aria-label="EP58 리그매니저 대회 소식 보기 영상 보기">
+          <span class="guide-card__image-wrap">
+            <img src="../assets/images/guide/v22/EP58_썸네일.jpg" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
+            <span class="guide-card__number">EP58</span>
+          </span>
+          <span class="guide-card__body">
+            <span class="guide-card__eyebrow">플레이파크 2.2 사용 설명</span>
+            <strong class="guide-card__title">리그매니저 대회 소식 보기</strong>
+            <span class="guide-card__summary">홈 대회 소식 · 대회 전체보기</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+        </div>
+        <details id="guideLegacy" class="guide-legacy">
+          <summary>이전 V2.0 사용 설명 보기 <span aria-hidden="true">⌄</span></summary>
+          <p>이전 버전의 앱 화면입니다. 현재 메뉴와 다를 수 있으니 먼저 V2.2 영상을 확인해 주세요.</p>
+          <div class="guide-grid">
+        <a class="guide-card" href="https://youtube.com/shorts/NSt6r4SFhsY" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP01 EP1 1 바뀐 홈에서 필요한 메뉴 찾기 홈 전체 화면과 홈 버튼 강조 아래쪽 주요 메뉴 전체 강조 게임 버튼 2.8배 확대: 기록된 게임 결과 확인 홈의 다양한 기능 메뉴 영역 강조" data-video-id="NSt6r4SFhsY" aria-label="EP01 바뀐 홈에서 필요한 메뉴 찾기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP01_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP01</span>
@@ -419,7 +745,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/ZlqNf6V3ixM" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP02 EP2 2 오늘의 메시지와 날씨 확인하기 홈 위쪽 오늘의 메시지 영역 강조 날짜 아래 메시지 본문을 1.35배 확대하여 읽기 메시지 바로 아래 날씨 영역 전체 강조 왼쪽 기온과 날씨를 2.7배 확대" data-video-id="ZlqNf6V3ixM" aria-label="EP02 오늘의 메시지와 날씨 확인하기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/ZlqNf6V3ixM" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP02 EP2 2 오늘의 메시지와 날씨 확인하기 홈 위쪽 오늘의 메시지 영역 강조 날짜 아래 메시지 본문을 1.35배 확대하여 읽기 메시지 바로 아래 날씨 영역 전체 강조 왼쪽 기온과 날씨를 2.7배 확대" data-video-id="ZlqNf6V3ixM" aria-label="EP02 오늘의 메시지와 날씨 확인하기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP02_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP02</span>
@@ -431,7 +757,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/zoPByq6MyX8" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP03 EP3 3 글씨를 크게 보는 방법 전체 서비스 열기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 3.2배 확대 아래쪽 메뉴 찾기 · 실제 화면 스크롤 글씨 크기 열기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.5배 확대 더크게 선택 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.4배 확대" data-video-id="zoPByq6MyX8" aria-label="EP03 글씨를 크게 보는 방법 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/zoPByq6MyX8" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP03 EP3 3 글씨를 크게 보는 방법 전체 서비스 열기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 3.2배 확대 아래쪽 메뉴 찾기 · 실제 화면 스크롤 글씨 크기 열기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.5배 확대 더크게 선택 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.4배 확대" data-video-id="zoPByq6MyX8" aria-label="EP03 글씨를 크게 보는 방법 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP03_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP03</span>
@@ -443,7 +769,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/spCag8VzWUs" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP04 EP4 4 플팍이에게 파크골프와 앱 사용법 물어보기 플팍이 열기 규칙과 구장도 질문 사용법 질문 예시 답변 읽기" data-video-id="spCag8VzWUs" aria-label="EP04 플팍이에게 파크골프와 앱 사용법 물어보기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/spCag8VzWUs" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP04 EP4 4 플팍이에게 파크골프와 앱 사용법 물어보기 플팍이 열기 규칙과 구장도 질문 사용법 질문 예시 답변 읽기" data-video-id="spCag8VzWUs" aria-label="EP04 플팍이에게 파크골프와 앱 사용법 물어보기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP04_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP04</span>
@@ -455,7 +781,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/Weh7EjNmsno" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP05 EP5 5 내 주변 파크골프장 쉽게 찾기 골프장 메뉴 열기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.8배 확대 실외골프장 선택 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.4배 확대 거리로 비교 · 해당 영역 3배 확대 구장 상세 열기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 1.45배 확대" data-video-id="Weh7EjNmsno" aria-label="EP05 내 주변 파크골프장 쉽게 찾기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/Weh7EjNmsno" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP05 EP5 5 내 주변 파크골프장 쉽게 찾기 골프장 메뉴 열기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.8배 확대 실외골프장 선택 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.4배 확대 거리로 비교 · 해당 영역 3배 확대 구장 상세 열기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 1.45배 확대" data-video-id="Weh7EjNmsno" aria-label="EP05 내 주변 파크골프장 쉽게 찾기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP05_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP05</span>
@@ -467,7 +793,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/_EQLljo8JBo" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP06 EP6 6 다른 지역 파크골프장과 지도 찾아보기 지역 선택 열기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.8배 확대 경기 선택 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.6배 확대 지도보기 누르기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.6배 확대 지도 움직이기 · 실제 화면 스크롤" data-video-id="_EQLljo8JBo" aria-label="EP06 다른 지역 파크골프장과 지도 찾아보기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/_EQLljo8JBo" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP06 EP6 6 다른 지역 파크골프장과 지도 찾아보기 지역 선택 열기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.8배 확대 경기 선택 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.6배 확대 지도보기 누르기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.6배 확대 지도 움직이기 · 실제 화면 스크롤" data-video-id="_EQLljo8JBo" aria-label="EP06 다른 지역 파크골프장과 지도 찾아보기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP06_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP06</span>
@@ -479,7 +805,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/AWW62hRlUW4" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP07 EP7 7 구장 정보와 리뷰 살펴보기 구장 상세 열기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 1.4배 확대 기본 정보 확인 · 해당 영역 2.5배 확대 주소·연락처 보기 · 실제 화면 스크롤 이용 안내 찾기 · 실제 화면 스크롤" data-video-id="AWW62hRlUW4" aria-label="EP07 구장 정보와 리뷰 살펴보기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/AWW62hRlUW4" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP07 EP7 7 구장 정보와 리뷰 살펴보기 구장 상세 열기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 1.4배 확대 기본 정보 확인 · 해당 영역 2.5배 확대 주소·연락처 보기 · 실제 화면 스크롤 이용 안내 찾기 · 실제 화면 스크롤" data-video-id="AWW62hRlUW4" aria-label="EP07 구장 정보와 리뷰 살펴보기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP07_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP07</span>
@@ -491,7 +817,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/Wag6NKWz-AY" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP08 EP8 8 AI 구장 분석으로 경기 준비하기 구장 분석 열기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.4배 확대 분석 경기 수 확인 · 해당 영역 1.1배 확대 코스별 분석 찾기 · 실제 화면 스크롤 코스 설명 읽기 · 해당 영역 1.04배 확대" data-video-id="Wag6NKWz-AY" aria-label="EP08 AI 구장 분석으로 경기 준비하기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/Wag6NKWz-AY" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP08 EP8 8 AI 구장 분석으로 경기 준비하기 구장 분석 열기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.4배 확대 분석 경기 수 확인 · 해당 영역 1.1배 확대 코스별 분석 찾기 · 실제 화면 스크롤 코스 설명 읽기 · 해당 영역 1.04배 확대" data-video-id="Wag6NKWz-AY" aria-label="EP08 AI 구장 분석으로 경기 준비하기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP08_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP08</span>
@@ -503,7 +829,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/nJtWaQTqhVc" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP09 EP9 9 홀별 거리와 공략 리뷰 확인하기 구장 분석 열기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.45배 확대 홀 목록 찾기 · 실제 화면 스크롤 1번홀 열기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.2배 확대 홀 거리 확인 · 해당 영역 2.7배 확대" data-video-id="nJtWaQTqhVc" aria-label="EP09 홀별 거리와 공략 리뷰 확인하기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/nJtWaQTqhVc" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP09 EP9 9 홀별 거리와 공략 리뷰 확인하기 구장 분석 열기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.45배 확대 홀 목록 찾기 · 실제 화면 스크롤 1번홀 열기 · 실제 화면 녹화로 조작과 결과 확인 · 해당 영역 2.2배 확대 홀 거리 확인 · 해당 영역 2.7배 확대" data-video-id="nJtWaQTqhVc" aria-label="EP09 홀별 거리와 공략 리뷰 확인하기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP09_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP09</span>
@@ -515,7 +841,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/t02BPxCwIvw" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP10 EP10 10 홀별 공략 읽고 나만의 기록 남기기 홀별 공략 활용 공개 글 읽기 내 공략 입력 등록 범위 선택" data-video-id="t02BPxCwIvw" aria-label="EP10 홀별 공략 읽고 나만의 기록 남기기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/t02BPxCwIvw" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP10 EP10 10 홀별 공략 읽고 나만의 기록 남기기 홀별 공략 활용 공개 글 읽기 내 공략 입력 등록 범위 선택" data-video-id="t02BPxCwIvw" aria-label="EP10 홀별 공략 읽고 나만의 기록 남기기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP10_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP10</span>
@@ -527,7 +853,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/BFJOrOnPHfM" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP11 EP11 11 구장 정보에서 게임 만들기 게임 예약하기 함께 칠 날짜 시간·코스 찾기 시작 시간 선택" data-video-id="BFJOrOnPHfM" aria-label="EP11 구장 정보에서 게임 만들기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/BFJOrOnPHfM" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP11 EP11 11 구장 정보에서 게임 만들기 게임 예약하기 함께 칠 날짜 시간·코스 찾기 시작 시간 선택" data-video-id="BFJOrOnPHfM" aria-label="EP11 구장 정보에서 게임 만들기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP11_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP11</span>
@@ -539,7 +865,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/xgK3a4zirRs" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP12 EP12 12 스크린 매장 찾고 모임 일정 준비하기 골프장 메뉴 열기 스크린 목록 보기 매장 상세 열기 모임 일정 열기" data-video-id="xgK3a4zirRs" aria-label="EP12 스크린 매장 찾고 모임 일정 준비하기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/xgK3a4zirRs" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP12 EP12 12 스크린 매장 찾고 모임 일정 준비하기 골프장 메뉴 열기 스크린 목록 보기 매장 상세 열기 모임 일정 열기" data-video-id="xgK3a4zirRs" aria-label="EP12 스크린 매장 찾고 모임 일정 준비하기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP12_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP12</span>
@@ -551,7 +877,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/RYIwWe_150w" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP13 EP13 13 특수 상황에서 수동 스코어카드 작성하기 스코어카드 열기 구장명 직접 입력 코스·기준타수 확인 홀 기준타수 누르기" data-video-id="RYIwWe_150w" aria-label="EP13 특수 상황에서 수동 스코어카드 작성하기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/RYIwWe_150w" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP13 EP13 13 특수 상황에서 수동 스코어카드 작성하기 스코어카드 열기 구장명 직접 입력 코스·기준타수 확인 홀 기준타수 누르기" data-video-id="RYIwWe_150w" aria-label="EP13 특수 상황에서 수동 스코어카드 작성하기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP13_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP13</span>
@@ -563,7 +889,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/Wi0i9YvvIXE" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP14 EP14 14 친구 초대와 실시간 기록 공유 친구 메뉴 열기 새 친구 초대하기 초대 방법 고르기 초대 주소 복사" data-video-id="Wi0i9YvvIXE" aria-label="EP14 친구 초대와 실시간 기록 공유 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/Wi0i9YvvIXE" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP14 EP14 14 친구 초대와 실시간 기록 공유 친구 메뉴 열기 새 친구 초대하기 초대 방법 고르기 초대 주소 복사" data-video-id="Wi0i9YvvIXE" aria-label="EP14 친구 초대와 실시간 기록 공유 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP14_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP14</span>
@@ -575,7 +901,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/bUspgv25jgc" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP15 EP15 15 게스트 추가와 경기 결과 나누기 첫 게스트 만들기 만들어진 이름 확인 두 번째 게스트 선택 상태 확인" data-video-id="bUspgv25jgc" aria-label="EP15 게스트 추가와 경기 결과 나누기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/bUspgv25jgc" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP15 EP15 15 게스트 추가와 경기 결과 나누기 첫 게스트 만들기 만들어진 이름 확인 두 번째 게스트 선택 상태 확인" data-video-id="bUspgv25jgc" aria-label="EP15 게스트 추가와 경기 결과 나누기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP15_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP15</span>
@@ -587,7 +913,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/0AEhwYd8XYU" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP16 EP16 16 타수 기록과 친구 경기 공유 기록할 사람 확인 더하기 한 번 늘어난 타수 확인 빼기 한 번" data-video-id="0AEhwYd8XYU" aria-label="EP16 타수 기록과 친구 경기 공유 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/0AEhwYd8XYU" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP16 EP16 16 타수 기록과 친구 경기 공유 기록할 사람 확인 더하기 한 번 늘어난 타수 확인 빼기 한 번" data-video-id="0AEhwYd8XYU" aria-label="EP16 타수 기록과 친구 경기 공유 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP16_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP16</span>
@@ -599,7 +925,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/o6RJ0yHYNLM" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP17 EP17 17 볼륨 버튼으로 타수와 사람·홀 이동하기 한 번 누르는 동작 선택된 사람 확인 한 타 늘리기 한 타 줄이기" data-video-id="o6RJ0yHYNLM" aria-label="EP17 볼륨 버튼으로 타수와 사람·홀 이동하기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/o6RJ0yHYNLM" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP17 EP17 17 볼륨 버튼으로 타수와 사람·홀 이동하기 한 번 누르는 동작 선택된 사람 확인 한 타 늘리기 한 타 줄이기" data-video-id="o6RJ0yHYNLM" aria-label="EP17 볼륨 버튼으로 타수와 사람·홀 이동하기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP17_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP17</span>
@@ -611,7 +937,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/SVCytgLXfRo" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP18 EP18 18 일반 경기 결과와 사진 공유 마지막 홀 마무리 종료 전에 확인 경기 종료하기 자동 우승자 확인" data-video-id="SVCytgLXfRo" aria-label="EP18 일반 경기 결과와 사진 공유 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/SVCytgLXfRo" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP18 EP18 18 일반 경기 결과와 사진 공유 마지막 홀 마무리 종료 전에 확인 경기 종료하기 자동 우승자 확인" data-video-id="SVCytgLXfRo" aria-label="EP18 일반 경기 결과와 사진 공유 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP18_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP18</span>
@@ -623,7 +949,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/Cm2SQRbj9_E" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP19 EP19 19 AI 경기 해설 읽기 해설 메뉴 찾기 분석 결과 열기 첫 해설 읽기 경기 요약 살펴보기" data-video-id="Cm2SQRbj9_E" aria-label="EP19 AI 경기 해설 읽기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/Cm2SQRbj9_E" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP19 EP19 19 AI 경기 해설 읽기 해설 메뉴 찾기 분석 결과 열기 첫 해설 읽기 경기 요약 살펴보기" data-video-id="Cm2SQRbj9_E" aria-label="EP19 AI 경기 해설 읽기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP19_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP19</span>
@@ -635,7 +961,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/zHw9HOpMmk4" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP20 EP20 20 파크일지에 경기 메모 작성하기 파크일지 열기 기록할 게임 찾기 게임에서도 바로 작성 경기 느낌 입력" data-video-id="zHw9HOpMmk4" aria-label="EP20 파크일지에 경기 메모 작성하기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/zHw9HOpMmk4" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP20 EP20 20 파크일지에 경기 메모 작성하기 파크일지 열기 기록할 게임 찾기 게임에서도 바로 작성 경기 느낌 입력" data-video-id="zHw9HOpMmk4" aria-label="EP20 파크일지에 경기 메모 작성하기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP20_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP20</span>
@@ -647,7 +973,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/-kMrdR6Vvp0" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP21 EP21 21 게임과 연결하지 않고 일지 작성하기 일지 쓰기 열기 자유롭게 작성 선택 제목과 내용 구분 연습 메모 입력" data-video-id="-kMrdR6Vvp0" aria-label="EP21 게임과 연결하지 않고 일지 작성하기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/-kMrdR6Vvp0" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP21 EP21 21 게임과 연결하지 않고 일지 작성하기 일지 쓰기 열기 자유롭게 작성 선택 제목과 내용 구분 연습 메모 입력" data-video-id="-kMrdR6Vvp0" aria-label="EP21 게임과 연결하지 않고 일지 작성하기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP21_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP21</span>
@@ -659,7 +985,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/aXfjOJzS5iM" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP22 EP22 22 내 경기 기록 한눈에 보기 내 정보 열기 평균 타수 확인 베스트 스코어 확인 최근 경기 찾기" data-video-id="aXfjOJzS5iM" aria-label="EP22 내 경기 기록 한눈에 보기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/aXfjOJzS5iM" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP22 EP22 22 내 경기 기록 한눈에 보기 내 정보 열기 평균 타수 확인 베스트 스코어 확인 최근 경기 찾기" data-video-id="aXfjOJzS5iM" aria-label="EP22 내 경기 기록 한눈에 보기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP22_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP22</span>
@@ -671,7 +997,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/JibbcWI05kI" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP23 EP23 23 게임 삭제 전에 확인하기 구장 이름 확인 날짜 확인 휴지통 버튼 열기 확인 문구 읽기" data-video-id="JibbcWI05kI" aria-label="EP23 게임 삭제 전에 확인하기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/JibbcWI05kI" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP23 EP23 23 게임 삭제 전에 확인하기 구장 이름 확인 날짜 확인 휴지통 버튼 열기 확인 문구 읽기" data-video-id="JibbcWI05kI" aria-label="EP23 게임 삭제 전에 확인하기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP23_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP23</span>
@@ -683,7 +1009,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/aMBsRRfaoSM" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP24 EP24 24 내 주변 동호회와 가입 화면 살펴보기 동호회 메뉴 열기 주변 목록 확인 관심 동호회 선택 소개와 지역 읽기" data-video-id="aMBsRRfaoSM" aria-label="EP24 내 주변 동호회와 가입 화면 살펴보기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/aMBsRRfaoSM" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP24 EP24 24 내 주변 동호회와 가입 화면 살펴보기 동호회 메뉴 열기 주변 목록 확인 관심 동호회 선택 소개와 지역 읽기" data-video-id="aMBsRRfaoSM" aria-label="EP24 내 주변 동호회와 가입 화면 살펴보기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP24_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP24</span>
@@ -695,7 +1021,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/ngSWVBScJ5g" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP25 EP25 25 우리 동호회 만들기 만들기 화면 열기 동호회명 입력 최대 인원 확인 즐겨찾는 구장" data-video-id="ngSWVBScJ5g" aria-label="EP25 우리 동호회 만들기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/ngSWVBScJ5g" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP25 EP25 25 우리 동호회 만들기 만들기 화면 열기 동호회명 입력 최대 인원 확인 즐겨찾는 구장" data-video-id="ngSWVBScJ5g" aria-label="EP25 우리 동호회 만들기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP25_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP25</span>
@@ -707,7 +1033,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/DswvwhbwfZ0" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP26 EP26 26 동호회 게임 모임 만들기 모임 메뉴 열기 모임 만들기 게임 모임 선택 게임 예약 항목" data-video-id="DswvwhbwfZ0" aria-label="EP26 동호회 게임 모임 만들기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/DswvwhbwfZ0" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP26 EP26 26 동호회 게임 모임 만들기 모임 메뉴 열기 모임 만들기 게임 모임 선택 게임 예약 항목" data-video-id="DswvwhbwfZ0" aria-label="EP26 동호회 게임 모임 만들기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP26_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP26</span>
@@ -719,7 +1045,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/BNOBIOndITQ" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP27 EP27 27 동호회 초대 주소 보내기 내 동호회 열기 초대하기 열기 링크 공유하기 초대 주소 복사" data-video-id="BNOBIOndITQ" aria-label="EP27 동호회 초대 주소 보내기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/BNOBIOndITQ" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP27 EP27 27 동호회 초대 주소 보내기 내 동호회 열기 초대하기 열기 링크 공유하기 초대 주소 복사" data-video-id="BNOBIOndITQ" aria-label="EP27 동호회 초대 주소 보내기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP27_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP27</span>
@@ -731,7 +1057,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/vdUZXiU-pBA" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP28 EP28 28 동호회 초대받아 가입하기 동호회 소개 열기 가입 신청 화면 가입 프로필 확인 가입 신청 실행" data-video-id="vdUZXiU-pBA" aria-label="EP28 동호회 초대받아 가입하기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/vdUZXiU-pBA" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP28 EP28 28 동호회 초대받아 가입하기 동호회 소개 열기 가입 신청 화면 가입 프로필 확인 가입 신청 실행" data-video-id="vdUZXiU-pBA" aria-label="EP28 동호회 초대받아 가입하기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP28_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP28</span>
@@ -743,7 +1069,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/_vIGndI25X4" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP29 EP29 29 동호회 게임 모임 참가 확인 모임에서 초대하기 함께할 회원 선택 회원 초대 실행 참가자 수 확인" data-video-id="_vIGndI25X4" aria-label="EP29 동호회 게임 모임 참가 확인 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/_vIGndI25X4" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP29 EP29 29 동호회 게임 모임 참가 확인 모임에서 초대하기 함께할 회원 선택 회원 초대 실행 참가자 수 확인" data-video-id="_vIGndI25X4" aria-label="EP29 동호회 게임 모임 참가 확인 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP29_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP29</span>
@@ -755,7 +1081,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/haGrtBoMRc0" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP30 EP30 30 9명 참가자, 3개 조로 편성하기 동호회 회원 열기 회원 선택 표시 회원 목록 더 보기 8명 초대해 9명 등록" data-video-id="haGrtBoMRc0" aria-label="EP30 9명 참가자, 3개 조로 편성하기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/haGrtBoMRc0" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP30 EP30 30 9명 참가자, 3개 조로 편성하기 동호회 회원 열기 회원 선택 표시 회원 목록 더 보기 8명 초대해 9명 등록" data-video-id="haGrtBoMRc0" aria-label="EP30 9명 참가자, 3개 조로 편성하기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP30_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP30</span>
@@ -767,7 +1093,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/8Y6LhvWJSEg" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP31 EP31 31 동호회에서 내 조의 경기 시작하기 각 조원의 게임카드 게임카드 상세 열기 상세에서 내 조 확인 시작 화면 열기" data-video-id="8Y6LhvWJSEg" aria-label="EP31 동호회에서 내 조의 경기 시작하기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/8Y6LhvWJSEg" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP31 EP31 31 동호회에서 내 조의 경기 시작하기 각 조원의 게임카드 게임카드 상세 열기 상세에서 내 조 확인 시작 화면 열기" data-video-id="8Y6LhvWJSEg" aria-label="EP31 동호회에서 내 조의 경기 시작하기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP31_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP31</span>
@@ -779,7 +1105,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/OKC741onWDU" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP32 EP32 32 동호회 조별 결과와 상세 점수 조별 집계 확인 상세 기록 열기 어느 조인지 확인 코스별 점수와 총점" data-video-id="OKC741onWDU" aria-label="EP32 동호회 조별 결과와 상세 점수 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/OKC741onWDU" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP32 EP32 32 동호회 조별 결과와 상세 점수 조별 집계 확인 상세 기록 열기 어느 조인지 확인 코스별 점수와 총점" data-video-id="OKC741onWDU" aria-label="EP32 동호회 조별 결과와 상세 점수 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP32_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP32</span>
@@ -791,7 +1117,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/S3HwfjYXvD8" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP33 EP33 33 친목 모임 등록 전 입력 준비 동호회 모임 열기 모임 만들기 메뉴 친목 모임 선택 모임 이름 입력" data-video-id="S3HwfjYXvD8" aria-label="EP33 친목 모임 등록 전 입력 준비 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/S3HwfjYXvD8" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP33 EP33 33 친목 모임 등록 전 입력 준비 동호회 모임 열기 모임 만들기 메뉴 친목 모임 선택 모임 이름 입력" data-video-id="S3HwfjYXvD8" aria-label="EP33 친목 모임 등록 전 입력 준비 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP33_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP33</span>
@@ -803,7 +1129,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/cqUKhK4FL3I" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP34 EP34 34 회원·공지·랭킹 살펴보기 내 동호회 열기 회원 목록 열기 회원 정보 확인 공지사항 모아보기" data-video-id="cqUKhK4FL3I" aria-label="EP34 회원·공지·랭킹 살펴보기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/cqUKhK4FL3I" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP34 EP34 34 회원·공지·랭킹 살펴보기 내 동호회 열기 회원 목록 열기 회원 정보 확인 공지사항 모아보기" data-video-id="cqUKhK4FL3I" aria-label="EP34 회원·공지·랭킹 살펴보기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP34_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP34</span>
@@ -815,7 +1141,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/8kAcOXQXrQw" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP35 EP35 35 동호회 챌린지 함께하기 챌린지 열기 레벨과 포인트 가입·게임 미션 아래 미션 보기" data-video-id="8kAcOXQXrQw" aria-label="EP35 동호회 챌린지 함께하기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/8kAcOXQXrQw" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP35 EP35 35 동호회 챌린지 함께하기 챌린지 열기 레벨과 포인트 가입·게임 미션 아래 미션 보기" data-video-id="8kAcOXQXrQw" aria-label="EP35 동호회 챌린지 함께하기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP35_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP35</span>
@@ -827,7 +1153,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/q5u_Z8G4bqc" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP36 EP36 36 주제에 맞게 파크수다 글 준비하기 커뮤니티 열기 글쓰기 메뉴 작성 화면 열기 주제 목록 열기" data-video-id="q5u_Z8G4bqc" aria-label="EP36 주제에 맞게 파크수다 글 준비하기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/q5u_Z8G4bqc" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP36 EP36 36 주제에 맞게 파크수다 글 준비하기 커뮤니티 열기 글쓰기 메뉴 작성 화면 열기 주제 목록 열기" data-video-id="q5u_Z8G4bqc" aria-label="EP36 주제에 맞게 파크수다 글 준비하기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP36_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP36</span>
@@ -839,7 +1165,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/4t2ufV3uMyA" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP37 EP37 37 같이쳐요 글쓰기와 참가 댓글 같이쳐요 글쓰기 내용 적기 구장 목록 열기 화천 검색" data-video-id="4t2ufV3uMyA" aria-label="EP37 같이쳐요 글쓰기와 참가 댓글 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/4t2ufV3uMyA" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP37 EP37 37 같이쳐요 글쓰기와 참가 댓글 같이쳐요 글쓰기 내용 적기 구장 목록 열기 화천 검색" data-video-id="4t2ufV3uMyA" aria-label="EP37 같이쳐요 글쓰기와 참가 댓글 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP37_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP37</span>
@@ -851,7 +1177,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/P1WfovXzhhM" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP38 EP38 38 장터에서 용품 정보 살펴보기 장터 목록 열기 용품 소개 글 열기 제목과 가격 확인 작성일 확인" data-video-id="P1WfovXzhhM" aria-label="EP38 장터에서 용품 정보 살펴보기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/P1WfovXzhhM" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP38 EP38 38 장터에서 용품 정보 살펴보기 장터 목록 열기 용품 소개 글 열기 제목과 가격 확인 작성일 확인" data-video-id="P1WfovXzhhM" aria-label="EP38 장터에서 용품 정보 살펴보기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP38_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP38</span>
@@ -863,7 +1189,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/lbXPVAl1Qn4" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP39 EP39 39 장터에 용품 소개 글 준비하기 장터 글쓰기 사진 선택 화면 예시 사진 선택 사진 첨부하기" data-video-id="lbXPVAl1Qn4" aria-label="EP39 장터에 용품 소개 글 준비하기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/lbXPVAl1Qn4" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP39 EP39 39 장터에 용품 소개 글 준비하기 장터 글쓰기 사진 선택 화면 예시 사진 선택 사진 첨부하기" data-video-id="lbXPVAl1Qn4" aria-label="EP39 장터에 용품 소개 글 준비하기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP39_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP39</span>
@@ -875,7 +1201,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/IGV-kjpElQc" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP40 EP40 40 문의 내용 작성과 내역 확인하기 홈에서 문의하기 필요한 사진 준비 문의 내용 입력 설명과 오타 확인" data-video-id="IGV-kjpElQc" aria-label="EP40 문의 내용 작성과 내역 확인하기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/IGV-kjpElQc" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP40 EP40 40 문의 내용 작성과 내역 확인하기 홈에서 문의하기 필요한 사진 준비 문의 내용 입력 설명과 오타 확인" data-video-id="IGV-kjpElQc" aria-label="EP40 문의 내용 작성과 내역 확인하기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP40_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP40</span>
@@ -887,7 +1213,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/3rl8iGHk7y0" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP41 EP41 41 홈에서 길라잡이로 기본 지식 배우기 길라잡이 열기 기본 지식 분야 기본 용어 선택 파크골프 알아보기" data-video-id="3rl8iGHk7y0" aria-label="EP41 홈에서 길라잡이로 기본 지식 배우기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/3rl8iGHk7y0" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP41 EP41 41 홈에서 길라잡이로 기본 지식 배우기 길라잡이 열기 기본 지식 분야 기본 용어 선택 파크골프 알아보기" data-video-id="3rl8iGHk7y0" aria-label="EP41 홈에서 길라잡이로 기본 지식 배우기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP41_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP41</span>
@@ -899,7 +1225,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <a class="guide-card" href="https://youtube.com/shorts/UE7t3wZ6Va4" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="EP42 EP42 42 파크골프 뉴스 읽기 파크 뉴스 열기 기사 제목 살펴보기 언론사와 날짜 기사 원문 열기" data-video-id="UE7t3wZ6Va4" aria-label="EP42 파크골프 뉴스 읽기 영상 보기">
+        <a class="guide-card" href="https://youtube.com/shorts/UE7t3wZ6Va4" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP42 EP42 42 파크골프 뉴스 읽기 파크 뉴스 열기 기사 제목 살펴보기 언론사와 날짜 기사 원문 열기" data-video-id="UE7t3wZ6Va4" aria-label="EP42 파크골프 뉴스 읽기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP42_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP42</span>
@@ -911,7 +1237,7 @@
             <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
         </a>
-        <button class="guide-card guide-card--pending" type="button" disabled data-guide-item data-guide-search="EP43 EP43 43 파크TV에서 레슨과 사용법 찾기 홈에서 파크TV 주제 탭 살펴보기 앱 사용설명 선택 영상 제목 확인" data-video-id="De7prTvsdYo" data-pending-video aria-label="EP43 파크TV에서 레슨과 사용법 찾기 공개 준비 중">
+        <a class="guide-card" href="https://youtube.com/shorts/De7prTvsdYo" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP43 EP43 43 파크TV에서 레슨과 사용법 찾기 홈에서 파크TV 주제 탭 살펴보기 앱 사용설명 선택 영상 제목 확인" data-video-id="De7prTvsdYo" aria-label="EP43 파크TV에서 레슨과 사용법 찾기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP43_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP43</span>
@@ -920,10 +1246,10 @@
             <span class="guide-card__eyebrow">플레이파크 2.0 사용 설명</span>
             <strong class="guide-card__title">파크TV에서 레슨과 사용법 찾기</strong>
             <span class="guide-card__summary">홈에서 파크TV · 주제 탭 살펴보기</span>
-            <span class="guide-card__action">공개 준비 중</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
-        </button>
-        <button class="guide-card guide-card--pending" type="button" disabled data-guide-item data-guide-search="EP44 EP44 44 오늘의 퀴즈와 파크골프 마스터 홈에서 퀴즈 찾기 오늘의 OX 답 선택 정답과 해설 마스터 도전 열기" data-video-id="PTyH6YXUKDo" data-pending-video aria-label="EP44 오늘의 퀴즈와 파크골프 마스터 공개 준비 중">
+        </a>
+        <a class="guide-card" href="https://youtube.com/shorts/PTyH6YXUKDo" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP44 EP44 44 오늘의 퀴즈와 파크골프 마스터 홈에서 퀴즈 찾기 오늘의 OX 답 선택 정답과 해설 마스터 도전 열기" data-video-id="PTyH6YXUKDo" aria-label="EP44 오늘의 퀴즈와 파크골프 마스터 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP44_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP44</span>
@@ -932,10 +1258,10 @@
             <span class="guide-card__eyebrow">플레이파크 2.0 사용 설명</span>
             <strong class="guide-card__title">오늘의 퀴즈와 파크골프 마스터</strong>
             <span class="guide-card__summary">홈에서 퀴즈 찾기 · 오늘의 OX 답 선택</span>
-            <span class="guide-card__action">공개 준비 중</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
-        </button>
-        <button class="guide-card guide-card--pending" type="button" disabled data-guide-item data-guide-search="EP45 EP45 45 대회 소식과 참가 안내 찾기 홈에서 대회 소식 찾기 홈 대회 정보 미리보기 대회 목록 열기 대회 안내 선택" data-video-id="5B_iNKoGYvQ" data-pending-video aria-label="EP45 대회 소식과 참가 안내 찾기 공개 준비 중">
+        </a>
+        <a class="guide-card" href="https://youtube.com/shorts/5B_iNKoGYvQ" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP45 EP45 45 대회 소식과 참가 안내 찾기 홈에서 대회 소식 찾기 홈 대회 정보 미리보기 대회 목록 열기 대회 안내 선택" data-video-id="5B_iNKoGYvQ" aria-label="EP45 대회 소식과 참가 안내 찾기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP45_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP45</span>
@@ -944,10 +1270,10 @@
             <span class="guide-card__eyebrow">플레이파크 2.0 사용 설명</span>
             <strong class="guide-card__title">대회 소식과 참가 안내 찾기</strong>
             <span class="guide-card__summary">홈에서 대회 소식 찾기 · 홈 대회 정보 미리보기</span>
-            <span class="guide-card__action">공개 준비 중</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
-        </button>
-        <button class="guide-card guide-card--pending" type="button" disabled data-guide-item data-guide-search="EP46 EP46 46 홈에서 공지사항 찾아 읽기 홈 메뉴 찾기 공지사항 선택 제목과 날짜 공지 상세 열기" data-video-id="56YnUGssOw4" data-pending-video aria-label="EP46 홈에서 공지사항 찾아 읽기 공개 준비 중">
+        </a>
+        <a class="guide-card" href="https://youtube.com/shorts/56YnUGssOw4" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP46 EP46 46 홈에서 공지사항 찾아 읽기 홈 메뉴 찾기 공지사항 선택 제목과 날짜 공지 상세 열기" data-video-id="56YnUGssOw4" aria-label="EP46 홈에서 공지사항 찾아 읽기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP46_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP46</span>
@@ -956,10 +1282,10 @@
             <span class="guide-card__eyebrow">플레이파크 2.0 사용 설명</span>
             <strong class="guide-card__title">홈에서 공지사항 찾아 읽기</strong>
             <span class="guide-card__summary">홈 메뉴 찾기 · 공지사항 선택</span>
-            <span class="guide-card__action">공개 준비 중</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
-        </button>
-        <button class="guide-card guide-card--pending" type="button" disabled data-guide-item data-guide-search="EP47 EP47 47 처음이라면 입문 안내부터 보기 입문 안내 열기 입문하기 탭 영상 제목 읽기 유튜브에서 보기" data-video-id="hNEWF1D_h2M" data-pending-video aria-label="EP47 처음이라면 입문 안내부터 보기 공개 준비 중">
+        </a>
+        <a class="guide-card" href="https://youtube.com/shorts/hNEWF1D_h2M" target="_blank" rel="noopener noreferrer" data-guide-item data-guide-search="2.0 EP47 EP47 47 처음이라면 입문 안내부터 보기 입문 안내 열기 입문하기 탭 영상 제목 읽기 유튜브에서 보기" data-video-id="hNEWF1D_h2M" aria-label="EP47 처음이라면 입문 안내부터 보기 영상 보기">
           <span class="guide-card__image-wrap">
             <img src="../assets/images/guide/EP47_썸네일.webp" alt="" width="480" height="853" loading="lazy" decoding="async" class="guide-card__image" />
             <span class="guide-card__number">EP47</span>
@@ -968,17 +1294,18 @@
             <span class="guide-card__eyebrow">플레이파크 2.0 사용 설명</span>
             <strong class="guide-card__title">처음이라면 입문 안내부터 보기</strong>
             <span class="guide-card__summary">입문 안내 열기 · 입문하기 탭</span>
-            <span class="guide-card__action">공개 준비 중</span>
+            <span class="guide-card__action">영상 보기 <span aria-hidden="true">↗</span></span>
           </span>
-        </button>
-        </div>
+        </a>
+          </div>
+        </details>
         <p id="guideEmpty" class="guide-empty" hidden>찾는 영상이 없습니다. 다른 단어로 검색해 보세요.</p>
       </div>
     </section>
     <!-- GUIDE_VIDEOS_END -->
 
     <!-- ===== FAQ ===== -->
-    <section class="py-24 md:py-32" aria-labelledby="faq-title">
+    <section id="faq" class="py-24 md:py-32" aria-labelledby="faq-title">
       <div class="mx-auto max-w-3xl px-6">
         <div class="reveal text-center">
           <span class="eyebrow">FAQ</span>
@@ -1004,7 +1331,7 @@
               동호회 게임은 몇 명부터 사용할 수 있나요?
               <iconify-icon icon="solar:alt-arrow-down-linear" class="shrink-0 text-xl text-muted transition-transform duration-500 ease-spring group-open:rotate-180 group-open:text-brand"></iconify-icon>
             </summary>
-            <p class="faq-answer px-6 pb-5 leading-relaxed text-muted">인원 제한이 있지는 않습니다. 동호회 정례 모임이나 번개 시 편하게 인원을 모집하셔서 게임을 즐기실 수 있습니다. 다만 실제 대회 형태로 치르게 될 경우 플레이어가 아닌 심판이 채점해야 하고, 폰 화면으로 많은 인원을 관리하기에는 어려움이 있어 대회 운영 시스템을 사용하시기를 추천합니다.</p>
+            <p class="faq-answer px-6 pb-5 leading-relaxed text-muted">동호회 게임 모임은 1명부터 100명까지 함께할 수 있습니다. 모임장이 멤버를 등록하거나 참가자가 신청할 수 있습니다. 다만 실제 대회 형태로 치르게 될 경우 플레이어가 아닌 심판이 채점해야 하고, 폰 화면으로 많은 인원을 관리하기에는 어려움이 있어 대회 운영 시스템을 사용하시기를 추천합니다.</p>
           </details>
           <details class="faq-item group">
             <summary class="flex cursor-pointer list-none items-center justify-between gap-5 px-6 py-5 font-semibold text-ink transition-colors hover:bg-black/[0.02]">
@@ -1062,6 +1389,8 @@
       </div>
     </section>
   </main>
+
+  <a id="guideBackToTop" class="guide-back-to-top" href="#playpark-intro" aria-label="페이지 맨 위로 이동" hidden><span aria-hidden="true">↑</span> 맨 위로</a>
 
   <!-- ===== 영상 라이트박스 ===== -->
   <div id="videoModal" role="dialog" aria-modal="true" aria-label="영상 재생"
