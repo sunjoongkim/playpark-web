@@ -1,0 +1,20 @@
+/* Scoped layout so deployments preserve the current site's shared stylesheet. */
+#store-list {
+  @apply mt-8 mx-auto grid gap-5;
+}
+#store-list[data-count="1"] {
+  @apply max-w-sm;
+}
+#store-list[data-count="2"] {
+  @apply max-w-2xl;
+}
+@screen sm {
+  #store-list:not([data-count="1"]) {
+    @apply grid-cols-2;
+  }
+}
+@screen lg {
+  #store-list:not([data-count="1"]):not([data-count="2"]) {
+    @apply grid-cols-4;
+  }
+}

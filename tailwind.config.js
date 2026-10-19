@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   // JS가 토글하는 클래스도 스캔 대상에 넣는다 (src/js/main.js)
-  content: ["./index.html", "./pages/**/*.html", "./src/js/**/*.js"],
+  content: ["./index.html", "./pages/**/*.html", "./src/js/**/*.{js,mjs}"],
   theme: {
     extend: {
       fontFamily: {

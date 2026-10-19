@@ -4,7 +4,8 @@
   "description": "PlayPark 마케팅 웹사이트 — Tailwind CSS(PostCSS 빌드) 기반 정적 HTML 사이트",
   "private": true,
   "scripts": {
-    "build": "node scripts/build-guide.mjs && postcss src/css/main.css -o dist/output.css --env production",
+    "test": "node --test scripts/store-list.test.mjs",
+    "build": "node scripts/build-guide.mjs && postcss src/css/main.css -o dist/output.css --env production && postcss src/css/store-list.css -o dist/store-list.css --env production",
     "watch": "postcss src/css/main.css -o dist/output.css --watch",
     "dev": "concurrently -k \"npm:watch\" \"serve -l 3000 .\"",
     "build:guide": "node scripts/build-guide.mjs"

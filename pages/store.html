@@ -66,6 +66,7 @@
     ]
   }
   </script>
+  <link rel="stylesheet" href="../dist/store-list.css" />
 </head>
 <body class="antialiased selection:bg-brand/20">
   <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-white">본문 바로가기</a>
@@ -496,73 +497,24 @@
     </section>
 
     <!-- ===== ⑥ 매장 찾기 ===== -->
-    <section class="bg-white py-24 md:py-32" aria-labelledby="find-title">
+    <section id="locations" class="bg-white py-24 md:py-32" aria-labelledby="find-title">
       <div class="mx-auto max-w-container px-6">
         <div class="reveal text-center">
           <h2 id="find-title" class="text-3xl font-black tracking-tight text-ink sm:text-4xl md:text-5xl">운영은 더 쉽게, 관리는 더 편하게</h2>
           <p class="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-muted">
             안정적인 운영을 먼저 생각합니다.<br class="hidden md:block" />
-            현재 운영 중인 매장들을 가볍게 둘러보시고 편하게 창업 이야기를 나눠보세요.
+            현재 운영 중인 매장과 오픈 준비 소식을 확인하시고 편하게 창업 이야기를 나눠보세요.
           </p>
         </div>
 
-        <ul class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4" role="list">
+        <p id="store-list-status" class="mt-10 text-center text-sm text-muted" role="status" aria-live="polite">매장 정보를 불러오는 중입니다.</p>
+        <div class="mt-4 text-center">
+          <button id="store-list-retry" type="button" class="rounded-full border border-ink/15 px-6 py-3 text-sm font-bold text-ink" hidden>다시 불러오기</button>
+        </div>
+        <ul id="store-list" class="mt-8 grid gap-5" role="list" aria-label="운영 및 준비중인 무인매장" aria-describedby="store-list-status" aria-busy="true"></ul>
+        <noscript><p class="mt-6 text-center text-muted">매장 목록을 보려면 자바스크립트를 켜거나 아래 예약하기 버튼을 눌러 주세요.</p></noscript>
 
-          <li class="reveal card-bezel">
-            <a href="https://ppscreen.playpark.app/reserve" target="_blank" rel="noopener" aria-label="플레이파크 판교밸리점 예약하기 (새 창에서 열림)" class="group card-bezel-inner flex h-full flex-col p-6">
-              <span class="store-badge"><iconify-icon icon="solar:clock-circle-bold"></iconify-icon>24시간 무인</span>
-              <h3 class="store-name">플레이파크 판교밸리점</h3>
-              <p class="store-address">경기 성남시 수정구 고등로 33<br />(고등동, 판교밸리프라자)</p>
-              <dl class="store-spec">
-                <div><dt>룸</dt><dd>2개</dd></div>
-                <div><dt>주차</dt><dd>지하 2시간 무료</dd></div>
-              </dl>
-              <span class="store-card-cta" aria-hidden="true">예약하기<iconify-icon icon="solar:arrow-right-up-linear"></iconify-icon></span>
-            </a>
-          </li>
-
-          <li class="reveal card-bezel" style="--d:80ms">
-            <a href="https://ppscreen.playpark.app/reserve" target="_blank" rel="noopener" aria-label="플레이파크 장안점 예약하기 (새 창에서 열림)" class="group card-bezel-inner flex h-full flex-col p-6">
-              <span class="store-badge"><iconify-icon icon="solar:clock-circle-bold"></iconify-icon>24시간 무인</span>
-              <h3 class="store-name">플레이파크 장안점</h3>
-              <p class="store-address">서울 동대문구 장한로 110<br />(장안동, 힐스테이트 장안센트럴)</p>
-              <dl class="store-spec">
-                <div><dt>룸</dt><dd>2개</dd></div>
-                <div><dt>주차</dt><dd>건물 지하 주차장</dd></div>
-              </dl>
-              <span class="store-card-cta" aria-hidden="true">예약하기<iconify-icon icon="solar:arrow-right-up-linear"></iconify-icon></span>
-            </a>
-          </li>
-
-          <li class="reveal card-bezel" style="--d:160ms">
-            <a href="https://ppscreen.playpark.app/reserve" target="_blank" rel="noopener" aria-label="플레이파크 남부터미널점 예약하기 (새 창에서 열림)" class="group card-bezel-inner flex h-full flex-col p-6">
-              <span class="store-badge store-badge-alt"><iconify-icon icon="solar:moon-stars-bold"></iconify-icon>주간 유인 · 야간 무인</span>
-              <h3 class="store-name">플레이파크 남부터미널점</h3>
-              <p class="store-address">서울 서초구 효령로 291<br />(서초동)</p>
-              <dl class="store-spec">
-                <div><dt>룸</dt><dd>3개</dd></div>
-                <div><dt>교통</dt><dd>3번 출구 도보 2분</dd></div>
-              </dl>
-              <span class="store-card-cta" aria-hidden="true">예약하기<iconify-icon icon="solar:arrow-right-up-linear"></iconify-icon></span>
-            </a>
-          </li>
-
-          <li class="reveal card-bezel" style="--d:240ms">
-            <a href="https://ppscreen.playpark.app/reserve" target="_blank" rel="noopener" aria-label="플레이파크 대구 수성점 예약하기 (새 창에서 열림)" class="group card-bezel-inner flex h-full flex-col p-6">
-              <span class="store-badge"><iconify-icon icon="solar:clock-circle-bold"></iconify-icon>24시간 무인</span>
-              <h3 class="store-name">플레이파크 대구 수성점</h3>
-              <p class="store-address">대구 수성구 달구벌대로 2450<br />(범어동)</p>
-              <dl class="store-spec">
-                <div><dt>룸</dt><dd>4개</dd></div>
-                <div><dt>주차</dt><dd>대형 주차장</dd></div>
-              </dl>
-              <span class="store-card-cta" aria-hidden="true">예약하기<iconify-icon icon="solar:arrow-right-up-linear"></iconify-icon></span>
-            </a>
-          </li>
-
-        </ul>
-
-        <!-- 예약 · 전화 버튼. 예약은 외부 시스템(ppscreen)이 담당하므로 지점 선택도 그쪽에서 한다. -->
+        <!-- 전체 매장 예약 · 전화 버튼. 카드에서는 storeId로 해당 매장에 바로 진입한다. -->
         <div class="reveal mt-12 flex flex-col items-center justify-center gap-3 sm:flex-row" style="--d:120ms">
           <a href="https://ppscreen.playpark.app/reserve" target="_blank" rel="noopener" class="group btn-primary w-full sm:w-auto">
             예약하기
@@ -802,5 +754,6 @@
   </div>
 
   <script defer src="../src/js/main.js"></script>
+  <script type="module" src="../src/js/store-list.mjs"></script>
 </body>
 </html>
